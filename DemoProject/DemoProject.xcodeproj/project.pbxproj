@@ -13,6 +13,7 @@
 		235980D329A49D0B009E8C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235980D129A49D0B009E8C5D /* Main.storyboard */; };
 		235980D529A49D0C009E8C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235980D429A49D0C009E8C5D /* Assets.xcassets */; };
 		235980D829A49D0C009E8C5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235980D629A49D0C009E8C5D /* LaunchScreen.storyboard */; };
+		235980E029A49FAB009E8C5D /* Storyboard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235980DF29A49FAB009E8C5D /* Storyboard2.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		235980D429A49D0C009E8C5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235980D729A49D0C009E8C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		235980D929A49D0C009E8C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		235980DF29A49FAB009E8C5D /* Storyboard2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard2.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				235980D429A49D0C009E8C5D /* Assets.xcassets */,
 				235980D629A49D0C009E8C5D /* LaunchScreen.storyboard */,
 				235980D929A49D0C009E8C5D /* Info.plist */,
+				235980DF29A49FAB009E8C5D /* Storyboard2.storyboard */,
 			);
 			path = DemoProject;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235980E029A49FAB009E8C5D /* Storyboard2.storyboard in Resources */,
 				235980D829A49D0C009E8C5D /* LaunchScreen.storyboard in Resources */,
 				235980D529A49D0C009E8C5D /* Assets.xcassets in Resources */,
 				235980D329A49D0B009E8C5D /* Main.storyboard in Resources */,
