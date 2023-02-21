@@ -26,6 +26,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window!.makeKeyAndVisible()
             
             
+            
+            
         }
     }
 
