@@ -29,6 +29,7 @@ xcuserdata/## compatibility with Xcode 8 and earlier (ignoring not required star
 build/
 DerivedData/
 *.moved-aside
+*.xcuserstate
 *.pbxuser
 !default.pbxuser
 *.mode1v3
