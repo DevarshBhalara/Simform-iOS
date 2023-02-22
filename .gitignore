@@ -9,6 +9,7 @@ Icon# Thumbnails
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
+*.xcuserstate
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
