@@ -2,7 +2,19 @@ import UIKit
 
 var greeting = "Hello, playground"
 
-print("Hello")
+var myVariable = 60
+let myConstent = 34
+var myFloar: Float = 10.2
 
+var myString = "Hello " + String(myConstent)
 
-print("Hello 2")
+print(myString)
+
+print("My weight is \(myVariable) !!") 
+
+let mulLineString = """
+Hello, this is "Multiline Line String "
+example.
+"""
+
+print(mulLineString)
