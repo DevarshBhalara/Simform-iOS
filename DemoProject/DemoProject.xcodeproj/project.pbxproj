@@ -26,6 +26,7 @@
 		235980D729A49D0C009E8C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		235980D929A49D0C009E8C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		235980DF29A49FAB009E8C5D /* Storyboard2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard2.storyboard; sourceTree = "<group>"; };
+		23A2520929A5D1600042B1D2 /* first_playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = first_playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 				235980D629A49D0C009E8C5D /* LaunchScreen.storyboard */,
 				235980D929A49D0C009E8C5D /* Info.plist */,
 				235980DF29A49FAB009E8C5D /* Storyboard2.storyboard */,
+				23A2520929A5D1600042B1D2 /* first_playground.playground */,
 			);
 			path = DemoProject;
 			sourceTree = "<group>";
