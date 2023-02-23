@@ -170,3 +170,128 @@ if myDivisiable.isEmpty == true {
     print("\(checkPrime) is Prime number only divisible by 1 and \(checkPrime)")
 }*/
     
+print()
+
+/**
+ String
+ */
+
+//Write a Swift program to create a new string made of a copy of the first two characters of a given string. If the given string is shorter than length 2, return whatever there is.
+
+
+var myStr1: String = "Simform"
+
+if myStr1.count <= 2 {
+    print(myStr1)
+}else{
+    //var index1 = myStr1.index(myStr1.startIndex, offsetBy: 2)
+    //var ansString = myStr1[..<index1]
+    //print(ansString)
+    var newStrr  = String(myStr1.prefix(2))
+    print(newStrr)
+   
+   
+}
+
+print()
+
+
+//Write a Swift program to create a new string without the first and last character of a given string. The string length must be at least 2.
+//Input: “Simform”
+//Output: imfor
+
+myStr1.remove(at: myStr1.startIndex)
+myStr1.remove(at: myStr1.index(before: myStr1.endIndex))
+print(myStr1)
+
+
+//Write a Swift program that accept two strings and return their concatenation, except the first char of each string. The given strings length must be at least 1.
+//Input: "Swift", "Examples"
+//Output: wiftxamples
+
+var str1 = "swift"
+var str2 = "examples"
+
+if str1.count == 0 || str2.count == 0 {
+    print("String length must be at least 1 of both string")
+}else{
+    str1.remove(at: str1.startIndex)
+    str2.remove(at: str2.index(before: str2.endIndex))
+
+    var str3 = str1 + str2
+    print(str3)
+}
+
+
+//Write a Swift program to move the first two characters of a given string to the end. The given string length must be at least 2.
+//Input: Swift
+//Output: iftSw
+
+var shiftString : String = "Swift"
+var indexShiftString = shiftString.index(shiftString.startIndex, offsetBy: 2)
+var firstTwoShift = shiftString[..<indexShiftString]
+
+print(shiftString)
+
+shiftString.remove(at: shiftString.startIndex)
+shiftString.remove(at: shiftString.startIndex)
+
+shiftString += firstTwoShift
+print(shiftString)
+
+//Write a Swift program to test if a given string starts with "Sw".
+//Input: Swift
+//Output: true
+
+var checkString: String = "Swift"
+
+if checkString[checkString.startIndex] == "S" {
+    if checkString[checkString.index(after: checkString.startIndex)] == "w" {
+        print(true)
+    }else{
+        print(false)
+    }
+}else{
+    print(false)
+}
+
+
+//Write a Swift program to create a new string made of the first and last n chars from a given string. The string length will be at least n.
+//Input: “Simform Solutions”, 3
+//Output: Simons
+
+var firstLastChar: String = "Simfor Solutions"
+var charss = 3
+
+if firstLastChar.count < charss {
+    
+    print("String size must be at least equal to n")
+    
+}else{
+    
+    var indexx = firstLastChar.index( firstLastChar.startIndex , offsetBy: charss)
+    var indexx1 = firstLastChar.index(firstLastChar.endIndex, offsetBy: -charss)
+    
+    var strAnss = firstLastChar [..<indexx] + firstLastChar[indexx1...]
+    print(strAnss)
+
+}
+
+//Try all string methods: https://developer.apple.com/documentation/swift/string
+
+let cafe1 = "Cafe\u{301}"
+let cafe2 = "Café"
+print(cafe1)
+
+let name = "Devarsh Bhalara"
+let firstSpace = name.firstIndex(of: " ") ?? name.endIndex
+print(name[..<firstSpace])
+
+print(Array(name))
+print(name.unicodeScalars.map{$0.value})
+
+
+var earth:String = "🌍"
+print(earth)
+
+

@@ -240,3 +240,9 @@ print(stringMyString)
 
 stringMyString.insert(contentsOf: "Insert ", at: stringMyString.startIndex )
 print(stringMyString)
+
+
+let greeting1 = "Hello, world!"
+let index1 = greeting1.firstIndex(of: ",") ?? greeting1.endIndex
+let beginning = greeting1[..<index1]
+
