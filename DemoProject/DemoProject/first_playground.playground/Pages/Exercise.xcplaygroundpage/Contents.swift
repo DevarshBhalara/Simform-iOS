@@ -1,6 +1,8 @@
 print("Hello World!\n")
 
-//Variables
+/**
+ Variables
+ **/
 //Create variables of different types and print it
 
 var myInt: Int = 3
@@ -28,7 +30,9 @@ var duration = 2
 var interest = (amout * iRate * duration)/100
 print("Interest is \(interest) \n")
 
-//Operator
+/**
+ Operator
+ **/
 //Create example for String concate using operators
 
 var myStringFirst : String = "My name is "
@@ -64,6 +68,105 @@ print()
 var myIntT : Int = 10
 var myIntT2: Int = 20
 
-print((myIntT<myIntT2) ? "Second value is greater" : "First value is greater")
+print((myIntT<myIntT2) ? "Second value is greater \n" : "First value is greater \n")
 
 
+/**
+ Control Flow
+ */
+
+//Print the powers of 2 that are less than or equal to N.
+
+var N:Int = 100
+var num : Int = 1
+var ans : Int = 1
+
+
+
+while ans < N {
+    ans *= 2
+    if(ans > N){
+        break;
+    }else{
+        print(ans)
+    }
+}
+
+/*repeat{
+    print(ans)
+    ans *= 2
+    
+}while(ans <= N)*/
+
+/*for _ in 1...N{
+    ans = ans * 2
+    if(ans > N){
+        break;
+    }else{
+        
+        print(ans)
+    }
+}*/
+
+//Given an integer N draw a square of N x N asterisks. Look at the examples.
+var squareN:Int = 3
+for _ in 1...squareN{
+    print()
+    for _ in 1...squareN{
+        print("*" , terminator: "")
+    }
+}
+print()
+//Given an integer N draw a triangle of asterisks. The triangle should have N lines, the i-th line should have i asterisks on it.
+var triN:Int = 5
+print()
+for i in 1...triN{
+  
+    for _ in 1...i{
+        print("*", terminator: "")
+    }
+    print()
+}
+
+print()
+
+//Given an integer N draw a pyramid of asterisks. The pyramid should have N lines. On the i-th line there should be N-i spaces followed by i*2-1 asterisks.
+
+var pyN: Int = 5
+for i in 1...pyN{
+    for _ in 1...(pyN-i+1){
+        print(terminator: " ")
+    }
+    for _ in 1..<i*2{
+        print("*" , terminator: "")
+    }
+    print()
+}
+    
+print()
+//You are given a number. Print "prime" if the number is a prime and "not prime" otherwise. A number is a prime if it has exactly 2 distinct divisors (1 and itself).
+
+var checkPrime : Int = 19
+var myN = checkPrime/2
+var count = 0
+var myDivisiable : String = ""
+
+for i in 2...myN{
+    if checkPrime%i == 0 {
+        myDivisiable.append("Prime")
+        print("\(checkPrime) is not Prime")
+        break;
+    }
+}
+
+if myDivisiable.isEmpty == true {
+    print("\(checkPrime) is Prime number only divisible by 1 and \(checkPrime)")
+}
+
+
+/*if count>2{
+    print("\(checkPrime) is not Prime")
+}else{
+    print("\(checkPrime) is Prime number only divisible by 1 and \(checkPrime)")
+}*/
+    
