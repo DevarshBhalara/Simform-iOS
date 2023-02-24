@@ -83,20 +83,20 @@ var ans : Int = 1
 
 
 
-while ans < N {
+/*while ans < N {
     ans *= 2
     if(ans > N){
         break;
     }else{
         print(ans)
     }
-}
+}*/
 
-/*repeat{
+repeat{
     print(ans)
     ans *= 2
     
-}while(ans <= N)*/
+}while(ans <= N)
 
 /*for _ in 1...N{
     ans = ans * 2
@@ -121,7 +121,6 @@ print()
 var triN:Int = 5
 print()
 for i in 1...triN{
-  
     for _ in 1...i{
         print("*", terminator: "")
     }
@@ -146,7 +145,7 @@ for i in 1...pyN{
 print()
 //You are given a number. Print "prime" if the number is a prime and "not prime" otherwise. A number is a prime if it has exactly 2 distinct divisors (1 and itself).
 
-var checkPrime : Int = 19
+var checkPrime : Int = 18
 var myN = checkPrime/2
 var count = 0
 var myDivisiable : String = ""
@@ -189,8 +188,7 @@ if myStr1.count <= 2 {
     //print(ansString)
     var newStrr  = String(myStr1.prefix(2))
     print(newStrr)
-   
-   
+
 }
 
 print()
@@ -230,7 +228,7 @@ if str1.count == 0 || str2.count == 0 {
 var shiftString : String = "Swift"
 var indexShiftString = shiftString.index(shiftString.startIndex, offsetBy: 2)
 var firstTwoShift = shiftString[..<indexShiftString]
-
+print(indexShiftString)
 print(shiftString)
 
 shiftString.remove(at: shiftString.startIndex)
@@ -293,5 +291,387 @@ print(name.unicodeScalars.map{$0.value})
 
 var earth:String = "🌍"
 print(earth)
+
+print()
+
+//Write a Swift program to check whether the first element and the last element of a given array of integers are equal. The array length must be 1 or more.
+//Input: [1,2,3,1]
+//Output: true
+
+var myArrr = [1,2,3,1]
+if !myArrr.isEmpty {
+    print(myArrr.first == myArrr.last)
+}else{
+    print("Array is empty")
+}
+
+
+//Write a Swift program to create a new array with double the length of a given array of integers and its last element is the same as the given array. The given array will be length 1 or more. By default, a new integer array contains all 0's.
+//Input: [1,2,3,4]
+//Output: [0,0,0,0,0,0,0,4]
+
+var myArr2 = [1,2,3,4]
+var len = myArr2.count * 2
+
+var myArr2_d = Array(repeating: 0, count: len-1)
+myArr2_d.append(myArr2.last!)
+print(myArr2_d)
+
+
+//Write a Swift program to create a new array, taking first two elements from a given array of integers. If the length of the given array is less than 2 use the single element of the given array
+//Input: [0,1,2,3]
+//Output: [0,1]
+
+var myArr3 = [0,1,2,3]
+
+if myArr3.count > 1 {
+    var myArr3_ans = myArr3.prefix(2)
+    print(myArr3_ans)
+}else{
+    var myArr3_ans = myArr3.prefix(1)
+    print(myArr3_ans)
+}
+
+//Write a Swift program to take one array and find out maximum number from that array
+//Input: [0,50,100,20,80,150]
+//Output: 150
+
+var myArr4 = [0,50,100,20,80,150]
+var max_arr = myArr4.max()
+print(max_arr!)
+
+
+//Write a Swift program to take one array and sort it in descending order.
+//Input: [0,5,6,2,10]
+//Output: [10,6,5,2,0]
+
+
+var myArr5 = [0,5,6,2,10]
+myArr5.sort(by: > )
+print(myArr5)
+
+print()
+
+//Print all the numbers from listOfNumbers that are divisible by at least one number from divisors
+//Input: var listOfNumbers = [1, 2, 3, 10, 100]
+//var divisors = [2, 5]
+//Output: 2,10,100
+
+var listOfNumbers = [1, 2, 3, 10, 100]
+var divisors = [2, 5]
+
+for i in listOfNumbers {
+    for j in divisors {
+        if i % j == 0 {
+            print(i)
+            break
+        }
+    }
+}
+
+//Try all Array methods: new
+var students = ["Ben", "Ivy", "Jordell"]
+students.append("Devarsh")
+students.append(contentsOf: ["John" , "Paul"])
+print(students)
+students.insert("Walk", at: 2)
+print(students)
+
+students.remove(at: 0)
+print(students)
+students.removeLast()
+print(students)
+
+if let  i = students.firstIndex(of: "Walk") {
+    students[i] = "Walker"
+}
+print(students)
+
+/**
+ Dictonary
+ */
+
+//You are given a dictionary code of type [String:String] which has values for all lowercase letters. The codedictionary represents a way to encode a message. For example if code["a"] = "z" and code["b"] = "x" the encoded version if "ababa" will be "zxzxz". You are also given a encodedMessage which contains only lowercase letters and spaces. Use the codedictionary to decode the message and print it. Write a Swift program to decode the message and print final output string
+
+var code = [
+
+"a" : "b",
+
+"b" : "c",
+
+"c" : "d",
+
+"d" : "e",
+
+"e" : "f",
+
+"f" : "g",
+
+"g" : "h",
+
+"h" : "i",
+
+"i" : "j",
+
+"j" : "k",
+
+"k" : "l",
+
+"l" : "m",
+
+"m" : "n",
+
+"n" : "o",
+
+"o" : "p",
+
+"p" : "q",
+
+"q" : "r",
+
+"r" : "s",
+
+"s" : "t",
+
+"t" : "u",
+
+"u" : "v",
+
+"v" : "w",
+
+"w" : "x",
+
+"x" : "y",
+
+"y" : "z",
+
+"z" : "a"
+
+]
+
+var encodedMessage = "uijt nfttbhf jt ibse up sfbe"
+
+
+var decoded_msg = encodedMessage.map({ch in
+    code.first(where: { String(ch) ==  $0.value })?.key ?? " "
+}).joined()
+
+print(decoded_msg)
+
+//let bbb = code.filter{$0.value == "u"}
+
+
+//You are given an array of dictionaries. Each dictionary in the array contains exactly 2 keys “firstName” and “lastName”. Create an array of strings called firstNames that contains only the values for “firstName” from each dictionary.
+//Output: firstNames = ["Calvin","Garry","Leah","Sonja","Noel"]
+
+var people: [[String:String]] = [
+
+[
+
+"firstName": "Calvin",
+
+"lastName": "Newton"
+
+],
+
+[
+
+"firstName": "Garry",
+
+"lastName": "Mckenzie"
+
+],
+
+[
+
+"firstName": "Leah",
+
+"lastName": "Rivera"
+
+],
+
+[
+
+"firstName": "Sonja",
+
+"lastName": "Moreno"
+
+],
+
+[
+
+"firstName": "Noel",
+
+"lastName": "Bowen"
+
+]
+
+]
+
+var firstnamee : [String] = []
+
+for arrD in people {
+    firstnamee.append(arrD["firstName"]!)
+}
+print(firstnamee)
+print()
+//You are given an array of dictionaries. Each dictionary in the array contains exactly 2 keys “firstName” and “lastName”. Create an array of strings called fullNames that contains the values for “firstName” and “lastName” from the dictionary separated by a space.
+
+var fullName : [String] = []
+
+for arrD in people {
+    fullName.append( arrD["firstName"]! + " " + arrD["lastName"]! )
+}
+print(fullName)
+
+
+//You are given an array of dictionaries. Each dictionary in the array describes the score of a person. Find the person with the lowest score and print his full name.
+var people2 : [[String:Any]] = [
+
+[
+
+"firstName": "Calvin",
+
+"lastName": "Newton",
+
+"score": 13
+
+],
+
+[
+
+"firstName": "Garry",
+
+"lastName": "Mckenzie",
+
+"score": 12
+
+],
+
+[
+
+"firstName": "Leah",
+
+"lastName": "Rivera",
+
+"score": 10
+
+],
+
+[
+
+"firstName": "Sonja",
+
+"lastName": "Moreno",
+
+"score": 3
+
+],
+
+[
+
+"firstName": "Noel",
+
+"lastName": "Bowen",
+
+"score": 16
+
+]
+
+]
+var min : Int = Int.max
+/*var index = 0
+for (i, arrD) in people2.enumerated()  {
+    if min > (arrD["score"] as! Int) {
+        index = i
+        min = (arrD["score"] as! Int)
+    }
+}
+ print(arrD[index]["firstName"])
+ */
+
+var fullname = ""
+for arrD in people2 {
+    if min > (arrD["score"] as! Int) {
+        
+        min = (arrD["score"] as! Int)
+        fullname = arrD["firstName"] as! String
+        fullname.append(arrD["lastName"] as! String)
+    }
+}
+
+
+print(fullname)
+
+print()
+//You are given an array of dictionaries. Each dictionary in the array describes the score of a person. Print the leaderboard in the following format:
+
+for arrD in people2 {
+    print(arrD["firstName"] as! String ,terminator: " ")
+    print(arrD["lastName"] as! String ,terminator: " ")
+    print(" - ",terminator: " ")
+    print(arrD["score"] as! Int)
+    
+}
+
+//You are given an array of integers. Find out the frequency of each one.The frequency of a number is the number of times it appears in the array.Print the numbers in ascending order followed by their frequency.
+
+var numbers_arr = [1, 2, 3, 2, 3, 5, 2, 1, 3, 4, 2, 2, 2]
+var freqDict : [Int:Int] = [:]
+
+for i in numbers_arr {
+    if freqDict.keys.contains(i) {
+        var ind :Int = freqDict[i]!
+        ind = ind + 1
+        freqDict[i] = ind
+    }else{
+        freqDict[i] = 1
+    }
+}
+print(freqDict)
+
+freqDict.sorted(){
+    $0.key < $1.key
+}.forEach{
+    print("\($0) \($1)")
+}
+
+/**
+ Optionals
+ */
+//Create an example of demonstrating How to declare optionals in swift?
+
+var exOptional: Int?
+
+//What is force unwrapping in optionals show usage in example.
+//print(exOptional!)
+
+//Create one example of show usage of optional binding Create one example using if-let Create one example using guard-let
+
+
+var exOptionalBinding:Int?
+
+if let i = exOptionalBinding {
+    print("Optional has some value \(i)")
+}else{
+    print("Optional doesn't have any value ")
+}
+
+
+func check(_ num1:Int? = nil){
+    guard let num1 = num1 else{
+        print("Num1 is nil")
+        return
+    }
+    
+   print("Value is \(num1)")
+}
+
+check(7)
+
+
+//Create one example using nil colloison operator
+
+print(exOptionalBinding ?? "No value")
 
 
