@@ -246,6 +246,7 @@ let greeting1 = "Hello, world!"
 let index1 = greeting1.firstIndex(of: ",") ?? greeting1.endIndex
 let beginning = greeting1[..<index1]
 
+<<<<<<< HEAD
 var myarrrrr : [Int] = []
 
 var exOptionalBinding:Int?
@@ -283,3 +284,5 @@ func sum(_ num1:Int? = nil, _ num2:Int? = nil){
 }
 
 sum(5,10)
+=======
+>>>>>>> feature/exersice
