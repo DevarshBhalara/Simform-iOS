@@ -814,4 +814,5 @@ func getSumOf(array:[Int], handler: @escaping ((Int)->Void)) {
 getSumOf(array: [16,756,442,6,23]) { (sum) in
     print(sum)
 }
- 
+
+print()
