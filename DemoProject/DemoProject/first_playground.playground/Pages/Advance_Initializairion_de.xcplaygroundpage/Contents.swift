@@ -639,6 +639,152 @@ extension SeriesCheck {
 }
 
 
+//weak unowned
+class Person1 {
+    var name:String
+    var job : Job?
+    
+    init(name: String){
+        print("Init of Person1")
+        self.name = name
+    }
+    
+    func printName(){
+        print("name is \(name)")
+    }
+    
+    deinit{
+        print("Deinit of Person1")
+    }
+}
+
+
+class Job {
+    var jobDesc: String
+    weak var person : Person1?
+    
+    init(jobDesc : String){
+        print("Init of Job")
+        self.jobDesc = jobDesc
+    }
+    deinit{
+        print("deinit of Job")
+    }
+}
+
+
+if (1 == 1)
+{
+    var objPerson = Person1(name: "Devarsh")
+    var objJob = Job(jobDesc: "Jobbbbb")
+    objPerson.job = objJob
+    objJob.person = objPerson
+    //    print(CFGetRetainCount(objJob))
+}
+
+print()
+
+
+protocol SeriesProtocol {
+    var name : String { get }
+    var seasonCount : Int { get }
+    var rating : Float { get }
+    var review : String? { get }
+    
+    init(name: String , seasonCount : Int , rating : Float) //need to write required in Class when we use this init()
+    mutating func giveReview(reviewFromUser : String) -> () // need to write mutating keyword when we are using struct, in class don't need mutating
+    func displayDetails() -> ()
+}
+
+struct SeriesCheck : SeriesProtocol {
+    var name: String
+    var seasonCount: Int
+    var rating: Float
+    var review: String?
+    var seriesType:SeriesType?
+    
+    
+    init(name: String , seasonCount : Int , rating : Float) {
+        self.name = name
+        self.seasonCount = seasonCount
+        self.rating = rating
+    }
+    
+    mutating func giveReview(reviewFromUser: String) {
+        self.review = reviewFromUser
+    }
+    
+    func displayDetails() {
+        print("The sereis \(name) has \(seasonCount) season and has rating of \(rating) and Review is : \(review ?? "No review Available")")
+    }
+}
+
+
+var objSeries = SeriesCheck(name: "Elite", seasonCount: 6, rating: 8.3)
+objSeries.giveReview(reviewFromUser: "Must watch this , you'll learn a lot from this ")
+objSeries.displayDetails()
+print()
+
+
+//extension
+extension SeriesProtocol {
+    func isGood(seasonCount : Int, rating : Float) -> (){
+        if seasonCount > 3 && rating >= 8 {
+            print("worth to waste time")
+        }else {
+            print("Don't waste your time")
+        }
+    }
+}
+
+
+extension SeriesCheck {
+    
+    init(name: String , seasonCount : Int , rating : Float , type:SeriesCheck.SeriesType) {
+        self.name = name
+        self.seasonCount = seasonCount
+        self.rating = rating
+        self.seriesType = type
+    }
+    
+    struct CastName {
+        var castName : [String]
+        
+        init(castName: [String]) {
+            self.castName = castName
+        }
+        func printCasttt() -> () {
+            for i in castName {
+                print(i)
+            }
+        }
+    }
+    enum SeriesType {
+        case Thriller
+        case Action
+        case Horror
+        case Scifi
+        case Comdy
+        case No_Type_Available
+        
+    }
+    
+    
+    func getSeriesType() -> SeriesType {
+        if let a = self.seriesType {
+            return a
+        }else {
+            return SeriesType.No_Type_Available
+        }
+    }
+    
+    func test() -> () {
+        print("test")
+    }
+    
+    
+}
+    
 var objSeries2 = SeriesCheck(name: "Vampire Diaries", seasonCount: 8, rating: 8.3 , type: SeriesCheck.SeriesType.Thriller)
 objSeries2.isGood(seasonCount: objSeries2.seasonCount, rating: objSeries2.rating)
 print("Series type : \(objSeries2.getSeriesType())")
@@ -888,3 +1034,72 @@ bakery.delegate = shop
 bakery.makeCookie()
 
 
+<<<<<<< Updated upstream
+=======
+enum Marks {
+
+    case gpa(Double, Double, Double)
+    case grade(String, String, String)
+}
+
+
+var marks1 = Marks.gpa(3, 2.9, 3.8)
+print(marks1)
+var marks2 = Marks.grade("A", "B", "C")
+print(marks2)
+
+enum Pizza {
+
+  // named associated value
+  case small (inches: Int)
+  case medium (inches: Int)
+  case large (inches: Int)
+}
+
+// pass value using provided names
+var pizza1 = Pizza.medium(inches: 12)
+print(pizza1)
+
+enum Vehicle: String {
+
+  case car = "Four Wheeler"
+  case bike = "Two Wheeler"
+}
+Vehicle.car.rawValue    
+
+var aaa: Set = [
+    [1:"One"],
+    [2:"Two"]
+]
+print(type(of: aaa))
+
+enum Testttt {
+    case one(name: String)
+    case two( String = "Dev", Int = 10)
+    case three(name: String = "Dev")
+    
+}
+var nameee2 = Testttt.two()
+var nameeee = Testttt.one(name: "Devarsh")
+switch nameee2 {
+case .one(let name):
+    print("\(name)")
+case .two(let name,let age):
+    print("\(name) \(age)")
+case .three(let name):
+    print(name)
+}
+
+class ExTest {
+    private var a: Int = 10
+}
+extension ExTest {
+    func test() {
+        print(a)
+    }
+}
+//
+//class ST {
+//    var a = 10
+//}
+>>>>>>> Stashed changes

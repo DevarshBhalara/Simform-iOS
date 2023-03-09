@@ -580,7 +580,7 @@ print("Area of Rect is : \(ansArea.area)")
 
 
 struct WillSetDidSetEx{
-    var count : Int = 0 {
+    var count : Int  {
         willSet(newCount) {
             print("Value \(newCount) is about to set in count")
         }
@@ -801,14 +801,14 @@ print(dayssObj[3])
 print()
 
 var complitionHandler: ((Int)->Void)?
-func getSumOf(array:[Int], handler: @escaping ((Int)->Void)) {
+func getSumOf(array:[Int], handler:((Int)->Void)) {
        
        var sum: Int = 0
         for value in array {
             sum += value
         }
         print(sum)
-        complitionHandler = handler
+//        complitionHandler = handler
     }
     
 getSumOf(array: [16,756,442,6,23]) { (sum) in
@@ -816,3 +816,192 @@ getSumOf(array: [16,756,442,6,23]) { (sum) in
 }
 
 print()
+<<<<<<< Updated upstream
+=======
+
+//storage closure
+//store closure for future user
+var complitionHandler1: ((Int)->Void)?
+var sum = 0
+  
+  
+func calculate_Sum(_ array:Array<Int>, performSum: @escaping ((Int) -> Void)){
+      
+    for i in array{
+        sum = sum + i
+    }
+   complitionHandler1 = performSum
+}
+  
+  
+func calculation(){
+    sum = 0
+    var array = [0,1,2,3,4,5,6,7,8,9]
+    calculate_Sum(array) { (sum) in
+        debugPrint(sum)
+    }
+}
+calculation()
+complitionHandler1!(sum)
+
+//async
+
+func calculate_Sum1(_ array:Array<Int>, performSum: @escaping ((Int) -> Void)){
+    var sum = 0
+    for i in array{
+        sum = sum + i
+    }
+    DispatchQueue.global().asyncAfter(deadline: .now() + 10) {
+        performSum(sum)
+    }
+     
+}
+  
+  
+func calculation1(){
+    let array = [0,1,2,3,4,5,6,7,8,9]
+    calculate_Sum1(array) { (sum) in
+        debugPrint(sum)
+    }
+}
+calculation1()
+
+//
+var myarrr : [Any] = [1,2,"H"]
+print(myarrr)
+var myarrr2 : [AnyObject] = [1 as AnyObject , 2 as AnyObject , "H" as AnyObject]
+print(myarrr2)
+
+var myarrr3 : [NSString] = ["1","2"]
+print(myarrr3)
+
+//
+class Ex{
+    var count: Int = 0{
+        didSet {
+            count += 2
+        }
+    }
+}
+var exObj = Ex()
+exObj.count = 10
+print(exObj.count)
+
+//
+class SomeClass {
+    var a: Int
+    init(a: Int) {
+        self.a = a
+    }
+}
+
+class SomeSubclass: SomeClass {
+    
+    var b: Int
+    init(b: Int){
+        self.b = b
+        super.init(a: 10)
+    }
+    
+//    required init(a: Int) {
+//        fatalError("init(a:) has not been implemented")
+//    }
+    
+}
+var sub = SomeSubclass(b: 10)
+//
+class A {
+    var num: Int
+
+    required init(num: Int) {
+        self.num = num
+    }
+}
+
+class B: A {
+    func haveFun() {
+        print("Woo hoo!")
+    }
+}
+
+class C: A {
+
+    init(str : String) {
+        super.init(num: Int(str)!)
+    }
+    
+    required init(num: Int) {
+        fatalError("init(num:) has not been implemented")
+    }
+    
+    
+    func haveFun() {
+        print("Woo hoo!")
+    }
+}
+
+
+//recursive enum
+indirect enum ArithmaticExp{
+    case number(Int)
+    case addtion(ArithmaticExp , ArithmaticExp)
+    case multiplication(ArithmaticExp, ArithmaticExp)
+}
+ // (5+6) * 10
+var num1_a = ArithmaticExp.number(5)
+var num2_a = ArithmaticExp.number(6)
+var ans_additioh_a = ArithmaticExp.addtion(num1_a, num2_a)
+var f_ans = ArithmaticExp.multiplication(ans_additioh_a, ArithmaticExp.number(10))
+
+func evaluate(expr: ArithmaticExp) -> Int {
+    switch expr {
+    case let .number(value):
+        print("Number case")
+        return value
+    case let .addtion(a, b):
+        print("Addtions case")
+        return evaluate(expr: a) + evaluate(expr: b)
+    case let .multiplication(left , right ):
+        print("Multiplication case")
+        return evaluate(expr: left) * evaluate(expr: right)
+    }
+}
+
+evaluate(expr: f_ans)
+
+private class ATest {
+    public var a = 100
+}
+extension ATest {
+    
+}
+
+enum Planet: Int {
+    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
+}
+
+let positionToFind = 5
+if let somePlanet = Planet(rawValue: positionToFind) {
+        print(somePlanet)
+    switch somePlanet {
+    case .earth:
+        print("Mostly harmless")
+    default:
+        print("Not a safe place for humans")
+    }
+} else {
+    print("There isn't a planet at position \(positionToFind)")
+}
+
+let currentPoint = (10, 0)
+switch currentPoint {
+case (0, let y):
+    print("on the y-axis with a y value of \(y)")
+case let (x, y):
+    print("somewhere else at (\(x), \(y))")
+case (let x, 0):
+    print("on the x-axis with an x value of \(x)")
+case (0, let y):
+    print("on the y-axis with a y value of \(y)")
+}
+>>>>>>> Stashed changes
