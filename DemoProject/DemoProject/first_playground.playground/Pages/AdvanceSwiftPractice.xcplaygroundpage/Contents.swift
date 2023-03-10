@@ -17,7 +17,7 @@ var mulans = multiplication(n1: 10, n2: 2)
 print(mulans ?? 0 )
 
 //return two value
-func largSmallArray (array:[Int]) -> (large:Int,small:Int) {
+func largSmallArray (array:[Int]) -> (large: Int,small: Int) {
     var l = array[0]
     var s = array[0]
     
@@ -91,7 +91,7 @@ print (addtion(30,20))
 
 //function type as Parameter and return type
 print()
-func sum2(a:Int,b:Int) -> Int {
+func sum2(a: Int,b: Int) -> Int {
     return a+b
 }
 var addtion2 : (Int,Int) -> Int = sum2
@@ -130,7 +130,7 @@ let nameClosure = {
 }
 nameClosure()
 
-var nameClosure2:(String) -> () = { name in
+var nameClosure2: (String) -> () = { name in
     print("My name is \(name)")
 }
 /*let nameClosure2:(String) -> () = {
@@ -138,16 +138,16 @@ var nameClosure2:(String) -> () = { name in
 }*/
 nameClosure2("Deavrsh B.")
 
-let addClosure:(Int,Int) -> (Int) = {
-    (a:Int,b:Int) in
+let addClosure: (Int,Int) -> (Int) = {
+    (a: Int,b: Int) in
     return a+b
 }
 print(addClosure(10,20))
 
 
 var arr = [0,4,5,-3,2]
-let cusSorted :(Int,Int) -> Bool = {
-    (s1:Int,s2:Int) -> Bool in
+let cusSorted: (Int,Int) -> Bool = {
+    (s1: Int,s2: Int) -> Bool in
      print("\(s1) < \(s2) = \(s1<s2)")
     return s1 < s2
     
@@ -185,15 +185,18 @@ var needD = Lap.apple
 switch needD {
 case .apple :
     print("Apple")
+    fallthrough
     
 case .asus :
     print("Asus")
+    fallthrough
     
 case .dell :
     print("Dell")
     
 case .hp :
     print("HP")
+    
     
 case .msi :
     print("MSI")
@@ -202,7 +205,7 @@ default :
     print("NO")
 }
 
-enum Mobile : String,CaseIterable{
+enum Mobile: String, CaseIterable{
     case  Redmi
     case iphone
     case google
@@ -210,7 +213,6 @@ enum Mobile : String,CaseIterable{
 }
 let mobileCaseCount = Mobile.allCases.count
 print("\(mobileCaseCount) total brand available")
-
 
 
 for mobile in Mobile.allCases {
@@ -298,7 +300,7 @@ struct Person {
     var lname = "Bhalara"
 }
 
-class PersonClass{
+class PersonClass {
     var nameC = Person()
     var address = "gayatri nagar"
     var city = "Rajkot"
@@ -319,7 +321,7 @@ print(person2Name.fname)
 print()
 //higher order function
     
-var numArry:[Int] = [1,2,3,5]
+var numArry: [Int] = [1,2,3,5]
 var numAsString = numArry.map{
     (array) -> String in
     return String(array)
@@ -328,9 +330,9 @@ print(numAsString)
 
 var filterArray = [1,2,3,4,6,7,7,8]
 
-var onlyEven = filterArray.filter{
+var onlyEven = filterArray.filter  {
     (number) -> Bool in
-    return number%2==0
+    return number % 2 == 0
 }
 
 var filterArrayString = ["Redmi" , "Iphone" , "Oneplus" , "Realme" ]
@@ -351,6 +353,7 @@ print(filteredArray)
 
 var combineArray = filterArray.reduce("Combined array is  : "){
     (result , i) -> String in
+    print("\(result) \(i)")
     return result+String(i)
 }
 print(combineArray)
@@ -488,11 +491,11 @@ struct LevelTracker{
         }
     }
     
-    static func isUnlock(level : Int)->Bool{
+    static func isUnlock(level: Int)->Bool{
         return level <= highestLevelUnlock
     }
     
-    mutating func advance(to level:Int)->Bool{
+    mutating func advance(to level: Int)->Bool{
         if LevelTracker.isUnlock(level: level) {
             currentLevel = level
             return true
@@ -738,7 +741,7 @@ print(teaser.body)
 @propertyWrapper struct BlogTeaser2 {
     
     private var _body: String = ""
-    var wrappedValue : String {
+    var wrappedValue: String {
         set {
             _body = truncate(string: newValue)
         }
@@ -760,8 +763,8 @@ print(teaser.body)
 }
 
 struct BlogAns {
-    var title : String
-    @BlogTeaser2 var body2 : String
+    var title: String
+    @BlogTeaser2 var body2: String
 }
 var titleBody = BlogAns(title: "hello")
 print(titleBody.body2)
@@ -825,7 +828,7 @@ var complitionHandler1: ((Int)->Void)?
 var sum = 0
   
   
-func calculate_Sum(_ array:Array<Int>, performSum: @escaping ((Int) -> Void)){
+func calculate_Sum(_ array: Array<Int>, performSum: @escaping ((Int) -> Void)){
       
     for i in array{
         sum = sum + i
@@ -993,10 +996,15 @@ if let somePlanet = Planet(rawValue: positionToFind) {
     print("There isn't a planet at position \(positionToFind)")
 }
 
+<<<<<<< Updated upstream
+=======
+//tuple in switch
+>>>>>>> Stashed changes
 let currentPoint = (10, 0)
 switch currentPoint {
 case (0, let y):
     print("on the y-axis with a y value of \(y)")
+<<<<<<< Updated upstream
 case let (x, y):
     print("somewhere else at (\(x), \(y))")
 case (let x, 0):
@@ -1004,4 +1012,46 @@ case (let x, 0):
 case (0, let y):
     print("on the y-axis with a y value of \(y)")
 }
+>>>>>>> Stashed changes
+=======
+case (let x, 0):
+    print("on the x-axis with an x value of \(x)")
+case let (x, y):
+    print("somewhere else at (\(x), \(y))")
+
+case (0, let y):
+    print("on the y-axis with a y value of \(y)")
+}
+
+//class vs static
+class Test2 {
+    class func display() {
+        print("Class methods")
+    }
+    static func displayS() {
+        print("Static method")
+    }
+}
+class Test3: Test2 {
+    
+    override class func display() {
+        print("Class method override")
+    }
+    //static can't override
+}
+var objTest3 = Test3()
+Test3.displayS()
+
+
+//multiple condition in guard
+var a1: Int?
+var b1: Int?
+
+func testGuard() {
+    guard a1 == 5 , b1 == 10 else {
+        print("False")
+        return
+    }
+}
+testGuard()
 >>>>>>> Stashed changes

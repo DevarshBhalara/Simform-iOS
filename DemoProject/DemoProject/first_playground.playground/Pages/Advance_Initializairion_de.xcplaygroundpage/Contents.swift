@@ -1033,6 +1033,7 @@ bakery.delegate = shop
 
 bakery.makeCookie()
 
+<<<<<<< Updated upstream
 
 <<<<<<< Updated upstream
 =======
@@ -1102,4 +1103,3 @@ extension ExTest {
 //class ST {
 //    var a = 10
 //}
->>>>>>> Stashed changes
