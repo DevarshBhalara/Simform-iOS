@@ -634,205 +634,13 @@ extension SeriesCheck {
     func test() -> () {
         print("test")
     }
-    
-    
+
 }
-
-
-//weak unowned
-class Person1 {
-    var name:String
-    var job : Job?
-    
-    init(name: String){
-        print("Init of Person1")
-        self.name = name
-    }
-    
-    func printName(){
-        print("name is \(name)")
-    }
-    
-    deinit{
-        print("Deinit of Person1")
-    }
-}
-
-
-class Job {
-    var jobDesc: String
-    weak var person : Person1?
-    
-    init(jobDesc : String){
-        print("Init of Job")
-        self.jobDesc = jobDesc
-    }
-    deinit{
-        print("deinit of Job")
-    }
-}
-
-
-if (1 == 1)
-{
-    var objPerson = Person1(name: "Devarsh")
-    var objJob = Job(jobDesc: "Jobbbbb")
-    objPerson.job = objJob
-    objJob.person = objPerson
-    //    print(CFGetRetainCount(objJob))
-}
-
-print()
-
-
-protocol SeriesProtocol {
-    var name : String { get }
-    var seasonCount : Int { get }
-    var rating : Float { get }
-    var review : String? { get }
-    
-    init(name: String , seasonCount : Int , rating : Float) //need to write required in Class when we use this init()
-    mutating func giveReview(reviewFromUser : String) -> () // need to write mutating keyword when we are using struct, in class don't need mutating
-    func displayDetails() -> ()
-}
-
-struct SeriesCheck : SeriesProtocol {
-    var name: String
-    var seasonCount: Int
-    var rating: Float
-    var review: String?
-    var seriesType:SeriesType?
-    
-    
-    init(name: String , seasonCount : Int , rating : Float) {
-        self.name = name
-        self.seasonCount = seasonCount
-        self.rating = rating
-    }
-    
-    mutating func giveReview(reviewFromUser: String) {
-        self.review = reviewFromUser
-    }
-    
-    func displayDetails() {
-        print("The sereis \(name) has \(seasonCount) season and has rating of \(rating) and Review is : \(review ?? "No review Available")")
-    }
-}
-
-
-var objSeries = SeriesCheck(name: "Elite", seasonCount: 6, rating: 8.3)
-objSeries.giveReview(reviewFromUser: "Must watch this , you'll learn a lot from this ")
-objSeries.displayDetails()
-print()
-
-
-//extension
-extension SeriesProtocol {
-    func isGood(seasonCount : Int, rating : Float) -> (){
-        if seasonCount > 3 && rating >= 8 {
-            print("worth to waste time")
-        }else {
-            print("Don't waste your time")
-        }
-    }
-}
-
-
-extension SeriesCheck {
-    
-    init(name: String , seasonCount : Int , rating : Float , type:SeriesCheck.SeriesType) {
-        self.name = name
-        self.seasonCount = seasonCount
-        self.rating = rating
-        self.seriesType = type
-    }
-    
-    struct CastName {
-        var castName : [String]
-        
-        init(castName: [String]) {
-            self.castName = castName
-        }
-        func printCasttt() -> () {
-            for i in castName {
-                print(i)
-            }
-        }
-    }
-    enum SeriesType {
-        case Thriller
-        case Action
-        case Horror
-        case Scifi
-        case Comdy
-        case No_Type_Available
-        
-    }
-    
-    
-    func getSeriesType() -> SeriesType {
-        if let a = self.seriesType {
-            return a
-        }else {
-            return SeriesType.No_Type_Available
-        }
-    }
-    
-    func test() -> () {
-        print("test")
-    }
-    
-    
-}
-    
 var objSeries2 = SeriesCheck(name: "Vampire Diaries", seasonCount: 8, rating: 8.3 , type: SeriesCheck.SeriesType.Thriller)
 objSeries2.isGood(seasonCount: objSeries2.seasonCount, rating: objSeries2.rating)
 print("Series type : \(objSeries2.getSeriesType())")
 objSeries2.giveReview(reviewFromUser: "Must watch this , you'll learn a lot from this ")
-
-
 objSeries2.displayDetails()
-
-//var cast = SeriesCheck.CastName(castName: ["1","2","3"])
-var objSereis2Cast = SeriesCheck.CastName(castName: ["Ian Samholder","Paul","Nina"])
-objSereis2Cast.printCasttt()
-
-
-print()
-
-protocol SomeProtocol {
-    //init()
-}
-
-class SomeSuperClass {
-    var nameS : String
-    init(name : String) {
-        nameS = name
-        print("Init of super class")
-    }
-    init(){
-        nameS = " "
-        print("Empty init")
-    }
-}
-
-class SomeSubClass: SomeSuperClass, SomeProtocol {
-    
-    required override init() {
-        print("Init in sub class")
-        
-        super.init(name: "test")
-    }
-    
-    override init(name: String) {
-        print("Sub class init name param")
-        super.init()
-    }
-}
-var objSub2 = SomeSubClass()
-var objSubClass = SomeSubClass(name: "hh")
-
-print()
 
 
 class Series2 {
@@ -865,6 +673,49 @@ extension SeriesCheck {
 }
 
 print(objSeries2[0])
+
+
+
+print()
+
+protocol SomeProtocol {
+    //init()
+}
+
+
+
+class SomeSuperClass {
+    var nameS : String
+    init(name : String) {
+        nameS = name
+        print("Init of super class")
+    }
+    init(){
+        nameS = " "
+        print("Empty init")
+    }
+}
+
+class SomeSubClass: SomeSuperClass, SomeProtocol {
+    
+    required override init() {
+        print("Init in sub class")
+        
+        super.init(name: "test")
+    }
+    
+    override init(name: String) {
+        print("Sub class init name param")
+        super.init()
+    }
+}
+var objSub2 = SomeSubClass()
+var objSubClass = SomeSubClass(name: "hh")
+
+print()
+
+
+
 
 //optional chaining
 class Chaining {
@@ -1033,10 +884,7 @@ bakery.delegate = shop
 
 bakery.makeCookie()
 
-<<<<<<< Updated upstream
 
-<<<<<<< Updated upstream
-=======
 enum Marks {
 
     case gpa(Double, Double, Double)
