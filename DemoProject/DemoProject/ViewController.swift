@@ -34,6 +34,23 @@ class ViewController: UIViewController {
         debugPrint("View did Load")
         super.viewDidLoad()
         
+        let objPublicClass = File2PublicClass()
+        objPublicClass.methodPublic()
+        
+        let objPrivateVar = Test2()
+        print(objPrivateVar.memberVariableA)
+        
+        let objOpenClass = ClassOpen()
+        objOpenClass.displayClassOpen()
+        
+        let objTest2 = Test2()
+        objTest2.nonPrivateMethod()
+        objTest2.displayClassOpen()
+        
+//        objTest2 = ClassOpen() as! Test2
+//        objTest2.displayClassOpen()
+//        objTest2.privateMethod()  can't access private method
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

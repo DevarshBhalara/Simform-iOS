@@ -20,14 +20,21 @@ Hello, this is "Multiline Line String "
 example.
 """
 
-var b = 10
+
+var dev = (s: "Abc", i: 4, e: 10)
+dev.s
 
 print(mulLineString)
 
+typealias str = String
+var a: str = "Abc"
 
 //keyword as Variable
 var `let` = "Lettt"
-var `if` = "hello"
+var `if` = """
+My name is
+    \"devarsh\"
+"""
 
 print(  `if`, `let`)
 
@@ -47,7 +54,7 @@ var myString1: cusString = "Hello"
 print(myString1)
 
 
-var a : Int?
+
 
 //tuple
 let tupleEx = (1,"One")
@@ -79,9 +86,10 @@ print((a1<b1) ? "B1 is greater" : "A1 is greater")
 
 
 //loops and array,dictonary
-var arr: [Int] = []
-var myDict: [String:Int] = [:]
+var arr: [Int] = [1,2,3]
+var myDict: [String : Int] = [:]
 
+var dddd = Dictionary<String , Int>()
 
 let myArr = [1,2,3,4,5]
 
@@ -89,9 +97,9 @@ for a in myArr{
     print(a)
 }
 
-var marks = [50,60,45,66]
+var marks = [50, 60, 45, 66]
 var total = 0
-for mark in marks{
+for mark in marks {
     total = total + mark
 }
 print()
@@ -116,7 +124,7 @@ for mark in marks{
 
 print()
 
-if let i = marks.firstIndex(of: 50){
+if let i = marks.firstIndex(of: 50) {
     marks[i] = 55
 }
 print("Arry after changing 50 to 55")
@@ -135,7 +143,67 @@ print(total)
 
 print()
 
-var myDict2:[Int:String] = [1:"One",2:"Two",3:"Three"]
+var myDict2: [Int : String] = [1: "One", 2: "Two", 3: "Three"]
+
+
+var strrr = "News  string"
+
+print(strrr[strrr.index(before: strrr.endIndex)])
+print(strrr[strrr.index(strrr.startIndex, offsetBy: 2)])
+
+strrr.insert(contentsOf: "sss", at: strrr.index(strrr.startIndex, offsetBy: 4))
+print(strrr)
+//for (i, v) in myDict2 {
+//    print(i.value)
+//}
+//
+//
+//for i in 1...-5 {
+//    print(i)
+//}
+
+var a11 = [Int] (repeating: 0, count: 10)
+//
+//func testt()   {
+//    var temp: Int? = 20
+//    var aG = 20
+//    for i in 1...5 {
+//        guard aG == temp else {
+//
+//
+//        }
+//        var a3: Int?
+//        if a3 == nil {
+//            return
+//        }else{
+//
+//        }
+//
+//
+//    }
+//
+//}
+//testt()
+//
+arr.append(6)
+arr.capacity
+arr[1...3] = [1,2,3]
+print(arr)
+arr.insert(contentsOf: [2,4] , at: 3)
+var revA: [Int] = arr.reversed()
+print(arr)
+
+arr.removeAll(keepingCapacity: false)
+arr.capacity
+var a0: Int?
+if a0 == nil {
+    
+}
+
+var a5: Int? 
+a5 = 5
+print(a5)
+
 for (key , value) in myDict2{
     print("Key : \(key) , Value : \(value)" )
 }
@@ -143,9 +211,9 @@ for (key , value) in myDict2{
 print()
 
 var myArrDict = [
-    "Prime" : [2,3,5,7,11,13] ,
-    "Fibonacci" : [1,1,2,3,5,8] ,
-    "Square" : [1,4,9,16,25]
+    "Prime" : [2, 3, 5, 7, 11, 13] ,
+    "Fibonacci" : [1, 1, 2, 3, 5, 8] ,
+    "Square" : [1, 4, 9, 16, 25]
 ]
 
 for (keyArrDict, arrDict) in myArrDict {
@@ -157,8 +225,43 @@ for (keyArrDict, arrDict) in myArrDict {
 
 print()
   
+switch (1,"a") {
+    
+case (let x, let y) :
+    print("1")
+    fallthrough
+    
+case (0,"b") :
+    print("2")
+    
+case (3,"a") :
+    print("3")
+    
+default:
+    print("5")
+}
+
+//var day = "Monday"
+//switch day {
+//case "Monday":
+//    print("1")
+//case "Tuesday":
+//    print("1")
+//case "Wed":
+//    print("1")
+//case "Thu":
+//    print("1")
+//case "Fri":
+//    print("1")
+//case "Sat":
+//    print("1")
+//case "Sun":
+//    print("1")
+//
+//}
+
 var forWhile:Int = 0
-while(forWhile <= 9){
+while(forWhile <= 9) {
     print(forWhile)
     forWhile += 1
 }
@@ -167,8 +270,10 @@ var rpWhile = 0
 repeat{
     print(rpWhile)
     rpWhile += 1
-}while(rpWhile<10)
+} while(rpWhile<10)
 
+//var a9: Int?
+//print(a9!)
 print()
 
 var total1 = 0
@@ -230,8 +335,8 @@ print(stringMyString)
 print(stringMyString[stringMyString.startIndex]   )
 print(stringMyString[  stringMyString.index(after: stringMyString.startIndex) ]  )
 print( stringMyString[stringMyString.index(stringMyString.startIndex , offsetBy: 2)] )
-
-for index in stringMyString.indices{
+print(stringMyString.indices)
+for index in stringMyString.indices {
     print(stringMyString[index])
 }
 
@@ -240,49 +345,3 @@ print(stringMyString)
 
 stringMyString.insert(contentsOf: "Insert ", at: stringMyString.startIndex )
 print(stringMyString)
-
-
-let greeting1 = "Hello, world!"
-let index1 = greeting1.firstIndex(of: ",") ?? greeting1.endIndex
-let beginning = greeting1[..<index1]
-
-<<<<<<< HEAD
-var myarrrrr : [Int] = []
-
-var exOptionalBinding:Int?
-
-if let i = exOptionalBinding {
-    print("Optional has some value \(i)")
-}else{
-    print("Optional doesn't have any value ")
-}
-
-
-/*guard let i = exOptionalBinding else {
-    print("Doesn't have any value")
-    
-}
-*/
-
-var shoppingList = ["Eggs", "Milk","Flour" ,"Baking Powder","Chocolate Spread", "Cheese", "Butter"]
-print(shoppingList)
-shoppingList[0...4] = ["ch1" , "ch2"]
-print(shoppingList)
-
-func sum(_ num1:Int? = nil, _ num2:Int? = nil){
-    guard let num1 = num1 else{
-        print("Num1 is nil")
-        return
-    }
-    
-    guard let num2 else {
-        print("Num2 is nil")
-        return
-    }
-    
-    print("\(num1) + \(num2) = \(num1+num2)")
-}
-
-sum(5,10)
-=======
->>>>>>> feature/exersice
