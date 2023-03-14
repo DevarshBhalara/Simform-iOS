@@ -181,14 +181,15 @@ class Vehical {
     }
 }
 
-class Car : Vehical {
-    var seat : Int = 4
-    var gear : Int = 0
-    override var desc: String{
+class Car: Vehical {
+    var seat: Int = 4
+    var gear: Int = 0
+    
+    override var desc: String {
         return "This is car"
     }
     
-    override var speed: Int{
+    override var speed: Int {
         didSet{
             gear = Int(speed / 10) + 1
         }
@@ -199,8 +200,8 @@ class Car : Vehical {
     }
     
 }
-class Cycle : Car {
-    var hasBasket : Bool = false
+class Cycle: Car {
+    var hasBasket: Bool = false
     
     
     override func makeNoise() {
@@ -247,8 +248,8 @@ class Person {
     var residence: Residence?
 }
 class Residence{
-    var rooms : [Room] = []
-    var numberOfRooms : Int {
+    var rooms: [Room] = []
+    var numberOfRooms: Int {
         return rooms.count
     }
     subscript(index: Int) -> Room {
@@ -262,7 +263,7 @@ class Residence{
     func printRooms(){
         print("Number of Rooms are \(numberOfRooms)")
     }
-    var address : Address?
+    var address: Address?
 }
 
 
@@ -273,8 +274,8 @@ class Room {
 
 
 class Address{
-    var buildingName : String?
-    var buildingNumber : String?
+    var buildingName: String?
+    var buildingNumber: String?
     var street: String?
     
     func buildingIdentifier() -> String? {
@@ -350,28 +351,29 @@ do{
 
 //
 print()
-enum FileError : Error {
+enum FileError: Error {
     case fileNotFount
     case maxSizeReached
     case readPersmissionOnly
 }
 
 struct FileInfo {
-    var fileName : String
-    var fileSize : Int
-    var readOnly : Int
+    var fileName: String
+    var fileSize: Int
+    var readOnly: Int
 }
 
 class FileAccess {
+    
     var fileInfo = [
-        "StudentList" : FileInfo( fileName : "StudentFile" , fileSize : 27  , readOnly : 1),
-        "TeacherList" : FileInfo( fileName : "TeacherFile" , fileSize : 10  , readOnly : 0),
-        "StudentList2" : FileInfo( fileName : "StudentFile2" , fileSize : 22  , readOnly : 1)
+        "StudentList": FileInfo( fileName : "StudentFile" , fileSize : 27  , readOnly : 1),
+        "TeacherList": FileInfo( fileName : "TeacherFile" , fileSize : 10  , readOnly : 0),
+        "StudentList2": FileInfo( fileName : "StudentFile2" , fileSize : 22  , readOnly : 1)
     ]
     
     var maxFileSize = 2
     
-    func fileope (fileName name : String) throws {
+    func fileope (fileName name: String) throws {
         //print("In fileope")
         
         
@@ -390,16 +392,12 @@ class FileAccess {
         }else {
             throw FileError.fileNotFount
         }
-        
-        
     }
 }
 do{
     //print("In Do")
     var file = FileAccess()
     try file.fileope(fileName: "StudentList")
-    
-    
     
 }catch FileError.fileNotFount {
     print("Invalid file")
@@ -408,6 +406,8 @@ do{
 }catch FileError.readPersmissionOnly {
     print("File can't View Due to security")
 }
+
+
 //nested type
 class Cricketer {
     var profile = Profile()
@@ -445,20 +445,20 @@ print(obj2)
 
 //type casting
 class PlayerCricketType {
-    var name : String
+    var name: String
     init(name: String) {
         self.name = name
     }
 }
-class Batsman : PlayerCricketType{
-    var batType : String
-    init(battype: String , name : String){
+class Batsman: PlayerCricketType{
+    var batType: String
+    init(battype: String, name: String){
         self.batType = battype
         super.init(name: name)
     }
 }
-class Bowler : PlayerCricketType{
-    var bolType : String
+class Bowler: PlayerCricketType{
+    var bolType: String
     init(boltype: String , name : String){
         self.bolType = boltype
         super.init(name: name)
@@ -486,7 +486,7 @@ print(batCount)
 print(bolCount)
 
 for item in arr {
-    if let name =   item as? Batsman{
+    if let name = item as? Batsman{
         print("\(name.batType) \(name.name)")
     } else if let name =   item as? Bowler{
         print("\(name.bolType) \(name.name)")
@@ -497,8 +497,8 @@ for item in arr {
 print()
 //weak unowned
 class Person1 {
-    var name:String
-    var job : Job?
+    var name: String
+    var job: Job?
     
     init(name: String){
         print("Init of Person1")
@@ -519,7 +519,7 @@ class Job {
     var jobDesc: String
     weak var person : Person1?
     
-    init(jobDesc : String){
+    init(jobDesc: String){
         print("Init of Job")
         self.jobDesc = jobDesc
     }
@@ -541,17 +541,17 @@ if (1 == 1)
 print()
 // protocol
 protocol SeriesProtocol {
-    var name : String { get }
-    var seasonCount : Int { get }
-    var rating : Float { get }
-    var review : String? { get }
+    var name: String { get }
+    var seasonCount: Int { get }
+    var rating: Float { get }
+    var review: String? { get }
     
-    init(name: String , seasonCount : Int , rating : Float) //need to write required in Class when we use this init()
+    init(name: String, seasonCount : Int, rating : Float) //need to write required in Class when we use this init()
     mutating func giveReview(reviewFromUser : String) -> () // need to write mutating keyword when we are using struct, in class don't need mutating
     func displayDetails() -> ()
 }
 
-struct SeriesCheck : SeriesProtocol {
+struct SeriesCheck: SeriesProtocol {
     var name: String
     var seasonCount: Int
     var rating: Float
@@ -559,7 +559,7 @@ struct SeriesCheck : SeriesProtocol {
     var seriesType:SeriesType?
     
     
-    init(name: String , seasonCount : Int , rating : Float) {
+    init(name: String, seasonCount : Int, rating : Float) {
         self.name = name
         self.seasonCount = seasonCount
         self.rating = rating
@@ -581,7 +581,7 @@ print()
 
 //extension
 extension SeriesProtocol {
-    func isGood(seasonCount : Int, rating : Float) -> (){
+    func isGood(seasonCount: Int, rating: Float) -> (){
         if seasonCount > 3 && rating >= 8 {
             print("worth to waste time")
         }else {
@@ -593,7 +593,7 @@ extension SeriesProtocol {
 
 extension SeriesCheck {
     
-    init(name: String , seasonCount : Int , rating : Float , type:SeriesCheck.SeriesType) {
+    init(name: String, seasonCount : Int, rating : Float, type:SeriesCheck.SeriesType) {
         self.name = name
         self.seasonCount = seasonCount
         self.rating = rating
@@ -601,7 +601,7 @@ extension SeriesCheck {
     }
     
     struct CastName {
-        var castName : [String]
+        var castName: [String]
         
         init(castName: [String]) {
             self.castName = castName
@@ -621,7 +621,6 @@ extension SeriesCheck {
         case No_Type_Available
         
     }
-    
     
     func getSeriesType() -> SeriesType {
         if let a = self.seriesType {
@@ -644,9 +643,9 @@ objSeries2.displayDetails()
 
 
 class Series2 {
-    var cast : [String]
-    var details : SeriesProtocol
-    init(cast : [String] , detai : SeriesProtocol){
+    var cast: [String]
+    var details: SeriesProtocol
+    init(cast: [String], detai: SeriesProtocol){
         self.cast = cast
         self.details = detai
     }
@@ -685,11 +684,13 @@ protocol SomeProtocol {
 
 
 class SomeSuperClass {
-    var nameS : String
-    init(name : String) {
+    var nameS: String
+    
+    init(name: String) {
         nameS = name
         print("Init of super class")
     }
+    
     init(){
         nameS = " "
         print("Empty init")
@@ -715,14 +716,14 @@ var objSubClass = SomeSubClass(name: "hh")
 print()
 
 
-
-
 //optional chaining
 class Chaining {
     var str: Str? = Str()
+    
     init?(_ flag: Bool) {
         if !flag { return nil }
     }
+    
     struct Str {
         var arr: [Int]? = [1, 2, 3]
     }
@@ -737,16 +738,20 @@ protocol RandomNumberGenerator {
 }
 
 class LinearCongruentialGenerator: RandomNumberGenerator {
+    
     var lastRandom = 42.0
     let m = 139968.0
     let a = 3877.0
     let c = 29573.0
+    
     func random() -> Double {
         lastRandom = ((lastRandom * a + c)
             .truncatingRemainder(dividingBy:m))
         return lastRandom / m
     }
+    
 }
+
 let generator = LinearCongruentialGenerator()
 print("Here's a random number: \(generator.random())")
 print("And another one: \(generator.random())")
@@ -790,7 +795,7 @@ protocol CalculatorProtocol {
     func div(calVar: CalculatorVariable) -> Int
 }
 class Calculator{
-    var delegate : CalculatorProtocol?
+    var delegate: CalculatorProtocol?
     
     func calculatePerform(calVar: CalculatorVariable) {
         var operation = calVar.Operation
@@ -803,7 +808,7 @@ class Calculator{
             }
             print(a)
             
-        case .Subtraction :
+        case .Subtraction:
             guard let a = delegate?.sub(calVar: calVar) else {
                 return
             }
@@ -822,7 +827,7 @@ class Calculator{
     }
 }
 
-class CalcultorPerform : CalculatorProtocol {
+class CalcultorPerform: CalculatorProtocol {
     func add(calVar: CalculatorVariable) -> Int {
         return calVar.num1 + calVar.num2
     }
@@ -845,29 +850,36 @@ objCalculator.calculatePerform(calVar: CalculatorVariable(num1: 50 , num2: 10, O
 
 
 struct Cookie {
+    
     var size:Int = 5
     var hasChocolateChips:Bool = false
+    
 }
 
 protocol BakeryDelegate {
+    
     func cookieWasBaked(_ cookie: Cookie)
     func preferredCookieSize() -> Int
+    
 }
 
 
 
 class Bakery{
-    var delegate:BakeryDelegate?
+    var delegate: BakeryDelegate?
     
-    func makeCookie(){
+    func makeCookie() {
         var cookie = Cookie()
         cookie.size = delegate?.preferredCookieSize() ?? 6
         cookie.hasChocolateChips = true
         
         delegate?.cookieWasBaked(cookie)
     }
+    
 }
+
 class CookieShop: BakeryDelegate{
+    
     func cookieWasBaked(_ cookie: Cookie){
         print("cookie was baked, with size \(cookie.size)")
     }
@@ -875,20 +887,19 @@ class CookieShop: BakeryDelegate{
     func preferredCookieSize() -> Int{
         return 12
     }
+    
 }
 
 let shop = CookieShop()
-
 let bakery = Bakery()
 bakery.delegate = shop
-
 bakery.makeCookie()
-
 
 enum Marks {
 
     case gpa(Double, Double, Double)
     case grade(String, String, String)
+    
 }
 
 

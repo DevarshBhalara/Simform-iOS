@@ -1,7 +1,19 @@
 //: [Previous](@previous)
 
 import Foundation
-/**1**/
+
+/**1
+ You are working on a smart-fridge. The smart-fridge knows how old the eggs and bacon in it are. You know that eggs spoil after 3 weeks (21 days) and bacon after one week (7 days).
+ Given baconAge and eggsAge(in days) determine if you can cook bacon and eggs or what ingredients you need to throw out.
+ If you can cook bacon and eggs print you can cook bacon and eggs.
+ If you need to throw out any ingredients for each one print a line with the text throw out <ingredient> (where <ingredient> is bacon or eggs) in any order.
+
+ Input:
+ var baconAge = 3
+ var eggsAge = 2
+ Output:
+ you can cook bacon and eggs   **/
+
 class Breakfast {
     var baconAge = 3
     var eggsAge = 2
@@ -23,7 +35,15 @@ class Breakfast {
 var objBreakFast = Breakfast()
 objBreakFast.check()
 
-/**2**/
+/**2
+ You are given a year, determine if it’s a leap year. A leap year is a year containing an extra day. It has 366 days instead of the normal 365 days. The extra day is added in February, which has 29 days instead of the normal 28 days. Leap years occur every 4 years. 2012 was a leap year and 2016 will also be a leap year.
+ The above rule is valid except that every 100 years special rules apply. Years that are divisible by 100 are not leap years if they are not also divisible by 400. For example 1900 was not a leap year, but 2000 was. Print Leap year! or Not a leap year! depending on the case.
+
+ Input:
+ var year = 2000
+ Output:
+ Leap year!
+ **/
 
 func checkLeapYear(year: Int) -> () {
     if year % 400 == 0 && year % 100 == 0 {
@@ -40,7 +60,22 @@ func checkLeapYear(year: Int) -> () {
 checkLeapYear(year: 2016)
 
 
-/**3**/
+/**3
+ You are working on a videogame where the character has a certain number of hitpoints(HP) ranging from 0 to 100.
+  100 represents full health
+  0 represents dead.
+ You want to add regenerating health to the game using the following rules:
+ 
+ HP always regenerates up to numbers of the form X0 (75 -> 80 , 32 -> 40 …)
+ When HP is below 20 it regenerates up to 20 (13 -> 20, 5 -> 20, …)
+ If the character has 0 HP then he doesn’t regenerate life (he’s dead)
+ Given the current hp of the character stored in a variable hp print the hp the player will have after regenerating life.
+
+ Input:
+ var hp = 60
+ Output:
+ 60
+ **/
 
 func regenarateHP(hp: Int) -> Int{
     if hp > 20 {
@@ -60,7 +95,20 @@ func regenarateHP(hp: Int) -> Int{
 print(regenarateHP(hp: 60))
 
 
-/**4**/
+/**4
+ You are given three grades obtained by 3 students in a class stored in variables grade1, grade2, grade3 of typeDouble.
+ You are also given your grade in the class stored in a variable yourGrade of type Double.
+ Print above average if your grade is greater than the class average or below average” otherwise.
+  Note: the average of the class includes your grade.
+
+ Input:
+ var grade1 = 7.0
+ var grade2 = 9.0
+ var grade3 = 5.0
+ var yourGrade = 8.0
+ Output:
+ "above average"
+ **/
 
 class Grade{
     var grade1: Double = 7.0
@@ -80,7 +128,17 @@ class Grade{
 var objGrade = Grade()
 objGrade.calcAvearge()
 
-/***/
+/**5
+ You have the cost of a meal at a restaurant stored in a variable mealCost of type Double.
+ You would like to leave a tip of a certain percentage. The percentage is stored in a variable tip of type Int.
+ Print the total cost of the meal.
+
+ Input:
+ var mealCost:Double = 3.5
+ var tip:Int = 20
+ Output:
+ 4.2
+ */
 
 var mealCost: Double = 3.5
 var tip: Int = 20
@@ -201,7 +259,7 @@ objBatsman.printDetail()
  */
 
 class FindPower{
-    var value : Int
+    var value: Int
     init(value: Int){
         self.value = value
     }
@@ -342,8 +400,6 @@ class Example{
         self.a = "Hello"
     }
     
-    
-    
 }
 let example1 = Example()
 example1.a = "Hello"
@@ -359,6 +415,7 @@ print(  )
  **/
 
 struct Work{
+    
     var workLocation: String
     var workHours: Int
     var projectName: [String]
@@ -371,7 +428,9 @@ struct Work{
             print($0)
         }
     }
+    
 }
+
 var aaa = Work(workLocation: "Ahmedabad", workHours: 8, projectName: ["healt app" , "Chat application"])
 aaa.printDetails()
 
@@ -379,6 +438,7 @@ print()
 /**Create a structure example which demonstrates use of initializer in structures.**/
 
 struct Student2{
+    
     var name: String
     var collegeName: String
     var department: String
@@ -388,6 +448,7 @@ struct Student2{
         self.collegeName = collegeName
         self.department = department
     }
+    
 }
 
 var objStudent3 = Student2(Name: "Devarsh", CollegeName: "Marwadi", Department: "CE")
@@ -399,6 +460,7 @@ print()
  */
 
 struct Demo{
+    
     var name: String
     var hobby: [String]
     
@@ -411,6 +473,7 @@ struct Demo{
         self.name = "Devarsh"
         self.hobby = ["Cricket" , "music"]
     }
+    
 }
 var objDemo = Demo()
 print(objDemo.name)
@@ -481,6 +544,7 @@ objArr.forEach{
 }
 
 print()
+
 /**Perform same example given in class question no 10 and check output using structure. Try to find difference between these two outputs and try to figure out the reason for that output.
  
  class 10 :
@@ -498,6 +562,7 @@ print()
  **/
 
 struct Example2{
+    
     var a: String
     
     init(a: String){
