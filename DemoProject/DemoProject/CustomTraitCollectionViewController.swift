@@ -9,16 +9,7 @@ import UIKit
 
 class CustomTraitCollectionViewController: UIViewController {
     
-    override var traitCollection: UITraitCollection {
-        if UIDevice.current.userInterfaceIdiom == .Pad && UIDevice.current.orientation.isPortrait.boolVal {
-            return UITraitCollection(traitsFrom:
-                                        [UITraitCollection(horizontalSizeClass: .compact),
-                                        [UITraitCollection(verticalSizeClass: .regular)])
-        }
-                                         return super.traitCollection
-    }
-        
-    }
+  
 
     
     override func viewDidLoad() {
@@ -28,7 +19,16 @@ class CustomTraitCollectionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+//    override var traitCollection: UITraitCollection {
+//        if UIDevice.current.userInterfaceIdiom == .Pad && UIDevice.current.orientation.isPortrait. {
+//            return UITraitCollection(traitsFrom:
+//                                        [UITraitCollection(horizontalSizeClass: .compact),
+//                                        [UITraitCollection(verticalSizeClass: .regular)])
+//        }
+//                                         return super.traitCollection
+//    }
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -39,4 +39,4 @@ class CustomTraitCollectionViewController: UIViewController {
     }
     */
 
-}
+
