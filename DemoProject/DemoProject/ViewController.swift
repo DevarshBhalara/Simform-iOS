@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         debugPrint("load View called")
         super.loadView()
         creatlabel()
+        
+        debugPrint("")
     }
     
     func creatlabel(){
