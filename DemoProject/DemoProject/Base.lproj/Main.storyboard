@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VH6-XS-Iuk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sB2-QF-mNr">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -989,7 +989,7 @@ example of compression resistance priority
             <objects>
                 <viewController id="sB2-QF-mNr" customClass="ViewController" customModule="DemoProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2JF-N9-zKP">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bzn-X4-buI">
@@ -1083,11 +1083,10 @@ example of compression resistance priority
                             </mask>
                         </variation>
                     </view>
-                    <size key="freeformSize" width="736" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9I-FJ-Buv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-913" y="-1960"/>
+            <point key="canvasLocation" x="-790" y="-2039"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Yxj-l5-6R0">

@@ -15,6 +15,12 @@
 		235980D529A49D0C009E8C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235980D429A49D0C009E8C5D /* Assets.xcassets */; };
 		235980D829A49D0C009E8C5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235980D629A49D0C009E8C5D /* LaunchScreen.storyboard */; };
 		235980E029A49FAB009E8C5D /* Storyboard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235980DF29A49FAB009E8C5D /* Storyboard2.storyboard */; };
+		2380873E29E56B5B004D9AB3 /* UISegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380873D29E56B5B004D9AB3 /* UISegmentViewController.swift */; };
+		2380874029E57881004D9AB3 /* UIStepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380873F29E57881004D9AB3 /* UIStepperViewController.swift */; };
+		2380874229E593A0004D9AB3 /* UISegmentCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380874129E593A0004D9AB3 /* UISegmentCustom.swift */; };
+		23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF329E5277F00F3748D /* UISliderViewController.swift */; };
+		23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */; };
+		23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */; };
 		23C6D9FA29DD52AE003E9B72 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C6D9F929DD52AE003E9B72 /* Register.storyboard */; };
 		23FCACFA29E3CEAF00623264 /* UiComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FCACF929E3CEAF00623264 /* UiComponents.storyboard */; };
 		23FCACFC29E3D98A00623264 /* UILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCACFB29E3D98A00623264 /* UILabelViewController.swift */; };
@@ -38,7 +44,13 @@
 		235980D729A49D0C009E8C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		235980D929A49D0C009E8C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		235980DF29A49FAB009E8C5D /* Storyboard2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard2.storyboard; sourceTree = "<group>"; };
+		2380873D29E56B5B004D9AB3 /* UISegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentViewController.swift; sourceTree = "<group>"; };
+		2380873F29E57881004D9AB3 /* UIStepperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepperViewController.swift; sourceTree = "<group>"; };
+		2380874129E593A0004D9AB3 /* UISegmentCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentCustom.swift; sourceTree = "<group>"; };
 		23A2520929A5D1600042B1D2 /* first_playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = first_playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		23B31AF329E5277F00F3748D /* UISliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderViewController.swift; sourceTree = "<group>"; };
+		23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressBarViewController.swift; sourceTree = "<group>"; };
+		23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControlViewController.swift; sourceTree = "<group>"; };
 		23C6D9F929DD52AE003E9B72 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		23FCACF929E3CEAF00623264 /* UiComponents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UiComponents.storyboard; sourceTree = "<group>"; };
 		23FCACFB29E3D98A00623264 /* UILabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +113,12 @@
 				23FCAD0529E415AB00623264 /* UITextViewViewController.swift */,
 				23FCAD0729E41BA600623264 /* UiComponentViewController.swift */,
 				23FCAD0929E4227800623264 /* UISwitchViewController.swift */,
+				23B31AF329E5277F00F3748D /* UISliderViewController.swift */,
+				23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */,
+				23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */,
+				2380873D29E56B5B004D9AB3 /* UISegmentViewController.swift */,
+				2380873F29E57881004D9AB3 /* UIStepperViewController.swift */,
+				2380874129E593A0004D9AB3 /* UISegmentCustom.swift */,
 			);
 			path = DemoProject;
 			sourceTree = "<group>";
@@ -179,14 +197,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2380874029E57881004D9AB3 /* UIStepperViewController.swift in Sources */,
 				235980D029A49D0B009E8C5D /* ViewController.swift in Sources */,
+				23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */,
 				23FCAD0829E41BA600623264 /* UiComponentViewController.swift in Sources */,
 				23FCAD0229E4043000623264 /* UiTextFieldPadding.swift in Sources */,
 				235980CC29A49D0B009E8C5D /* AppDelegate.swift in Sources */,
+				2380874229E593A0004D9AB3 /* UISegmentCustom.swift in Sources */,
+				23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */,
 				2327A44429DC585B0055D904 /* CustomTraitCollectionViewController.swift in Sources */,
 				23FCAD0629E415AB00623264 /* UITextViewViewController.swift in Sources */,
+				2380873E29E56B5B004D9AB3 /* UISegmentViewController.swift in Sources */,
 				23FCACFC29E3D98A00623264 /* UILabelViewController.swift in Sources */,
 				23FCAD0029E4021600623264 /* UiTextFieldViewController.swift in Sources */,
+				23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */,
 				23FCAD0429E4151F00623264 /* UITextViewExtension.swift in Sources */,
 				23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */,
 				23FCAD0A29E4227800623264 /* UISwitchViewController.swift in Sources */,

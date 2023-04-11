@@ -11,6 +11,7 @@ class UiTextFieldViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfCapitalization: UiTextFieldPadding!
     @IBOutlet weak var tfJustText: UiTextFieldPadding!
     
@@ -19,10 +20,27 @@ class UiTextFieldViewController: UIViewController, UITextFieldDelegate {
         print(tfCapitalization.padding)
         print(tfJustText.text ?? "no text")
         tfJustText.delegate = self
-        // Do any additional setup after loading the view.
+   
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
+    
+    
+    
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue { self.view.frame.origin.y = 0 - keyboardSize.height
+            
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        if let _ = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue { self.view.frame.origin.y = 0 }
+    }
+    
+    
     
     //UiTextField Delegated method
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
