@@ -24,7 +24,8 @@ class UIStepperViewController: UIViewController {
         lblShowValue.text = String(stepperFirst.value)
         lblNotAuto.text = String(stepperNotAuto.value)
         
-        stepperNotAutoNotContinues.setIncrementImage(UIImage(named: "burger"), for: .normal)
+        stepperNotAutoNotContinues.setIncrementImage(UIImage(systemName: "sun.min"), for: .normal)
+        stepperNotAutoNotContinues.setDecrementImage(UIImage(systemName: "sun.max"), for: .normal)
         // Do any additional setup after loading the view.
     }
     

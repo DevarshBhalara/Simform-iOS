@@ -836,7 +836,7 @@ example of compression resistance priority
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zER-Bu-J79" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2645" y="-6287"/>
+            <point key="canvasLocation" x="-2396" y="-6258"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="W65-IH-vNU">

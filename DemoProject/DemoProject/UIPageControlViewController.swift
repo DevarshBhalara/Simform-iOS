@@ -34,6 +34,8 @@ class UIPageControlViewController: UIViewController {
         view2.isHidden = true
         view3.isHidden = true
         
+        pageControltwo.preferredCurrentPageIndicatorImage = UIImage(systemName: "sun.min")
+
        
         
         pageControlThree.pageIndicatorTintColor = UIColor.blue
@@ -45,17 +47,21 @@ class UIPageControlViewController: UIViewController {
     }
     
     @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
-        
-        
+//
+       
+//        sender.setIndicatorImage(UIImage(named: "icon"), forPage: sender.currentPage)
+//
         print(sender.currentPage)
         print(sender.direction.rawValue)
      
         if (sender.currentPage == 0) {
+            
             print("inside 0")
             view1.isHidden = false
             view2.isHidden = true
             view3.isHidden = true
         } else if (sender.currentPage == 1) {
+            
             print("inside 1")
             view1.isHidden = true
             view2.isHidden = false

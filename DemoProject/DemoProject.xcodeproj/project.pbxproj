@@ -18,6 +18,27 @@
 		2380873E29E56B5B004D9AB3 /* UISegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380873D29E56B5B004D9AB3 /* UISegmentViewController.swift */; };
 		2380874029E57881004D9AB3 /* UIStepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380873F29E57881004D9AB3 /* UIStepperViewController.swift */; };
 		2380874229E593A0004D9AB3 /* UISegmentCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380874129E593A0004D9AB3 /* UISegmentCustom.swift */; };
+		238087DB29E6D3C900CBDCD3 /* UITableAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238087DA29E6D3C900CBDCD3 /* UITableAnimalViewController.swift */; };
+		238087DE29E6D72800CBDCD3 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238087DC29E6D72800CBDCD3 /* AnimalTableViewCell.swift */; };
+		238087DF29E6D72800CBDCD3 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238087DD29E6D72800CBDCD3 /* AnimalTableViewCell.xib */; };
+		238087E129E6D86B00CBDCD3 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238087E029E6D86B00CBDCD3 /* AnimalModel.swift */; };
+		238087E329E6E9BC00CBDCD3 /* ViewControllerTableDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238087E229E6E9BC00CBDCD3 /* ViewControllerTableDemo.swift */; };
+		239F127429E68493005313AA /* UiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F127329E68493005313AA /* UiTableViewController.swift */; };
+		239F127629E684F2005313AA /* UITableContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F127529E684F2005313AA /* UITableContentViewController.swift */; };
+		239F127929E688B6005313AA /* IndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F127729E688B6005313AA /* IndexTableViewCell.swift */; };
+		239F127A29E688B6005313AA /* IndexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239F127829E688B6005313AA /* IndexTableViewCell.xib */; };
+		239F127D29E69CD5005313AA /* EvenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F127B29E69CD5005313AA /* EvenTableViewCell.swift */; };
+		239F127E29E69CD5005313AA /* EvenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239F127C29E69CD5005313AA /* EvenTableViewCell.xib */; };
+		239F128029E6A33F005313AA /* UITableContentViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F127F29E6A33F005313AA /* UITableContentViewController2.swift */; };
+		239F128329E6A386005313AA /* TableViewCellOneFor2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F128129E6A386005313AA /* TableViewCellOneFor2.swift */; };
+		239F128429E6A386005313AA /* TableViewCellOneFor2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239F128229E6A386005313AA /* TableViewCellOneFor2.xib */; };
+		239F128729E6AFD3005313AA /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F128629E6AFD3005313AA /* MovieModel.swift */; };
+		239F128A29E6B0FA005313AA /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F128829E6B0FA005313AA /* MovieTableViewCell.swift */; };
+		239F128B29E6B0FA005313AA /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239F128929E6B0FA005313AA /* MovieTableViewCell.xib */; };
+		239F128D29E6B282005313AA /* UiTableMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F128C29E6B282005313AA /* UiTableMovieViewController.swift */; };
+		239F128F29E6BDCF005313AA /* SeriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F128E29E6BDCF005313AA /* SeriesModel.swift */; };
+		239F129229E6C23A005313AA /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F129029E6C23A005313AA /* SeriesTableViewCell.swift */; };
+		239F129329E6C23A005313AA /* SeriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239F129129E6C23A005313AA /* SeriesTableViewCell.xib */; };
 		23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF329E5277F00F3748D /* UISliderViewController.swift */; };
 		23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */; };
 		23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */; };
@@ -47,6 +68,27 @@
 		2380873D29E56B5B004D9AB3 /* UISegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentViewController.swift; sourceTree = "<group>"; };
 		2380873F29E57881004D9AB3 /* UIStepperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepperViewController.swift; sourceTree = "<group>"; };
 		2380874129E593A0004D9AB3 /* UISegmentCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentCustom.swift; sourceTree = "<group>"; };
+		238087DA29E6D3C900CBDCD3 /* UITableAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableAnimalViewController.swift; sourceTree = "<group>"; };
+		238087DC29E6D72800CBDCD3 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
+		238087DD29E6D72800CBDCD3 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalTableViewCell.xib; sourceTree = "<group>"; };
+		238087E029E6D86B00CBDCD3 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
+		238087E229E6E9BC00CBDCD3 /* ViewControllerTableDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableDemo.swift; sourceTree = "<group>"; };
+		239F127329E68493005313AA /* UiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiTableViewController.swift; sourceTree = "<group>"; };
+		239F127529E684F2005313AA /* UITableContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableContentViewController.swift; sourceTree = "<group>"; };
+		239F127729E688B6005313AA /* IndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexTableViewCell.swift; sourceTree = "<group>"; };
+		239F127829E688B6005313AA /* IndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndexTableViewCell.xib; sourceTree = "<group>"; };
+		239F127B29E69CD5005313AA /* EvenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenTableViewCell.swift; sourceTree = "<group>"; };
+		239F127C29E69CD5005313AA /* EvenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvenTableViewCell.xib; sourceTree = "<group>"; };
+		239F127F29E6A33F005313AA /* UITableContentViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableContentViewController2.swift; sourceTree = "<group>"; };
+		239F128129E6A386005313AA /* TableViewCellOneFor2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellOneFor2.swift; sourceTree = "<group>"; };
+		239F128229E6A386005313AA /* TableViewCellOneFor2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellOneFor2.xib; sourceTree = "<group>"; };
+		239F128629E6AFD3005313AA /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		239F128829E6B0FA005313AA /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		239F128929E6B0FA005313AA /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		239F128C29E6B282005313AA /* UiTableMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiTableMovieViewController.swift; sourceTree = "<group>"; };
+		239F128E29E6BDCF005313AA /* SeriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesModel.swift; sourceTree = "<group>"; };
+		239F129029E6C23A005313AA /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
+		239F129129E6C23A005313AA /* SeriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesTableViewCell.xib; sourceTree = "<group>"; };
 		23A2520929A5D1600042B1D2 /* first_playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = first_playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		23B31AF329E5277F00F3748D /* UISliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderViewController.swift; sourceTree = "<group>"; };
 		23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressBarViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +135,8 @@
 		235980CA29A49D0B009E8C5D /* DemoProject */ = {
 			isa = PBXGroup;
 			children = (
+				239F128529E6AFB8005313AA /* Model */,
+				239F127229E68476005313AA /* cells */,
 				235980CB29A49D0B009E8C5D /* AppDelegate.swift */,
 				235980CD29A49D0B009E8C5D /* SceneDelegate.swift */,
 				235980CF29A49D0B009E8C5D /* ViewController.swift */,
@@ -119,8 +163,43 @@
 				2380873D29E56B5B004D9AB3 /* UISegmentViewController.swift */,
 				2380873F29E57881004D9AB3 /* UIStepperViewController.swift */,
 				2380874129E593A0004D9AB3 /* UISegmentCustom.swift */,
+				239F127329E68493005313AA /* UiTableViewController.swift */,
+				239F127529E684F2005313AA /* UITableContentViewController.swift */,
+				239F127F29E6A33F005313AA /* UITableContentViewController2.swift */,
+				239F128C29E6B282005313AA /* UiTableMovieViewController.swift */,
+				238087DA29E6D3C900CBDCD3 /* UITableAnimalViewController.swift */,
+				238087E229E6E9BC00CBDCD3 /* ViewControllerTableDemo.swift */,
 			);
 			path = DemoProject;
+			sourceTree = "<group>";
+		};
+		239F127229E68476005313AA /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				239F127729E688B6005313AA /* IndexTableViewCell.swift */,
+				239F127829E688B6005313AA /* IndexTableViewCell.xib */,
+				239F127B29E69CD5005313AA /* EvenTableViewCell.swift */,
+				239F127C29E69CD5005313AA /* EvenTableViewCell.xib */,
+				239F128129E6A386005313AA /* TableViewCellOneFor2.swift */,
+				239F128229E6A386005313AA /* TableViewCellOneFor2.xib */,
+				239F128829E6B0FA005313AA /* MovieTableViewCell.swift */,
+				239F128929E6B0FA005313AA /* MovieTableViewCell.xib */,
+				239F129029E6C23A005313AA /* SeriesTableViewCell.swift */,
+				239F129129E6C23A005313AA /* SeriesTableViewCell.xib */,
+				238087DC29E6D72800CBDCD3 /* AnimalTableViewCell.swift */,
+				238087DD29E6D72800CBDCD3 /* AnimalTableViewCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		239F128529E6AFB8005313AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				239F128629E6AFD3005313AA /* MovieModel.swift */,
+				239F128E29E6BDCF005313AA /* SeriesModel.swift */,
+				238087E029E6D86B00CBDCD3 /* AnimalModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,10 +262,16 @@
 			files = (
 				235980E029A49FAB009E8C5D /* Storyboard2.storyboard in Resources */,
 				235980D829A49D0C009E8C5D /* LaunchScreen.storyboard in Resources */,
+				239F128429E6A386005313AA /* TableViewCellOneFor2.xib in Resources */,
 				23FCACFA29E3CEAF00623264 /* UiComponents.storyboard in Resources */,
+				239F129329E6C23A005313AA /* SeriesTableViewCell.xib in Resources */,
+				238087DF29E6D72800CBDCD3 /* AnimalTableViewCell.xib in Resources */,
 				235980D529A49D0C009E8C5D /* Assets.xcassets in Resources */,
 				2339135329DBEE4900505575 /* Main.storyboard in Resources */,
+				239F128B29E6B0FA005313AA /* MovieTableViewCell.xib in Resources */,
+				239F127A29E688B6005313AA /* IndexTableViewCell.xib in Resources */,
 				23C6D9FA29DD52AE003E9B72 /* Register.storyboard in Resources */,
+				239F127E29E69CD5005313AA /* EvenTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				238087DE29E6D72800CBDCD3 /* AnimalTableViewCell.swift in Sources */,
 				2380874029E57881004D9AB3 /* UIStepperViewController.swift in Sources */,
 				235980D029A49D0B009E8C5D /* ViewController.swift in Sources */,
+				239F127929E688B6005313AA /* IndexTableViewCell.swift in Sources */,
+				239F129229E6C23A005313AA /* SeriesTableViewCell.swift in Sources */,
+				239F128329E6A386005313AA /* TableViewCellOneFor2.swift in Sources */,
 				23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */,
 				23FCAD0829E41BA600623264 /* UiComponentViewController.swift in Sources */,
 				23FCAD0229E4043000623264 /* UiTextFieldPadding.swift in Sources */,
@@ -207,14 +296,25 @@
 				23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */,
 				2327A44429DC585B0055D904 /* CustomTraitCollectionViewController.swift in Sources */,
 				23FCAD0629E415AB00623264 /* UITextViewViewController.swift in Sources */,
+				239F128D29E6B282005313AA /* UiTableMovieViewController.swift in Sources */,
+				238087E129E6D86B00CBDCD3 /* AnimalModel.swift in Sources */,
+				239F128A29E6B0FA005313AA /* MovieTableViewCell.swift in Sources */,
+				239F127D29E69CD5005313AA /* EvenTableViewCell.swift in Sources */,
 				2380873E29E56B5B004D9AB3 /* UISegmentViewController.swift in Sources */,
 				23FCACFC29E3D98A00623264 /* UILabelViewController.swift in Sources */,
 				23FCAD0029E4021600623264 /* UiTextFieldViewController.swift in Sources */,
+				239F127629E684F2005313AA /* UITableContentViewController.swift in Sources */,
+				239F128029E6A33F005313AA /* UITableContentViewController2.swift in Sources */,
 				23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */,
 				23FCAD0429E4151F00623264 /* UITextViewExtension.swift in Sources */,
 				23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */,
+				239F127429E68493005313AA /* UiTableViewController.swift in Sources */,
+				239F128F29E6BDCF005313AA /* SeriesModel.swift in Sources */,
+				239F128729E6AFD3005313AA /* MovieModel.swift in Sources */,
 				23FCAD0A29E4227800623264 /* UISwitchViewController.swift in Sources */,
 				235980CE29A49D0B009E8C5D /* SceneDelegate.swift in Sources */,
+				238087DB29E6D3C900CBDCD3 /* UITableAnimalViewController.swift in Sources */,
+				238087E329E6E9BC00CBDCD3 /* ViewControllerTableDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
