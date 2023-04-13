@@ -13,6 +13,7 @@ class UITableContentViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var tblHeaderView: UIView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "IndexTableViewCell", bundle: nil), forCellReuseIdentifier: "IndexTableViewCell")
@@ -99,4 +100,5 @@ extension UITableContentViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
     }
+    
 }

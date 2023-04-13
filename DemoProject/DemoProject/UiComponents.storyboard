@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wmL-Vf-UWx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DBX-4f-idV">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1359,9 +1360,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7o7-4a-Q5Z">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7o7-4a-Q5Z">
                                 <rect key="frame" x="0.0" y="59" width="430" height="839"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="aed-qa-miz" id="3mc-A2-bQF"/>
                                     <outlet property="delegate" destination="aed-qa-miz" id="5tj-Km-bj5"/>
@@ -1547,13 +1547,110 @@
             </objects>
             <point key="canvasLocation" x="5135" y="-1057"/>
         </scene>
+        <!--Table View Color Fruits Controller-->
+        <scene sceneID="PRp-wf-Jrj">
+            <objects>
+                <viewController id="DBX-4f-idV" customClass="TableViewColorFruitsController" customModule="DemoProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TVH-0B-pAw">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jbR-Ti-FVt">
+                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fruits" id="Kvk-q3-Kcm" customClass="FruitTableViewCell" customModule="DemoProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kvk-q3-Kcm" id="Qcx-d6-53q">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vva-4m-hFK">
+                                                    <rect key="frame" x="60" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vva-4m-hFK" firstAttribute="top" secondItem="Qcx-d6-53q" secondAttribute="topMargin" id="EDH-Di-7Pa"/>
+                                                <constraint firstItem="Vva-4m-hFK" firstAttribute="leading" secondItem="Qcx-d6-53q" secondAttribute="leadingMargin" constant="40" id="tTb-Xz-mkG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblFruit" destination="Vva-4m-hFK" id="QmF-5e-GUR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="colors" id="ESc-6h-iWl" customClass="ColorTableViewCell" customModule="DemoProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="93.666667938232422" width="430" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ESc-6h-iWl" id="5nM-qO-SD2">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiB-Ea-5Ky">
+                                                    <rect key="frame" x="60" y="11.333333333333336" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZ7-XF-Bz8">
+                                                    <rect key="frame" x="327.33333333333331" y="11" width="73.666666666666686" height="22"/>
+                                                    <color key="tintColor" name="AccentColor"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button" image="circle" catalog="system"/>
+                                                    <state key="selected" image="button.programmable" catalog="system"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QiB-Ea-5Ky" firstAttribute="leading" secondItem="5nM-qO-SD2" secondAttribute="leadingMargin" constant="40" id="BVA-Bl-gm1"/>
+                                                <constraint firstItem="QiB-Ea-5Ky" firstAttribute="centerY" secondItem="5nM-qO-SD2" secondAttribute="centerY" id="Rn1-R4-cxk"/>
+                                                <constraint firstAttribute="trailing" secondItem="AZ7-XF-Bz8" secondAttribute="trailing" constant="29" id="bjJ-uH-zE0"/>
+                                                <constraint firstItem="AZ7-XF-Bz8" firstAttribute="centerY" secondItem="5nM-qO-SD2" secondAttribute="centerY" id="vd8-2j-CU2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnSelect" destination="AZ7-XF-Bz8" id="Kcs-zE-vLt"/>
+                                            <outlet property="lblColor" destination="QiB-Ea-5Ky" id="I4o-wf-flk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DBX-4f-idV" id="kL5-GB-tcT"/>
+                                    <outlet property="delegate" destination="DBX-4f-idV" id="4ap-43-GCv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yDI-Mc-32m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yDI-Mc-32m" firstAttribute="trailing" secondItem="jbR-Ti-FVt" secondAttribute="trailing" id="Zzj-37-xzT"/>
+                            <constraint firstItem="jbR-Ti-FVt" firstAttribute="leading" secondItem="yDI-Mc-32m" secondAttribute="leading" id="epA-Qm-SPR"/>
+                            <constraint firstItem="jbR-Ti-FVt" firstAttribute="top" secondItem="yDI-Mc-32m" secondAttribute="top" id="lOR-0e-MGa"/>
+                            <constraint firstItem="yDI-Mc-32m" firstAttribute="bottom" secondItem="jbR-Ti-FVt" secondAttribute="bottom" id="vDa-1g-4AP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jbR-Ti-FVt" id="tn9-Pq-VIp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOI-oq-57B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6127" y="-1033"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="button.programmable" catalog="system" width="128" height="123"/>
+        <image name="circle" catalog="system" width="128" height="123"/>
         <image name="facebookLogo" width="128" height="128"/>
         <image name="googleLogo" width="128" height="128"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="sun.min" catalog="system" width="128" height="123"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

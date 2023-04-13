@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2327A44429DC585B0055D904 /* CustomTraitCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327A44329DC585B0055D904 /* CustomTraitCollectionViewController.swift */; };
 		2339135329DBEE4900505575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235980D129A49D0B009E8C5D /* Main.storyboard */; };
+		2343370A29E8334F00976581 /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343370929E8334F00976581 /* SecondCollectionViewCell.swift */; };
+		2343370C29E833E800976581 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343370B29E833E800976581 /* SecondViewController.swift */; };
 		235980CC29A49D0B009E8C5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235980CB29A49D0B009E8C5D /* AppDelegate.swift */; };
 		235980CE29A49D0B009E8C5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235980CD29A49D0B009E8C5D /* SceneDelegate.swift */; };
 		235980D029A49D0B009E8C5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235980CF29A49D0B009E8C5D /* ViewController.swift */; };
@@ -43,6 +45,13 @@
 		23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */; };
 		23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */; };
 		23C6D9FA29DD52AE003E9B72 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C6D9F929DD52AE003E9B72 /* Register.storyboard */; };
+		23CB508029E7DB2E0057E0D7 /* AnimalModelStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB507F29E7DB2E0057E0D7 /* AnimalModelStructure.swift */; };
+		23CB508229E7FD540057E0D7 /* TableViewColorFruitsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB508129E7FD540057E0D7 /* TableViewColorFruitsController.swift */; };
+		23CB508429E804CF0057E0D7 /* FruitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB508329E804CF0057E0D7 /* FruitTableViewCell.swift */; };
+		23CB508829E80F7A0057E0D7 /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB508729E80F7A0057E0D7 /* ColorTableViewCell.swift */; };
+		23CB508B29E8243A0057E0D7 /* UiComponents2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CB508A29E8243A0057E0D7 /* UiComponents2.storyboard */; };
+		23CB508D29E825400057E0D7 /* UICollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB508C29E825400057E0D7 /* UICollectionViewController.swift */; };
+		23CB509029E826D10057E0D7 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB508F29E826D10057E0D7 /* FirstCollectionViewCell.swift */; };
 		23FCACFA29E3CEAF00623264 /* UiComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FCACF929E3CEAF00623264 /* UiComponents.storyboard */; };
 		23FCACFC29E3D98A00623264 /* UILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCACFB29E3D98A00623264 /* UILabelViewController.swift */; };
 		23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCACFD29E3E85900623264 /* UIButtonViewController.swift */; };
@@ -56,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		2327A44329DC585B0055D904 /* CustomTraitCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTraitCollectionViewController.swift; sourceTree = "<group>"; };
+		2343370929E8334F00976581 /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
+		2343370B29E833E800976581 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		235980C829A49D0B009E8C5D /* DemoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		235980CB29A49D0B009E8C5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		235980CD29A49D0B009E8C5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +105,13 @@
 		23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressBarViewController.swift; sourceTree = "<group>"; };
 		23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControlViewController.swift; sourceTree = "<group>"; };
 		23C6D9F929DD52AE003E9B72 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		23CB507F29E7DB2E0057E0D7 /* AnimalModelStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModelStructure.swift; sourceTree = "<group>"; };
+		23CB508129E7FD540057E0D7 /* TableViewColorFruitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewColorFruitsController.swift; sourceTree = "<group>"; };
+		23CB508329E804CF0057E0D7 /* FruitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitTableViewCell.swift; sourceTree = "<group>"; };
+		23CB508729E80F7A0057E0D7 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
+		23CB508A29E8243A0057E0D7 /* UiComponents2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UiComponents2.storyboard; sourceTree = "<group>"; };
+		23CB508C29E825400057E0D7 /* UICollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewController.swift; sourceTree = "<group>"; };
+		23CB508F29E826D10057E0D7 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		23FCACF929E3CEAF00623264 /* UiComponents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UiComponents.storyboard; sourceTree = "<group>"; };
 		23FCACFB29E3D98A00623264 /* UILabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelViewController.swift; sourceTree = "<group>"; };
 		23FCACFD29E3E85900623264 /* UIButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +153,7 @@
 		235980CA29A49D0B009E8C5D /* DemoProject */ = {
 			isa = PBXGroup;
 			children = (
+				23CB508929E823350057E0D7 /* CollectionView */,
 				239F128529E6AFB8005313AA /* Model */,
 				239F127229E68476005313AA /* cells */,
 				235980CB29A49D0B009E8C5D /* AppDelegate.swift */,
@@ -169,6 +188,8 @@
 				239F128C29E6B282005313AA /* UiTableMovieViewController.swift */,
 				238087DA29E6D3C900CBDCD3 /* UITableAnimalViewController.swift */,
 				238087E229E6E9BC00CBDCD3 /* ViewControllerTableDemo.swift */,
+				23CB508129E7FD540057E0D7 /* TableViewColorFruitsController.swift */,
+				23CB508A29E8243A0057E0D7 /* UiComponents2.storyboard */,
 			);
 			path = DemoProject;
 			sourceTree = "<group>";
@@ -188,6 +209,8 @@
 				239F129129E6C23A005313AA /* SeriesTableViewCell.xib */,
 				238087DC29E6D72800CBDCD3 /* AnimalTableViewCell.swift */,
 				238087DD29E6D72800CBDCD3 /* AnimalTableViewCell.xib */,
+				23CB508329E804CF0057E0D7 /* FruitTableViewCell.swift */,
+				23CB508729E80F7A0057E0D7 /* ColorTableViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -198,8 +221,28 @@
 				239F128629E6AFD3005313AA /* MovieModel.swift */,
 				239F128E29E6BDCF005313AA /* SeriesModel.swift */,
 				238087E029E6D86B00CBDCD3 /* AnimalModel.swift */,
+				23CB507F29E7DB2E0057E0D7 /* AnimalModelStructure.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		23CB508929E823350057E0D7 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				23CB508E29E826B30057E0D7 /* Cell */,
+				23CB508C29E825400057E0D7 /* UICollectionViewController.swift */,
+				2343370B29E833E800976581 /* SecondViewController.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		23CB508E29E826B30057E0D7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				23CB508F29E826D10057E0D7 /* FirstCollectionViewCell.swift */,
+				2343370929E8334F00976581 /* SecondCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +312,7 @@
 				235980D529A49D0C009E8C5D /* Assets.xcassets in Resources */,
 				2339135329DBEE4900505575 /* Main.storyboard in Resources */,
 				239F128B29E6B0FA005313AA /* MovieTableViewCell.xib in Resources */,
+				23CB508B29E8243A0057E0D7 /* UiComponents2.storyboard in Resources */,
 				239F127A29E688B6005313AA /* IndexTableViewCell.xib in Resources */,
 				23C6D9FA29DD52AE003E9B72 /* Register.storyboard in Resources */,
 				239F127E29E69CD5005313AA /* EvenTableViewCell.xib in Resources */,
@@ -286,25 +330,32 @@
 				2380874029E57881004D9AB3 /* UIStepperViewController.swift in Sources */,
 				235980D029A49D0B009E8C5D /* ViewController.swift in Sources */,
 				239F127929E688B6005313AA /* IndexTableViewCell.swift in Sources */,
+				23CB508D29E825400057E0D7 /* UICollectionViewController.swift in Sources */,
+				23CB508429E804CF0057E0D7 /* FruitTableViewCell.swift in Sources */,
+				2343370C29E833E800976581 /* SecondViewController.swift in Sources */,
 				239F129229E6C23A005313AA /* SeriesTableViewCell.swift in Sources */,
 				239F128329E6A386005313AA /* TableViewCellOneFor2.swift in Sources */,
 				23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */,
 				23FCAD0829E41BA600623264 /* UiComponentViewController.swift in Sources */,
 				23FCAD0229E4043000623264 /* UiTextFieldPadding.swift in Sources */,
 				235980CC29A49D0B009E8C5D /* AppDelegate.swift in Sources */,
+				2343370A29E8334F00976581 /* SecondCollectionViewCell.swift in Sources */,
 				2380874229E593A0004D9AB3 /* UISegmentCustom.swift in Sources */,
 				23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */,
 				2327A44429DC585B0055D904 /* CustomTraitCollectionViewController.swift in Sources */,
 				23FCAD0629E415AB00623264 /* UITextViewViewController.swift in Sources */,
 				239F128D29E6B282005313AA /* UiTableMovieViewController.swift in Sources */,
+				23CB508029E7DB2E0057E0D7 /* AnimalModelStructure.swift in Sources */,
 				238087E129E6D86B00CBDCD3 /* AnimalModel.swift in Sources */,
 				239F128A29E6B0FA005313AA /* MovieTableViewCell.swift in Sources */,
 				239F127D29E69CD5005313AA /* EvenTableViewCell.swift in Sources */,
 				2380873E29E56B5B004D9AB3 /* UISegmentViewController.swift in Sources */,
 				23FCACFC29E3D98A00623264 /* UILabelViewController.swift in Sources */,
 				23FCAD0029E4021600623264 /* UiTextFieldViewController.swift in Sources */,
+				23CB509029E826D10057E0D7 /* FirstCollectionViewCell.swift in Sources */,
 				239F127629E684F2005313AA /* UITableContentViewController.swift in Sources */,
 				239F128029E6A33F005313AA /* UITableContentViewController2.swift in Sources */,
+				23CB508229E7FD540057E0D7 /* TableViewColorFruitsController.swift in Sources */,
 				23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */,
 				23FCAD0429E4151F00623264 /* UITextViewExtension.swift in Sources */,
 				23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */,
@@ -313,6 +364,7 @@
 				239F128729E6AFD3005313AA /* MovieModel.swift in Sources */,
 				23FCAD0A29E4227800623264 /* UISwitchViewController.swift in Sources */,
 				235980CE29A49D0B009E8C5D /* SceneDelegate.swift in Sources */,
+				23CB508829E80F7A0057E0D7 /* ColorTableViewCell.swift in Sources */,
 				238087DB29E6D3C900CBDCD3 /* UITableAnimalViewController.swift in Sources */,
 				238087E329E6E9BC00CBDCD3 /* ViewControllerTableDemo.swift in Sources */,
 			);

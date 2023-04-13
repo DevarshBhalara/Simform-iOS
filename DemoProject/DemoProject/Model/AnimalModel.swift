@@ -6,31 +6,43 @@
 //
 
 import Foundation
-class AnimalModel: NSObject {
+struct AnimalModel {
     var animalImage: String?
     var animalName: String?
     
-    override init() {
-        super.init()
-    }
-    
-    init(_ img: String, _ name: String) {
-        animalName = name
-        animalImage = img
-    }
-    
+  
     static func getAllAnimal() -> [AnimalModel] {
         return [
-            AnimalModel("aardwolf", "Aardwolf"),
-            AnimalModel("bear", "Bear"),
-            AnimalModel("buffelo", "Buffelo"),
-            AnimalModel("dog", "Dog"),
-            AnimalModel("donkey", "Donkey"),
-            AnimalModel("iguana", "Iguana"),
-            AnimalModel("ivybee", "Ivybee"),
-            AnimalModel("lion", "Lion"),
-            AnimalModel("tiger", "Tiger"),
-            AnimalModel("zibra", "Zibra")
+            AnimalModel(animalImage: "aardwolf", animalName: "Aardwolf"),
+            AnimalModel(animalImage: "bear", animalName: "Bear"),
+            AnimalModel(animalImage: "buffelo", animalName: "Buffelo"),
+            AnimalModel(animalImage: "dog", animalName: "Dog"),
+            AnimalModel(animalImage: "donkey", animalName: "Donkey"),
+            AnimalModel(animalImage: "iguana", animalName: "Iguana"),
+            AnimalModel(animalImage: "ivybee", animalName: "Ivybee"),
+            AnimalModel(animalImage: "lion", animalName: "Lion"),
+            AnimalModel(animalImage: "tiger", animalName: "Tiger"),
+            AnimalModel(animalImage: "zibra", animalName: "Zibra")
         ]
+    }
+    
+    static func getAllAnimalDict() -> [String: [AnimalModel]] {
+        return [
+            "A" : [AnimalModel(animalImage: "aardwolf", animalName: "Aardwolf")],
+            "B" : [AnimalModel(animalImage: "bear", animalName: "Bear"),
+                   AnimalModel(animalImage: "buffelo", animalName: "Buffelo")],
+            "D" : [AnimalModel(animalImage: "dog", animalName: "Dog"),
+                   AnimalModel(animalImage: "donkey", animalName: "Donkey")],
+            "I" : [ AnimalModel(animalImage: "iguana", animalName: "Iguana"),
+                    AnimalModel(animalImage: "ivybee", animalName: "Ivybee"),
+                    AnimalModel(animalImage: "iguana", animalName: "Iguana"),
+                    AnimalModel(animalImage: "ivybee", animalName: "Ivybee"),
+                    AnimalModel(animalImage: "iguana", animalName: "Iguana"),
+                    AnimalModel(animalImage: "ivybee", animalName: "Ivybee")],
+            "L" : [AnimalModel(animalImage: "lion", animalName: "Lion"),],
+            "T" : [AnimalModel(animalImage: "tiger", animalName: "Tiger"),],
+            "Z" : [AnimalModel(animalImage: "zibra", animalName: "Zibra")]
+        ]
+        
     }
 }
