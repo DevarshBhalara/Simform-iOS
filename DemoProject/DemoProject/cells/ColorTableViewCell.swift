@@ -11,10 +11,10 @@ class ColorTableViewCell: UITableViewCell {
 
     @IBOutlet weak var btnSelect: UIButton!
     @IBOutlet weak var lblColor: UILabel!
-    var isSelect: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        print("Awake")
         // Initialization code
     }
 
@@ -22,6 +22,12 @@ class ColorTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func prepareForReuse() {
+        print("Reuse called \(btnSelect.isSelected)")
+        btnSelect.isSelected = false
+      
     }
     
     

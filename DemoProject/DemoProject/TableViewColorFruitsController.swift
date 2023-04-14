@@ -11,18 +11,7 @@ class TableViewColorFruitsController: UIViewController {
     
     var refreshData: UIRefreshControl!
 
-    struct Model {
-        var sectionName: String
-        var data : [String]
-        var isSelect: Bool = false
-        
-        static func getAllData() -> [Model] {
-          return [  Model(sectionName: "Fruits", data: ["Apple", "Banana" , "Mango"]),
-            Model(sectionName: "Colors", data: ["patato", "tomato", "Loki"]) ]
-        }
-    }
-    
-    var objectArr = Model.getAllData()
+    var fruitColorModelArray = FruitColorModel.getAllDataAgain()
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -35,9 +24,10 @@ class TableViewColorFruitsController: UIViewController {
         tableView.alwaysBounceVertical = true
         tableView.bounces = true
         super.viewDidLoad()
-        
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     @objc func loadData() {
@@ -47,18 +37,21 @@ class TableViewColorFruitsController: UIViewController {
 }
 
 extension TableViewColorFruitsController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 91
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return objectArr.count
+        return fruitColorModelArray.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(objectArr[section].data.count)
-        return objectArr[section].data.count
+        print(fruitColorModelArray[section].data?.count ?? 0)
+        return fruitColorModelArray[section].dataAgain?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return objectArr[section].sectionName
+        return fruitColorModelArray[section].sectionName
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,87 +59,72 @@ extension TableViewColorFruitsController: UITableViewDataSource {
         
         switch indexPath.section {
             case 0 :
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "fruits") as? FruitTableViewCell else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "fruits", for: indexPath) as? FruitTableViewCell else {
                     return UITableViewCell()
                     
                 }
-                cell.lblFruit.text = objectArr[indexPath.section].data[indexPath.row]
+            cell.lblFruit.text = fruitColorModelArray[indexPath.section].data?[indexPath.row]
                 return cell
                 
             case 1:
-                guard let colorCell = tableView.dequeueReusableCell(withIdentifier: "colors") as? ColorTableViewCell else {
+                guard let colorCell = tableView.dequeueReusableCell(withIdentifier: "colors", for: indexPath) as? ColorTableViewCell else {
                     return UITableViewCell()
                 }
             
-                colorCell.lblColor.text = objectArr[indexPath.section].data[indexPath.row]
+            colorCell.lblColor.text = fruitColorModelArray[indexPath.section].dataAgain?[indexPath.row].name
             
-                if indexPath.row == 1 {
+            if let selectedRow = tableView.indexPathForSelectedRow?.row {
+                if selectedRow == indexPath.row {
                     colorCell.btnSelect.isSelected = true
-                    tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
                 }
-//                if colorCell.isSelected {
-//                    colorCell.btnSelect.backgroundColor = .black
-//                } else {
-//                    colorCell.btnSelect.backgroundColor = .blue
-//                }
-                return colorCell
+            } else if fruitColorModelArray[1].dataAgain?[indexPath.row].isSelectedColor == true {
+                colorCell.btnSelect.isSelected = true
+                tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+            }
+            return colorCell
                 
             
             default:
                 return UITableViewCell()
             }
-            
-
     }
-    
-
-    
-//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, complete in
-//            self.objectArr[indexPath.section].data.remove(at: indexPath.row)
-//                    self.tableView.deleteRows(at: [indexPath], with: .automatic)
-//                    complete(true)
-//                }
-//                
-//                deleteAction.backgroundColor = .red
-//                
-//                let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
-//                configuration.performsFirstActionWithFullSwipe = true
-//                return configuration
-//    }
-    
-    
-
-     
-    
 }
 
 extension TableViewColorFruitsController: UITableViewDelegate {
     
-//    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-//        if indexPath == tableView.indexPathForSelectedRow {
-//            return nil
-//        }
-//        return indexPath
-//    }
-    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _,_,_  in
+            self?.fruitColorModelArray[indexPath.section].dataAgain?.remove(at: indexPath.row)
+            self?.fruitColorModelArray[indexPath.section].indexForSelectedFruit = -1
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        deleteAction.image = UIImage(systemName: "trash")
+        
+        deleteAction.backgroundColor = .red
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return configuration
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
                 if let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ColorTableViewCell{
                     print("Cell : \(cell)")
+//                    fruitColorModelArray[1].indexForSelectedFruit = indexPath.row
+                    fruitColorModelArray[1].dataAgain?[indexPath.row].isSelectedColor = true
                     cell.btnSelect.isSelected = true
                     print(cell.isSelected)
   
                 }
             }
-        
     }
     
    
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
                 if let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ColorTableViewCell{
-                    print("Cell : \(cell)")
+                    print("Deselect : \(cell)")
+                    fruitColorModelArray[1].dataAgain?[indexPath.row].isSelectedColor = false
                     cell.btnSelect.isSelected = false
                     print(cell.isSelected)
   
@@ -154,21 +132,15 @@ extension TableViewColorFruitsController: UITableViewDelegate {
             }
     }
     
-    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if indexPath.section == 1 {
-            return indexPath
-        }
-        return nil
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 {
-            if editingStyle == .delete {
-                objectArr[indexPath.section].data.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-            }
-        }
-        
-    }
+
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if indexPath.section == 0 {
+//            if editingStyle == .delete {
+//                objectArr[indexPath.section].data.remove(at: indexPath.row)
+//                tableView.deleteRows(at: [indexPath], with: .automatic)
+//            }
+//        }
+//
+//    }
 }
 
