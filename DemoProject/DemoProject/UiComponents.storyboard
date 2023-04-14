@@ -1637,7 +1637,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOI-oq-57B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6127" y="-1033"/>
+            <point key="canvasLocation" x="6126.9767441860467" y="-1033.2618025751074"/>
+        </scene>
+        <!--Table View Expanded Controller-->
+        <scene sceneID="NM5-HV-jmp">
+            <objects>
+                <viewController id="W8i-43-xpw" customClass="TableViewExpandedController" customModule="DemoProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mGm-1r-NuY">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jxl-Pj-DFk">
+                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="W8i-43-xpw" id="L4j-TL-n9f"/>
+                                    <outlet property="delegate" destination="W8i-43-xpw" id="yUM-du-PZp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PM6-8r-FSN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jxl-Pj-DFk" firstAttribute="top" secondItem="PM6-8r-FSN" secondAttribute="top" id="3JW-2I-60J"/>
+                            <constraint firstItem="PM6-8r-FSN" firstAttribute="trailing" secondItem="Jxl-Pj-DFk" secondAttribute="trailing" id="HiU-iv-XV7"/>
+                            <constraint firstItem="Jxl-Pj-DFk" firstAttribute="leading" secondItem="PM6-8r-FSN" secondAttribute="leading" id="abE-c1-Bm8"/>
+                            <constraint firstItem="PM6-8r-FSN" firstAttribute="bottom" secondItem="Jxl-Pj-DFk" secondAttribute="bottom" id="gcf-zP-ehH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Jxl-Pj-DFk" id="C0K-Yb-MqB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3f-G4-Sh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7769" y="-1490"/>
         </scene>
     </scenes>
     <resources>

@@ -58,6 +58,12 @@
 		23E1160D29E91A4B000D82EF /* FruitColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1160C29E91A4B000D82EF /* FruitColorModel.swift */; };
 		23E1160F29E93323000D82EF /* FruitColordata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1160E29E93323000D82EF /* FruitColordata.swift */; };
 		23E1161129E9335A000D82EF /* ColorStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1161029E9335A000D82EF /* ColorStructure.swift */; };
+		23E1161329E94A0D000D82EF /* TableFruitColorViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1161229E94A0D000D82EF /* TableFruitColorViewController2.swift */; };
+		23E1161529E94FC5000D82EF /* CollapseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1161429E94FC5000D82EF /* CollapseTableViewCell.swift */; };
+		23E1161729E95EF7000D82EF /* TableViewExpandedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1161629E95EF7000D82EF /* TableViewExpandedController.swift */; };
+		23E1161A29E95F89000D82EF /* ExpandedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1161829E95F89000D82EF /* ExpandedTableViewCell.swift */; };
+		23E1161B29E95F89000D82EF /* ExpandedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E1161929E95F89000D82EF /* ExpandedTableViewCell.xib */; };
+		23E1161D29E96114000D82EF /* ExpanedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1161C29E96114000D82EF /* ExpanedModel.swift */; };
 		23FCACFA29E3CEAF00623264 /* UiComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FCACF929E3CEAF00623264 /* UiComponents.storyboard */; };
 		23FCACFC29E3D98A00623264 /* UILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCACFB29E3D98A00623264 /* UILabelViewController.swift */; };
 		23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCACFD29E3E85900623264 /* UIButtonViewController.swift */; };
@@ -124,6 +130,12 @@
 		23E1160C29E91A4B000D82EF /* FruitColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitColorModel.swift; sourceTree = "<group>"; };
 		23E1160E29E93323000D82EF /* FruitColordata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitColordata.swift; sourceTree = "<group>"; };
 		23E1161029E9335A000D82EF /* ColorStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStructure.swift; sourceTree = "<group>"; };
+		23E1161229E94A0D000D82EF /* TableFruitColorViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFruitColorViewController2.swift; sourceTree = "<group>"; };
+		23E1161429E94FC5000D82EF /* CollapseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapseTableViewCell.swift; sourceTree = "<group>"; };
+		23E1161629E95EF7000D82EF /* TableViewExpandedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExpandedController.swift; sourceTree = "<group>"; };
+		23E1161829E95F89000D82EF /* ExpandedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedTableViewCell.swift; sourceTree = "<group>"; };
+		23E1161929E95F89000D82EF /* ExpandedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandedTableViewCell.xib; sourceTree = "<group>"; };
+		23E1161C29E96114000D82EF /* ExpanedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpanedModel.swift; sourceTree = "<group>"; };
 		23FCACF929E3CEAF00623264 /* UiComponents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UiComponents.storyboard; sourceTree = "<group>"; };
 		23FCACFB29E3D98A00623264 /* UILabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelViewController.swift; sourceTree = "<group>"; };
 		23FCACFD29E3E85900623264 /* UIButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +214,8 @@
 				238087E229E6E9BC00CBDCD3 /* ViewControllerTableDemo.swift */,
 				23CB508129E7FD540057E0D7 /* TableViewColorFruitsController.swift */,
 				23CB508A29E8243A0057E0D7 /* UiComponents2.storyboard */,
+				23E1161229E94A0D000D82EF /* TableFruitColorViewController2.swift */,
+				23E1161629E95EF7000D82EF /* TableViewExpandedController.swift */,
 			);
 			path = DemoProject;
 			sourceTree = "<group>";
@@ -223,6 +237,9 @@
 				238087DD29E6D72800CBDCD3 /* AnimalTableViewCell.xib */,
 				23CB508329E804CF0057E0D7 /* FruitTableViewCell.swift */,
 				23CB508729E80F7A0057E0D7 /* ColorTableViewCell.swift */,
+				23E1161429E94FC5000D82EF /* CollapseTableViewCell.swift */,
+				23E1161829E95F89000D82EF /* ExpandedTableViewCell.swift */,
+				23E1161929E95F89000D82EF /* ExpandedTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -234,6 +251,7 @@
 				239F128E29E6BDCF005313AA /* SeriesModel.swift */,
 				238087E029E6D86B00CBDCD3 /* AnimalModel.swift */,
 				23CB507F29E7DB2E0057E0D7 /* AnimalModelStructure.swift */,
+				23E1161C29E96114000D82EF /* ExpanedModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +351,7 @@
 				235980D829A49D0C009E8C5D /* LaunchScreen.storyboard in Resources */,
 				239F128429E6A386005313AA /* TableViewCellOneFor2.xib in Resources */,
 				23FCACFA29E3CEAF00623264 /* UiComponents.storyboard in Resources */,
+				23E1161B29E95F89000D82EF /* ExpandedTableViewCell.xib in Resources */,
 				239F129329E6C23A005313AA /* SeriesTableViewCell.xib in Resources */,
 				238087DF29E6D72800CBDCD3 /* AnimalTableViewCell.xib in Resources */,
 				235980D529A49D0C009E8C5D /* Assets.xcassets in Resources */,
@@ -369,7 +388,9 @@
 				2343370A29E8334F00976581 /* SecondCollectionViewCell.swift in Sources */,
 				2380874229E593A0004D9AB3 /* UISegmentCustom.swift in Sources */,
 				23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */,
+				23E1161329E94A0D000D82EF /* TableFruitColorViewController2.swift in Sources */,
 				2327A44429DC585B0055D904 /* CustomTraitCollectionViewController.swift in Sources */,
+				23E1161D29E96114000D82EF /* ExpanedModel.swift in Sources */,
 				23FCAD0629E415AB00623264 /* UITextViewViewController.swift in Sources */,
 				239F128D29E6B282005313AA /* UiTableMovieViewController.swift in Sources */,
 				23CB508029E7DB2E0057E0D7 /* AnimalModelStructure.swift in Sources */,
@@ -387,15 +408,18 @@
 				23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */,
 				23FCAD0429E4151F00623264 /* UITextViewExtension.swift in Sources */,
 				23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */,
+				23E1161729E95EF7000D82EF /* TableViewExpandedController.swift in Sources */,
 				239F127429E68493005313AA /* UiTableViewController.swift in Sources */,
 				23E1160D29E91A4B000D82EF /* FruitColorModel.swift in Sources */,
 				23E1160B29E90E6A000D82EF /* SeriesCollectionViewCell.swift in Sources */,
 				239F128F29E6BDCF005313AA /* SeriesModel.swift in Sources */,
 				239F128729E6AFD3005313AA /* MovieModel.swift in Sources */,
 				23FCAD0A29E4227800623264 /* UISwitchViewController.swift in Sources */,
+				23E1161A29E95F89000D82EF /* ExpandedTableViewCell.swift in Sources */,
 				235980CE29A49D0B009E8C5D /* SceneDelegate.swift in Sources */,
 				23CB508829E80F7A0057E0D7 /* ColorTableViewCell.swift in Sources */,
 				238087DB29E6D3C900CBDCD3 /* UITableAnimalViewController.swift in Sources */,
+				23E1161529E94FC5000D82EF /* CollapseTableViewCell.swift in Sources */,
 				238087E329E6E9BC00CBDCD3 /* ViewControllerTableDemo.swift in Sources */,
 				23E1160229E904FF000D82EF /* SeriesCollectionViewController.swift in Sources */,
 				23E1160F29E93323000D82EF /* FruitColordata.swift in Sources */,
