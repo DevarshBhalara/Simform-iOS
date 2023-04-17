@@ -50,14 +50,11 @@ extension UITableContentViewController: UITableViewDataSource {
     //for cell in table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let oddCell = tableView.dequeueReusableCell(withIdentifier: "IndexTableViewCell") as? IndexTableViewCell else {
+        guard let oddCell = tableView.dequeueReusableCell(withIdentifier: "IndexTableViewCell") as? IndexTableViewCell,
+              let evenCell = tableView.dequeueReusableCell(withIdentifier: "EvenTableViewCell") as? EvenTableViewCell else {
             return UITableViewCell()
         }
-        
-        
-        guard let evenCell = tableView.dequeueReusableCell(withIdentifier: "EvenTableViewCell") as? EvenTableViewCell else {
-            return UITableViewCell()
-        }
+    
         
         if indexPath.row % 2 == 0 {
             evenCell.lblEvenText.text = "Even : \(indexPath.row)"

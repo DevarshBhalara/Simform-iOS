@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DBX-4f-idV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t2n-VS-POz">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -1512,40 +1512,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KvH-5r-zwj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6833" y="-2338"/>
-        </scene>
-        <!--View Controller Table Demo-->
-        <scene sceneID="42S-yc-M0Q">
-            <objects>
-                <viewController id="wmL-Vf-UWx" customClass="ViewControllerTableDemo" customModule="DemoProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3GH-eX-zcG">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KIV-rJ-xFG">
-                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="wmL-Vf-UWx" id="kp4-k6-Xwn"/>
-                                    <outlet property="delegate" destination="wmL-Vf-UWx" id="SOu-Nd-X18"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="lPI-Of-ZrW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="lPI-Of-ZrW" firstAttribute="bottom" secondItem="KIV-rJ-xFG" secondAttribute="bottom" id="CWA-FE-c7X"/>
-                            <constraint firstItem="KIV-rJ-xFG" firstAttribute="top" secondItem="lPI-Of-ZrW" secondAttribute="top" id="cE8-Ck-gUR"/>
-                            <constraint firstItem="KIV-rJ-xFG" firstAttribute="leading" secondItem="lPI-Of-ZrW" secondAttribute="leading" id="ffX-88-ljP"/>
-                            <constraint firstItem="lPI-Of-ZrW" firstAttribute="trailing" secondItem="KIV-rJ-xFG" secondAttribute="trailing" id="u75-ep-k3H"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableAnimalView" destination="KIV-rJ-xFG" id="GVk-z1-ART"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fb0-Q2-vTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5135" y="-1057"/>
         </scene>
         <!--Table View Color Fruits Controller-->
         <scene sceneID="PRp-wf-Jrj">

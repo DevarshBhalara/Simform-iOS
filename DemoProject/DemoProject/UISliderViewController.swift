@@ -91,23 +91,4 @@ class UISliderViewController: UIViewController {
         print(sender.value)
         
     }
-    
-//    let step = 0.5
-//    @IBAction func pointFiveValueChanged(_ sender: UISlider) {
-//        let roundedValue = round(Double(sender.value) / step) * step
-//        sender.value = Float(roundedValue)
-//    }
-    
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

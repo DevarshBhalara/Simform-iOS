@@ -11,9 +11,9 @@ class TableViewColorFruitsController: UIViewController {
     
     var refreshData: UIRefreshControl!
 
-    var fruitColorModelArray = FruitColorModel.getAllDataAgain()
+    var fruitColorModelArray = FruitColorModel.getAllDataFruitColorModel()
   
-    
+    //MARK: - Outlet
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -37,7 +37,7 @@ extension TableViewColorFruitsController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 91
+        return 89
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -64,39 +64,39 @@ extension TableViewColorFruitsController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "fruits", for: indexPath) as? FruitTableViewCell,
+              let colorCell = tableView.dequeueReusableCell(withIdentifier: "colors", for: indexPath) as? ColorTableViewCell else {
+            return UITableViewCell()
+            
+        }
+        
         
         switch indexPath.section {
         case 0 :
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "fruits", for: indexPath) as? FruitTableViewCell else {
-                return UITableViewCell()
-                
-            }
+            
             cell.lblFruit.text = fruitColorModelArray[indexPath.section].data?[indexPath.row]
             return cell
             
         case 1:
-            guard let colorCell = tableView.dequeueReusableCell(withIdentifier: "colors", for: indexPath) as? ColorTableViewCell else {
-                return UITableViewCell()
-            }
-            
+
             colorCell.lblColor.text = fruitColorModelArray[indexPath.section].dataAgain?[indexPath.row].name
             
-            if fruitColorModelArray[indexPath.section].dataAgain?[indexPath.row].isSelectedColor == true {
-                print("Inside true")
-                colorCell.btnSelect.isSelected = true
-            } else {
-                print("Inside false")
-                colorCell.btnSelect.isSelected = false
-            }
-            
-//            if let selectedRow = tableView.indexPathForSelectedRow?.row {
-//                if selectedRow == indexPath.row {
-//                    colorCell.btnSelect.isSelected = true
-//                }
-//            } else if fruitColorModelArray[1].dataAgain?[indexPath.row].isSelectedColor == true {
+//            if fruitColorModelArray[indexPath.section].dataAgain?[indexPath.row].isSelectedColor == true {
+//                print("Inside true")
 //                colorCell.btnSelect.isSelected = true
-//                //                tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+//            } else {
+//                print("Inside false")
+//                colorCell.btnSelect.isSelected = false
 //            }
+            
+            if let selectedRow = tableView.indexPathForSelectedRow?.row {
+                if selectedRow == indexPath.row {
+                    colorCell.btnSelect.isSelected = true
+                }
+            } else if fruitColorModelArray[1].dataAgain?[indexPath.row].isSelectedColor == true {
+                colorCell.btnSelect.isSelected = true
+                //                tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+            }
             return colorCell
             
             
@@ -135,7 +135,6 @@ extension TableViewColorFruitsController: UITableViewDataSource {
             }
             
         }
-        
         
         func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
             if indexPath.section == 1 {

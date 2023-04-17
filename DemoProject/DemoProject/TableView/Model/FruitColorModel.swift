@@ -17,7 +17,7 @@ struct FruitColorModel {
                 FruitColorModel(sectionName: "Colors", data: ["patato", "tomato", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki", "Loki"]) ]
     }
     
-    static func getAllDataAgain() -> [FruitColorModel] {
+    static func getAllDataFruitColorModel() -> [FruitColorModel] {
         return [
             FruitColorModel(sectionName: "Fruits", data: ["Apple", "Banana" , "Mango"]),
             FruitColorModel(sectionName: "Color", dataAgain: [FruitColorData(name: "Red", isSelectedColor: false),

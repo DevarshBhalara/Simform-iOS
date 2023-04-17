@@ -8,7 +8,7 @@
 import Foundation
 struct ExpandedModel {
     var data: String
-    var isExpanded: Bool = false
+    var isExpanded: Bool = false 
     
     static func getAllData() -> [ExpandedModel] {
         

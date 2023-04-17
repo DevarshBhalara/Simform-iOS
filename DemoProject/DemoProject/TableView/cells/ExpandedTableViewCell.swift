@@ -13,7 +13,7 @@ class ExpandedTableViewCell: UITableViewCell {
     
     @IBOutlet weak var btnMoreLess: UIButton!
     
-    var expand: ((_ expanded: Bool) -> ())?
+    var expand: (() -> ())?
     
     
     
@@ -29,17 +29,6 @@ class ExpandedTableViewCell: UITableViewCell {
     }
     
     @IBAction func onClickMoreLess(_ sender: UIButton) {
-
-        sender.isSelected.toggle()
-        lblDescription.numberOfLines = sender.isSelected ? 0 : 2
-//        if sender.isSelected {
-//            lblDescription.numberOfLines = 0
-//            btnMoreLess.titleLabel?.text = "Less"
-//        } else {
-//            lblDescription.numberOfLines = 2
-//            btnMoreLess.titleLabel?.text = "More"
-//        }
-        
-        expand?(sender.isSelected)
-    }
+        expand?()
+    }   
 }

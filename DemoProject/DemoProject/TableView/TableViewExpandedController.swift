@@ -15,7 +15,7 @@ class TableViewExpandedController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "ExpandedTableViewCell", bundle: nil), forCellReuseIdentifier: "ExpandedTableViewCell")
-        // Do any additional setup after loading the view.
+
     }
     
 
@@ -34,23 +34,23 @@ extension TableViewExpandedController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExpandedTableViewCell", for: indexPath) as? ExpandedTableViewCell else {
             return UITableViewCell()
         }
+        
         cell.lblDescription.text = longDescription[indexPath.row].data
-        cell.btnMoreLess.isSelected = longDescription[indexPath.row].isExpanded
-        cell.expand = { isExpanded in
-           
-                //   print("reload \(indexPath) \(isExpanded)")
-            // tableView.reloadRows(at: [indexPath], with: .automatic)
-            self.longDescription[indexPath.row].isExpanded = isExpanded
-           // tableView.reloadRows(at: [indexPath], with: .automatic)
-            tableView.reloadData()
-            }
+        cell.btnMoreLess.isSelected = self.longDescription[indexPath.row].isExpanded
+        cell.lblDescription.numberOfLines = cell.btnMoreLess.isSelected ? 0 : 2
+        
+        cell.expand = {
+            self.longDescription[indexPath.row].isExpanded.toggle()
+            print("Number of lines : \(cell.lblDescription.numberOfLines) is expanded : \(cell.btnMoreLess.isSelected)")
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        
         return cell
         
     }
-    
-    
 }
 
+//MARK: - Extension Delegate
 extension TableViewExpandedController: UITableViewDelegate {
     
 }

@@ -58,21 +58,20 @@ extension TableViewColorFruitsController2: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "fruits", for: indexPath) as? FruitTableViewCell,
+              let colorCell = tableView.dequeueReusableCell(withIdentifier: "colors", for: indexPath) as? ColorTableViewCell else {
+            return UITableViewCell()
+            
+        }
         
         
         switch indexPath.section {
             case 0 :
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "fruits", for: indexPath) as? FruitTableViewCell else {
-                    return UITableViewCell()
-                    
-                }
+                
             cell.lblFruit.text = objectArr[indexPath.section].data?[indexPath.row]
                 return cell
                 
             case 1:
-                guard let colorCell = tableView.dequeueReusableCell(withIdentifier: "colors", for: indexPath) as? ColorTableViewCell else {
-                    return UITableViewCell()
-                }
             
             colorCell.lblColor.text = objectArr[indexPath.section].data?[indexPath.row]
 
@@ -91,8 +90,8 @@ extension TableViewColorFruitsController2: UITableViewDataSource {
 
 extension TableViewColorFruitsController2: UITableViewDelegate {
     
-//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
 //        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _,_,_  in
 //            self.objectArr[indexPath.section].data?.remove(at: indexPath.row)
 //            self.objectArr[indexPath.section].indexForSelectedFruit = -1
@@ -103,7 +102,15 @@ extension TableViewColorFruitsController2: UITableViewDelegate {
 //        deleteAction.backgroundColor = .red
 //        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
 //        return configuration
-//    }
+        
+        let delete = UIContextualAction(style: .destructive, title: "delete") {
+            (action, view, success:(Bool) -> Void) in
+        }
+        delete.backgroundColor = UIColor(cgColor: CGColor(red: 25/255, green: 33/255, blue: 37/255, alpha: 1))
+        delete.title = "Delete"
+        delete.image = UIImage(named: "trash")
+        return UISwipeActionsConfiguration(actions: [delete])
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {

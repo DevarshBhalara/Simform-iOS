@@ -58,11 +58,8 @@ extension UiTableMovieViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let movieCell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as? MovieTableViewCell else {
-            return UITableViewCell()
-        }
-        
-        guard let seriesCell = tableView.dequeueReusableCell(withIdentifier: "seriesCell") as? SeriesTableViewCell else {
+        guard let movieCell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as? MovieTableViewCell,
+              let seriesCell = tableView.dequeueReusableCell(withIdentifier: "seriesCell") as? SeriesTableViewCell else {
             return UITableViewCell()
         }
         
@@ -103,11 +100,6 @@ extension UiTableMovieViewController: UITableViewDelegate {
             indexData.isSelected = !indexData.isSelected
             arrMovie[indexPath.row] = indexData
             tableView.reloadData()
-//            if let movieCell = tableView.cellForRow(at: indexPath) as? MovieTableViewCell {
-//                let indexOfMovieData = arrMovie[indexPath.row]
-//                movieCell.configCell(data: indexOfMovieData)
-//            }
-
             
         } else if indexPath.section == 1 {
             
@@ -115,12 +107,6 @@ extension UiTableMovieViewController: UITableViewDelegate {
             indexData.isSelected = !indexData.isSelected
             arrSeries[indexPath.row] = indexData
             tableView.reloadData()
-            
-//            if let seriesCell = tableView.cellForRow(at: indexPath) as? SeriesTableViewCell {
-//                let indexOfSeriesData = arrSeries[indexPath.row]
-//                seriesCell.configSereisCell(data: indexOfSeriesData)
-//            }
-
         }
         
     }
