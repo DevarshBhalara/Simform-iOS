@@ -11,4 +11,8 @@ class FirstCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var image: UIImageView!
+    
+    func configureCell(data: String) {
+        lblName.text = data
+    }
 }

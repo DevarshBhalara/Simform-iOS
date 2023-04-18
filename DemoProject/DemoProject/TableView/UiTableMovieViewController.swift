@@ -10,8 +10,8 @@ import UIKit
 class UiTableMovieViewController: UIViewController {
 
     
-    var arrMovie = MovieModel.getAllMovies()
-    var arrSeries = SereisModel.getAllSeries()
+    var arrMovie = MovieSeriesModel.getAllMovies()
+    var arrSeries = MovieSeriesModel.getAllSeries()
     
     //MARK: - Outlets
     @IBOutlet weak var tableMovieView: UITableView!
@@ -66,14 +66,14 @@ extension UiTableMovieViewController: UITableViewDataSource {
         if indexPath.section == 0 {
             
             let indexOfMovieData = arrMovie[indexPath.row]
-            movieCell.configCell(data: indexOfMovieData)
+            movieCell.configureCell(data: indexOfMovieData)
             
             return movieCell
             
         } else if indexPath.section == 1 {
             
             let indexOfSeriesData = arrSeries[indexPath.row]
-            seriesCell.configSereisCell(data: indexOfSeriesData)
+            seriesCell.configureCell(data: indexOfSeriesData)
             return seriesCell
         } else {
             return UITableViewCell()
@@ -96,14 +96,14 @@ extension UiTableMovieViewController: UITableViewDelegate {
         
         if indexPath.section == 0 {
             
-            let indexData = arrMovie[indexPath.row]
+            var indexData = arrMovie[indexPath.row]
             indexData.isSelected = !indexData.isSelected
             arrMovie[indexPath.row] = indexData
             tableView.reloadData()
             
         } else if indexPath.section == 1 {
             
-            let indexData = arrSeries[indexPath.row]
+            var indexData = arrSeries[indexPath.row]
             indexData.isSelected = !indexData.isSelected
             arrSeries[indexPath.row] = indexData
             tableView.reloadData()

@@ -15,6 +15,5 @@ class IndexTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
     
 }

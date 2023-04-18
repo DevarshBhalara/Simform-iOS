@@ -41,7 +41,7 @@ extension SecondViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let itemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SecondCollectionViewCell", for: indexPath) as! SecondCollectionViewCell
-        itemCell.lblName.text = nameArr[indexPath.row]
+        itemCell.configureCell(data: nameArr[indexPath.row])
         return itemCell
     }
 }

@@ -10,4 +10,8 @@ import UIKit
 class SecondCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var lblName: UILabel!
+    
+    func configureCell(data: String) {
+        lblName.text = data
+    }
 }

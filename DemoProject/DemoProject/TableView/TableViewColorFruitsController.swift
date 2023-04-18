@@ -64,8 +64,8 @@ extension TableViewColorFruitsController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "fruits", for: indexPath) as? FruitTableViewCell,
-              let colorCell = tableView.dequeueReusableCell(withIdentifier: "colors", for: indexPath) as? ColorTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "fruits") as? FruitTableViewCell,
+              let colorCell = tableView.dequeueReusableCell(withIdentifier: "colors") as? ColorTableViewCell else {
             return UITableViewCell()
             
         }
@@ -74,12 +74,14 @@ extension TableViewColorFruitsController: UITableViewDataSource {
         switch indexPath.section {
         case 0 :
             
-            cell.lblFruit.text = fruitColorModelArray[indexPath.section].data?[indexPath.row]
+            let fruitData = fruitColorModelArray[indexPath.section].data?[indexPath.row] ?? ""
+            cell.configureCell(data: fruitData)
             return cell
             
         case 1:
 
-            colorCell.lblColor.text = fruitColorModelArray[indexPath.section].dataAgain?[indexPath.row].name
+            let colorData = fruitColorModelArray[indexPath.section].dataAgain?[indexPath.row] ?? FruitColorData(name: "NA")
+            colorCell.configureCell(data: colorData)
             
 //            if fruitColorModelArray[indexPath.section].dataAgain?[indexPath.row].isSelectedColor == true {
 //                print("Inside true")
@@ -91,11 +93,10 @@ extension TableViewColorFruitsController: UITableViewDataSource {
             
             if let selectedRow = tableView.indexPathForSelectedRow?.row {
                 if selectedRow == indexPath.row {
-                    colorCell.btnSelect.isSelected = true
+                    colorCell.btnSelected()
                 }
             } else if fruitColorModelArray[1].dataAgain?[indexPath.row].isSelectedColor == true {
-                colorCell.btnSelect.isSelected = true
-                //                tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+                colorCell.btnSelected()
             }
             return colorCell
             

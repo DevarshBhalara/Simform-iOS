@@ -46,8 +46,8 @@ extension UITableAnimalViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        animalCell.lblAnimalName.text = animalStructArray[indexPath.section].animalData[indexPath.row].animalName
-        animalCell.imgAnimal.image = UIImage(named: animalStructArray[indexPath.section].animalData[indexPath.row].animalImage ?? "")
+        let animalData = animalStructArray[indexPath.section].animalData[indexPath.row]
+        animalCell.configureCell(data: animalData)
         return animalCell
     }
     

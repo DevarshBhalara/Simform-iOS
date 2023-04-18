@@ -20,5 +20,9 @@ class FruitTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configureCell(data: String) {
+        lblFruit.text = data
+    }
 
 }

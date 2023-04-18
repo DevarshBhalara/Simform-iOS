@@ -30,5 +30,11 @@ class ExpandedTableViewCell: UITableViewCell {
     
     @IBAction func onClickMoreLess(_ sender: UIButton) {
         expand?()
-    }   
-}
+    }
+    
+    func configureCell(data: ExpandedModel) {
+        lblDescription.text = data.data
+        btnMoreLess.isSelected = data.isExpanded
+        lblDescription.numberOfLines = btnMoreLess.isSelected ? 0 : 2
+    }
+} 

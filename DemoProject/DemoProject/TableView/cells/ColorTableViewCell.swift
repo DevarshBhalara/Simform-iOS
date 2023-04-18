@@ -27,7 +27,14 @@ class ColorTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         print("Reuse called \(btnSelect.isSelected)")
         btnSelect.isSelected = false
-      
+    }
+    
+    func configureCell(data: FruitColorData) {
+        lblColor.text = data.name
+    }
+    
+    func btnSelected() {
+        btnSelect.isSelected = true
     }
     
     

@@ -22,9 +22,21 @@ class UIJobCollectionViewController: UIViewController {
     @IBOutlet weak var jobSliderPageControl: UIPageControl!
     @IBOutlet weak var jobCompanyCollectionView: UICollectionView!
     
+    var refreshdata: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.refreshdata = UIRefreshControl()
         jobCompanyCollectionView.dataSource = self
+        self.jobCompanyCollectionView.addSubview(refreshdata)
+        jobCompanyCollectionView.bounces = true
+        jobCompanyCollectionView.alwaysBounceHorizontal = true
+        refreshdata.addTarget(self, action: #selector(loadData), for: .valueChanged)
+    }
+    
+    @objc func loadData() {
+        print("refreshing")
     }
     
     @IBAction func indicatorValueChange(_ sender: UIPageControl) {
@@ -49,17 +61,18 @@ extension UIJobCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == jobSliderCollectionView {
-            let sliderCell = collectionView.dequeueReusableCell(withReuseIdentifier: "sliderCell", for: indexPath)
-            sliderCell.layer.cornerRadius = 10.0
-            sliderCell.backgroundColor = .random()
+            guard let sliderCell = collectionView.dequeueReusableCell(withReuseIdentifier: "sliderCell", for: indexPath) as? JobSliderCellCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            sliderCell.configureItem(data: sliderCell)
             return sliderCell
+            
         } else {
-            let companyCell = collectionView.dequeueReusableCell(withReuseIdentifier: "companyCell", for: indexPath) as! JobCompanyCollectionViewCell
-            companyCell.layer.cornerRadius = 10.0
-            companyCell.companyImage.image = UIImage(named: jobCompanyModelArray[indexPath.row].companyImage ?? "")
-            companyCell.companyName.text = jobCompanyModelArray[indexPath.row].companyName
-            companyCell.jobPosition.text = jobCompanyModelArray[indexPath.row].jobPosition
-            companyCell.jobSalary.text = jobCompanyModelArray[indexPath.row].jobSalary
+            guard let companyCell = collectionView.dequeueReusableCell(withReuseIdentifier: "companyCell", for: indexPath) as? JobCompanyCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            
+            companyCell.configureItem(cell: companyCell, data: jobCompanyModelArray[indexPath.row])
             return companyCell
             
         }
@@ -71,6 +84,9 @@ extension UIJobCollectionViewController: UICollectionViewDataSource {
         if collectionView == jobSliderCollectionView {
             print("will Display \(indexPath.row)")
             jobSliderPageControl.currentPage = indexPath.row
+            jobSliderPageControl.setCurrentPageIndicatorImage(UIImage(systemName: "capsule.fill"), forPage: jobSliderPageControl.currentPage)
+
+            
         }
     }
     

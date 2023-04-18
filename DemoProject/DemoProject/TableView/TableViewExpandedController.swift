@@ -35,9 +35,8 @@ extension TableViewExpandedController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.lblDescription.text = longDescription[indexPath.row].data
-        cell.btnMoreLess.isSelected = self.longDescription[indexPath.row].isExpanded
-        cell.lblDescription.numberOfLines = cell.btnMoreLess.isSelected ? 0 : 2
+        let cellData = longDescription[indexPath.row]
+        cell.configureCell(data: cellData)
         
         cell.expand = {
             self.longDescription[indexPath.row].isExpanded.toggle()

@@ -18,7 +18,7 @@ class AnimalTableViewCell: UITableViewCell {
     }
 
     
-    func configAnimal(data: AnimalModel) {
+    func configureCell(data: AnimalModel) {
         lblAnimalName.text = data.animalName
         imgAnimal.image = UIImage(named: data.animalImage ?? "")
     }

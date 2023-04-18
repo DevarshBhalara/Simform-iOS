@@ -37,7 +37,7 @@ extension UICollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FirstCollectionViewCell", for: indexPath) as! FirstCollectionViewCell
         
-        cell.lblName.text = "Hello \(indexPath)"
+        cell.configureCell(data: "Hello \(indexPath)")
         return cell
     }
     

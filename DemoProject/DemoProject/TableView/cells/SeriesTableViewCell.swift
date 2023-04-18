@@ -27,7 +27,7 @@ class SeriesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configSereisCell(data: SereisModel) {
+    func configureCell(data: MovieSeriesModel) {
         seriesImage.image = UIImage(named: data.seriesImage ?? "")
         seriesName.text = data.seriesName ?? "NA"
         seriesRating.text = "Rating : \(data.seriesRating ?? "NA")"

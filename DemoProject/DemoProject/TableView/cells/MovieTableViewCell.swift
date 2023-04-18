@@ -25,7 +25,7 @@ class MovieTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configCell(data: MovieModel) {
+    func configureCell(data: MovieSeriesModel) {
         imgMovie.image = UIImage(named: data.movieImageName ?? "")
         lblMovieName.text = data.movieName ?? "NA"
         lblrating.text = "\(data.rating ?? 0)"

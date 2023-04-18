@@ -18,4 +18,12 @@ class JobCompanyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var jobSalary: UILabel!
     
+    func configureItem(cell: JobCompanyCollectionViewCell, data: JobModel) {
+        companyImage.image = UIImage(named: data.companyImage ?? "spotify")
+        companyName.text = data.companyName
+        jobPosition.text = data.jobPosition
+        jobSalary.text = data.jobSalary
+        cell.layer.cornerRadius = 10.0
+    }
+    
 }
