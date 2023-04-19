@@ -53,6 +53,11 @@
 		23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF329E5277F00F3748D /* UISliderViewController.swift */; };
 		23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */; };
 		23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */; };
+		23C3147A29EFEF5A0017D5F2 /* UIStackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C3147929EFEF5A0017D5F2 /* UIStackViewViewController.swift */; };
+		23C3147D29EFF4A90017D5F2 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C3147C29EFF4A90017D5F2 /* TabViewController.swift */; };
+		23C3147F29EFF4DE0017D5F2 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C3147E29EFF4DE0017D5F2 /* SeriesViewController.swift */; };
+		23C3148129EFF4F00017D5F2 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C3148029EFF4F00017D5F2 /* MovieViewController.swift */; };
+		23C3148329EFF4FB0017D5F2 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C3148229EFF4FB0017D5F2 /* SongViewController.swift */; };
 		23CB508029E7DB2E0057E0D7 /* AnimalModelStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB507F29E7DB2E0057E0D7 /* AnimalModelStructure.swift */; };
 		23CB508229E7FD540057E0D7 /* TableViewColorFruitsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB508129E7FD540057E0D7 /* TableViewColorFruitsController.swift */; };
 		23CB508429E804CF0057E0D7 /* FruitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB508329E804CF0057E0D7 /* FruitTableViewCell.swift */; };
@@ -134,6 +139,11 @@
 		23B31AF329E5277F00F3748D /* UISliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderViewController.swift; sourceTree = "<group>"; };
 		23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressBarViewController.swift; sourceTree = "<group>"; };
 		23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControlViewController.swift; sourceTree = "<group>"; };
+		23C3147929EFEF5A0017D5F2 /* UIStackViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewViewController.swift; sourceTree = "<group>"; };
+		23C3147C29EFF4A90017D5F2 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		23C3147E29EFF4DE0017D5F2 /* SeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
+		23C3148029EFF4F00017D5F2 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		23C3148229EFF4FB0017D5F2 /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		23CB507F29E7DB2E0057E0D7 /* AnimalModelStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModelStructure.swift; sourceTree = "<group>"; };
 		23CB508129E7FD540057E0D7 /* TableViewColorFruitsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewColorFruitsController.swift; sourceTree = "<group>"; };
 		23CB508329E804CF0057E0D7 /* FruitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,6 +214,7 @@
 		231742E429ED4CCA0049E537 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				23C3147B29EFF4900017D5F2 /* TabBar */,
 				234C242929EE783600EB917E /* First.pdf */,
 				234C242529EE5FF400EB917E /* PHPickerCollectionView */,
 				231742E629ED4FD80049E537 /* TableView */,
@@ -225,6 +236,7 @@
 				231742E229ED40310049E537 /* UiImagePickerViewController.swift */,
 				231742E729ED60190049E537 /* UIActivityIndicatorViewController.swift */,
 				231742E929ED679F0049E537 /* WKWebViewViewController.swift */,
+				23C3147929EFEF5A0017D5F2 /* UIStackViewViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -344,6 +356,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		23C3147B29EFF4900017D5F2 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				23C3147C29EFF4A90017D5F2 /* TabViewController.swift */,
+				23C3147E29EFF4DE0017D5F2 /* SeriesViewController.swift */,
+				23C3148029EFF4F00017D5F2 /* MovieViewController.swift */,
+				23C3148229EFF4FB0017D5F2 /* SongViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		23CB508929E823350057E0D7 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,8 +384,8 @@
 		23CB508E29E826B30057E0D7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				23CB508F29E826D10057E0D7 /* FirstCollectionViewCell.swift */,
 				2343370929E8334F00976581 /* SecondCollectionViewCell.swift */,
+				23CB508F29E826D10057E0D7 /* FirstCollectionViewCell.swift */,
 				23E1160A29E90E6A000D82EF /* SeriesCollectionViewCell.swift */,
 				233C01AB29ED0445004733A2 /* JobSliderCellCollectionViewCell.swift */,
 				23D295C329ED2084000069E8 /* JobCompanyCollectionViewCell.swift */,
@@ -469,12 +492,15 @@
 				23CB508D29E825400057E0D7 /* UICollectionViewController.swift in Sources */,
 				23D295C229ED1DE5000069E8 /* JobModel.swift in Sources */,
 				23CB508429E804CF0057E0D7 /* FruitTableViewCell.swift in Sources */,
+				23C3147F29EFF4DE0017D5F2 /* SeriesViewController.swift in Sources */,
 				231742D929ED28420049E537 /* UICollectionViewInTableViewController.swift in Sources */,
+				23C3148329EFF4FB0017D5F2 /* SongViewController.swift in Sources */,
 				231742DC29ED2A480049E537 /* TableViewCell.swift in Sources */,
 				2343370C29E833E800976581 /* SecondViewController.swift in Sources */,
 				239F129229E6C23A005313AA /* SeriesTableViewCell.swift in Sources */,
 				239F128329E6A386005313AA /* TableViewCellOneFor2.swift in Sources */,
 				23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */,
+				23C3147D29EFF4A90017D5F2 /* TabViewController.swift in Sources */,
 				231742DF29ED2AFC0049E537 /* CollectionViewCell.swift in Sources */,
 				23FCAD0829E41BA600623264 /* UiComponentViewController.swift in Sources */,
 				234C242829EE602B00EB917E /* ImageCollectionViewCell.swift in Sources */,
@@ -510,10 +536,12 @@
 				23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */,
 				23E1161729E95EF7000D82EF /* TableViewExpandedController.swift in Sources */,
 				23E1160D29E91A4B000D82EF /* FruitColorModel.swift in Sources */,
+				23C3148129EFF4F00017D5F2 /* MovieViewController.swift in Sources */,
 				23E1160B29E90E6A000D82EF /* SeriesCollectionViewCell.swift in Sources */,
 				239F128729E6AFD3005313AA /* MovieSeriesModel.swift in Sources */,
 				23FCAD0A29E4227800623264 /* UISwitchViewController.swift in Sources */,
 				23E1161A29E95F89000D82EF /* ExpandedTableViewCell.swift in Sources */,
+				23C3147A29EFEF5A0017D5F2 /* UIStackViewViewController.swift in Sources */,
 				235980CE29A49D0B009E8C5D /* SceneDelegate.swift in Sources */,
 				23CB508829E80F7A0057E0D7 /* ColorTableViewCell.swift in Sources */,
 				233C01AA29ED0158004733A2 /* UIJobCollectionViewController.swift in Sources */,

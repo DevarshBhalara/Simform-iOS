@@ -16,13 +16,20 @@ class SeriesCollectionViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var seachBar: UISearchBar!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         seachBar.delegate = self
-
+        seachBar.setImage(UIImage(systemName: "trash"), for: .search, state: .normal)
+        seachBar.setImage(UIImage(systemName: "trash.fill"), for: .clear, state: .normal)
     }
+    
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        let height = collectionView.collectionViewLayout.collectionViewContentSize.height
+//        myCollectionViewHeight.constant = height
+//        self.view.layoutIfNeeded()
+//    }
     
 
 }
@@ -50,8 +57,9 @@ extension SeriesCollectionViewController: UICollectionViewDataSource {
 
 extension SeriesCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width / 2 - 20, height:  300)
+        return CGSize(width: collectionView.frame.size.width / 2 - 20, height:  collectionView.frame.size.height / 2)
     }
+
 }
 
 extension SeriesCollectionViewController: UISearchBarDelegate {
@@ -75,7 +83,7 @@ extension SeriesCollectionViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        searchResultSeriesModel = searchText.isEmpty ? seriesModel : seriesModel.filter { $0.seriesName?.contains(searchText) ?? false }
+        searchResultSeriesModel = searchText.isEmpty ? seriesModel : seriesModel.filter { $0.seriesName?.starts(with: searchText) ?? false }
         
         if searchResultSeriesModel.count == 0 {
             isSearchActive = false
@@ -89,3 +97,4 @@ extension SeriesCollectionViewController: UISearchBarDelegate {
     }
     
 }
+

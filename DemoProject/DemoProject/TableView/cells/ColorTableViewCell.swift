@@ -30,7 +30,13 @@ class ColorTableViewCell: UITableViewCell {
     }
     
     func configureCell(data: FruitColorData) {
+        btnSelect.isHidden = false
         lblColor.text = data.name
+    }
+    
+    func configureCellFruit(data: String) {
+        lblColor.text = data
+        btnSelect.isHidden = true
     }
     
     func btnSelected() {

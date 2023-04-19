@@ -64,8 +64,8 @@ extension TableViewColorFruitsController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "fruits") as? FruitTableViewCell,
-              let colorCell = tableView.dequeueReusableCell(withIdentifier: "colors") as? ColorTableViewCell else {
+        guard let cell = /*tableView.dequeueReusableCell(withIdentifier: "fruits") as? FruitTableViewCell,
+              let colorCell = */tableView.dequeueReusableCell(withIdentifier: "colors") as? ColorTableViewCell else {
             return UITableViewCell()
             
         }
@@ -75,13 +75,13 @@ extension TableViewColorFruitsController: UITableViewDataSource {
         case 0 :
             
             let fruitData = fruitColorModelArray[indexPath.section].data?[indexPath.row] ?? ""
-            cell.configureCell(data: fruitData)
+            cell.configureCellFruit(data: fruitData)
             return cell
             
         case 1:
 
             let colorData = fruitColorModelArray[indexPath.section].dataAgain?[indexPath.row] ?? FruitColorData(name: "NA")
-            colorCell.configureCell(data: colorData)
+            cell.configureCell(data: colorData)
             
 //            if fruitColorModelArray[indexPath.section].dataAgain?[indexPath.row].isSelectedColor == true {
 //                print("Inside true")
@@ -93,12 +93,12 @@ extension TableViewColorFruitsController: UITableViewDataSource {
             
             if let selectedRow = tableView.indexPathForSelectedRow?.row {
                 if selectedRow == indexPath.row {
-                    colorCell.btnSelected()
+                    cell.btnSelected()
                 }
             } else if fruitColorModelArray[1].dataAgain?[indexPath.row].isSelectedColor == true {
-                colorCell.btnSelected()
+                cell.btnSelected()
             }
-            return colorCell
+            return cell
             
             
         default:

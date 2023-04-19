@@ -34,8 +34,7 @@ struct FruitColorModel {
                                                               FruitColorData(name: "Red3", isSelectedColor: false),
                                                               FruitColorData(name: "Red2", isSelectedColor: false),
                                                               FruitColorData(name: "Red3", isSelectedColor: false),
-                                                              FruitColorData(name: "Red2", isSelectedColor: false),
-                                                              FruitColorData(name: "Red3", isSelectedColor: false)] ),
+                                                              FruitColorData(name: "Red2", isSelectedColor: false)] ),
             
         
         ]

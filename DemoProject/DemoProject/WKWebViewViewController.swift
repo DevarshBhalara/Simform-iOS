@@ -14,12 +14,13 @@ class WKWebViewViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var textFieldURL: UITextField!
     
+    @IBOutlet weak var progressBarLoading: UIProgressView!
     //MARK: - Outlets
     @IBOutlet weak var webView: WKWebView!
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        progressBarLoading.isHidden = true
         webView.navigationDelegate = self
 
         /** Load URL  */
@@ -49,11 +50,15 @@ class WKWebViewViewController: UIViewController {
     
     
     @IBAction func loadURLButtonClick(_ sender: UIButton) {
+        progressBarLoading.isHidden = false
        guard let url = URL(string: textFieldURL.text ?? "https://www.google.com/") else {
             return
         }
+        
+        
 
         let urlRequest = URLRequest(url: url)
+        progressBarLoading.setProgress(Float(webView.estimatedProgress), animated: true)
         webView.load(urlRequest)
     }
 }
@@ -86,6 +91,8 @@ extension WKWebViewViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("did finish")
         self.loadingIndicator.stopAnimating()
+        progressBarLoading.setProgress(0.0, animated: false)
+        progressBarLoading.isHidden = true
     }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
