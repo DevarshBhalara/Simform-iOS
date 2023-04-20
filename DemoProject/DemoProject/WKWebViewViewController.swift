@@ -10,14 +10,14 @@ import WebKit
 
 class WKWebViewViewController: UIViewController {
     
-    
-    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var textFieldURL: UITextField!
-    
-    @IBOutlet weak var progressBarLoading: UIProgressView!
     //MARK: - Outlets
+    
+    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var textFieldURL: UITextField!
+    @IBOutlet private weak var progressBarLoading: UIProgressView!
     @IBOutlet weak var webView: WKWebView!
- 
+    @IBOutlet weak var toolBar: UIToolbar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         progressBarLoading.isHidden = true
@@ -46,22 +46,57 @@ class WKWebViewViewController: UIViewController {
             (timer) in
             print(self.webView.estimatedProgress)
         }
+        
+
+        /** Custom bar Item Demo  */
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 60))
+        let barItem = UIBarButtonItem(customView: view)
+        view.backgroundColor = .black
+        barItem.image = UIImage(systemName: "trash.fill")
+
+        let view2 = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 60))
+        view2.backgroundColor = .red
+        let barItem2 = UIBarButtonItem(customView: view2)
+
+        toolBar.setItems( [barItem, barItem2], animated: true)
+  
+        /** Setting Background to Toolbar  */
+//        toolBar.setBackgroundImage(UIImage(named: "avtar"), forToolbarPosition:  .any, barMetrics: .default)
+        
+    }
+    
+    @IBAction func homeButtonClicked(_ sender: UIBarButtonItem) {
+        print("Going to home page")
+        loadWebPages(passedUrl: "https://www.google.com")
+    }
+    
+    @IBAction func reloadButtonClicked(_ sender: UIBarButtonItem) {
+        print("reloading web view")
+        webView.reload()
     }
     
     
+    @IBAction func faceBookButtonClicked(_ sender: UIBarButtonItem) {
+        loadWebPages(passedUrl: "https://www.facebook.com")
+    }
+    
     @IBAction func loadURLButtonClick(_ sender: UIButton) {
+        loadWebPages(passedUrl: textFieldURL.text ?? "")
+    }
+    
+    func loadWebPages(passedUrl: String) {
         progressBarLoading.isHidden = false
-       guard let url = URL(string: textFieldURL.text ?? "https://www.google.com/") else {
+        guard let url = URL(string: passedUrl) else {
             return
         }
-        
-        
-
+            
         let urlRequest = URLRequest(url: url)
         progressBarLoading.setProgress(Float(webView.estimatedProgress), animated: true)
         webView.load(urlRequest)
     }
+    
 }
+
 
 
 extension WKWebViewViewController: WKNavigationDelegate {

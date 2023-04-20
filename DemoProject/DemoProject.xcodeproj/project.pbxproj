@@ -77,6 +77,8 @@
 		23E1161A29E95F89000D82EF /* ExpandedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1161829E95F89000D82EF /* ExpandedTableViewCell.swift */; };
 		23E1161B29E95F89000D82EF /* ExpandedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E1161929E95F89000D82EF /* ExpandedTableViewCell.xib */; };
 		23E1161D29E96114000D82EF /* ExpanedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E1161C29E96114000D82EF /* ExpanedModel.swift */; };
+		23E5A23B29F139E6009D60DE /* UIPickerViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5A23A29F139E6009D60DE /* UIPickerViewViewController.swift */; };
+		23E5A23D29F15ADB009D60DE /* UIDateTimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5A23C29F15ADB009D60DE /* UIDateTimePickerViewController.swift */; };
 		23FCACFA29E3CEAF00623264 /* UiComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FCACF929E3CEAF00623264 /* UiComponents.storyboard */; };
 		23FCACFC29E3D98A00623264 /* UILabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCACFB29E3D98A00623264 /* UILabelViewController.swift */; };
 		23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCACFD29E3E85900623264 /* UIButtonViewController.swift */; };
@@ -163,6 +165,8 @@
 		23E1161829E95F89000D82EF /* ExpandedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedTableViewCell.swift; sourceTree = "<group>"; };
 		23E1161929E95F89000D82EF /* ExpandedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandedTableViewCell.xib; sourceTree = "<group>"; };
 		23E1161C29E96114000D82EF /* ExpanedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpanedModel.swift; sourceTree = "<group>"; };
+		23E5A23A29F139E6009D60DE /* UIPickerViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewViewController.swift; sourceTree = "<group>"; };
+		23E5A23C29F15ADB009D60DE /* UIDateTimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDateTimePickerViewController.swift; sourceTree = "<group>"; };
 		23FCACF929E3CEAF00623264 /* UiComponents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UiComponents.storyboard; sourceTree = "<group>"; };
 		23FCACFB29E3D98A00623264 /* UILabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelViewController.swift; sourceTree = "<group>"; };
 		23FCACFD29E3E85900623264 /* UIButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 				231742E729ED60190049E537 /* UIActivityIndicatorViewController.swift */,
 				231742E929ED679F0049E537 /* WKWebViewViewController.swift */,
 				23C3147929EFEF5A0017D5F2 /* UIStackViewViewController.swift */,
+				23E5A23A29F139E6009D60DE /* UIPickerViewViewController.swift */,
+				23E5A23C29F15ADB009D60DE /* UIDateTimePickerViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -526,6 +532,7 @@
 				23D295C429ED2084000069E8 /* JobCompanyCollectionViewCell.swift in Sources */,
 				231742EA29ED679F0049E537 /* WKWebViewViewController.swift in Sources */,
 				23FCACFC29E3D98A00623264 /* UILabelViewController.swift in Sources */,
+				23E5A23D29F15ADB009D60DE /* UIDateTimePickerViewController.swift in Sources */,
 				23FCAD0029E4021600623264 /* UiTextFieldViewController.swift in Sources */,
 				23CB509029E826D10057E0D7 /* FirstCollectionViewCell.swift in Sources */,
 				239F127629E684F2005313AA /* UITableContentViewController.swift in Sources */,
@@ -536,6 +543,7 @@
 				23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */,
 				23E1161729E95EF7000D82EF /* TableViewExpandedController.swift in Sources */,
 				23E1160D29E91A4B000D82EF /* FruitColorModel.swift in Sources */,
+				23E5A23B29F139E6009D60DE /* UIPickerViewViewController.swift in Sources */,
 				23C3148129EFF4F00017D5F2 /* MovieViewController.swift in Sources */,
 				23E1160B29E90E6A000D82EF /* SeriesCollectionViewCell.swift in Sources */,
 				239F128729E6AFD3005313AA /* MovieSeriesModel.swift in Sources */,

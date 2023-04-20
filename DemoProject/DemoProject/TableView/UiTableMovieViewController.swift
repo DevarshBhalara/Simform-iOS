@@ -20,6 +20,7 @@ class UiTableMovieViewController: UIViewController {
         super.viewDidLoad()
         tableMovieView.dataSource = self
         tableMovieView.delegate = self
+        tableMovieView.isEditing = true
         tableMovieView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "movieCell")
         tableMovieView.register(UINib(nibName: "SeriesTableViewCell", bundle: nil), forCellReuseIdentifier: "seriesCell")
         
