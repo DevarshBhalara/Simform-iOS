@@ -12,7 +12,7 @@ class TabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        self.selectedIndex = 2
+        self.tabBar.items?[1].badgeValue = "3"
     }
     
 }
@@ -21,13 +21,20 @@ extension TabViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         true
     }
+
     
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print(viewController)
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        item.badgeValue = nil
     }
+    
+//    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+//        viewController.tabBarItem.badgeValue = nil
+//        print(viewController.tabBarItem.badgeValue ?? "")
+//    }
     
     override func tabBar(_ tabBar: UITabBar, willBeginCustomizing items: [UITabBarItem]) {
         print("will")
+        print(items.count)
     }
  
     

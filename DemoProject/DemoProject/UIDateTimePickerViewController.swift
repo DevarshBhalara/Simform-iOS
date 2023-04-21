@@ -11,13 +11,19 @@ class UIDateTimePickerViewController: UIViewController {
 
     @IBOutlet weak var datePicker: UIDatePicker!
     override func viewDidLoad() {
-    
-        
-        super.viewDidLoad()
 
+        super.viewDidLoad()
+       
+        datePicker.backgroundColor = .blue
+        datePicker.tintColor = .white
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func datePickerValueChange(_ sender: UIDatePicker) {
+        print(sender.date)
+        
+    }
+    
     @IBAction func getDate(_ sender: UIButton) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"

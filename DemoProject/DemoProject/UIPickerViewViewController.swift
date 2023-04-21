@@ -17,12 +17,19 @@ class UIPickerViewViewController: UIViewController {
     
     @IBOutlet private weak var tfCountry: UITextField!
     
+    @IBOutlet weak var textFieldToolbar: UITextField!
     @IBOutlet weak var tfDateTime: UITextField!
     
     private let countryPicker = UIPickerView()
     private let timePicker = UIPickerView()
-    
-    
+
+    let imageArray = [
+        UIImage(named: "avtar"),
+        UIImage(named: "13reason"),
+        UIImage(named: "farzi"),
+        UIImage(named: "elite")
+    ]
+
 
     
     var data = ["1", "2", "3", " 4", "5", "6", "7"]
@@ -39,11 +46,24 @@ class UIPickerViewViewController: UIViewController {
         countryPicker.dataSource = self
         timePicker.delegate = self
         timePicker.dataSource = self
-        tfCountry.inputView = countryPicker
-        tfDateTime.inputView = timePicker
         tfCountry.delegate = self
         tfDateTime.delegate = self
+
         
+        tfCountry.inputView = countryPicker
+        tfDateTime.inputView = timePicker
+        
+        let toolbarTextField = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 40))
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButtonTextField = UIBarButtonItem(title: "Done", style: .done, target: .none, action: #selector(doneClickedTextField))
+        toolbarTextField.setItems([spacer, doneButtonTextField], animated: true)
+        textFieldToolbar.inputAccessoryView = toolbarTextField
+        
+    }
+    
+    @objc func doneClickedTextField() {
+        print("done button clicked")
+        textFieldToolbar.resignFirstResponder()
     }
     
     
@@ -55,6 +75,8 @@ class UIPickerViewViewController: UIViewController {
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolBar.setItems([doneButton, spacer, cancleButton], animated: true)
         tfCountry.inputAccessoryView = toolBar
+        
+ 
     }
     
     @objc func doneClicked() {
@@ -116,7 +138,10 @@ extension UIPickerViewViewController: UIPickerViewDataSource {
 
 extension UIPickerViewViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        setUpToolBar()
+        if textField == tfCountry {
+            setUpToolBar()
+        }
+        
         return true
     }
     
@@ -127,9 +152,12 @@ extension UIPickerViewViewController: UITextFieldDelegate {
 }
 
 extension UIPickerViewViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
-        view.backgroundColor = .red
-        return view
-    }
+//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+//    
+//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+//         
+//        view.backgroundColor = .blue
+//        return view
+//    }
+//    
 }

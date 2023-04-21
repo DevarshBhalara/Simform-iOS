@@ -49,16 +49,18 @@ class WKWebViewViewController: UIViewController {
         
 
         /** Custom bar Item Demo  */
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 60))
-        let barItem = UIBarButtonItem(customView: view)
-        view.backgroundColor = .black
-        barItem.image = UIImage(systemName: "trash.fill")
+        
+//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 60)) For custom View in barItem
+        
+        let barItem = UIBarButtonItem(image: UIImage(systemName: "trash.fill"), style: .plain, target: self, action: nil)
+//For custom View in barItem
+//        let view2 = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 60))
+//        view2.backgroundColor = .red
+        
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let barItem2 = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise"), style: .plain, target: self, action: nil)
 
-        let view2 = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 60))
-        view2.backgroundColor = .red
-        let barItem2 = UIBarButtonItem(customView: view2)
-
-        toolBar.setItems( [barItem, barItem2], animated: true)
+        toolBar.setItems( [barItem, spacer ,barItem2], animated: true)
   
         /** Setting Background to Toolbar  */
 //        toolBar.setBackgroundImage(UIImage(named: "avtar"), forToolbarPosition:  .any, barMetrics: .default)
