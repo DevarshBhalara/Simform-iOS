@@ -25,7 +25,6 @@ class PHPickerImageController: UIViewController {
     
         var config = PHPickerConfiguration()
         config.selectionLimit = 4
-
         config.filter = .videos
         
         let phController = PHPickerViewController(configuration: config)

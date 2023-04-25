@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2314D4D029F789A800996791 /* CallOut.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2314D4CF29F789A800996791 /* CallOut.xib */; };
+		2314D4D229F78A2B00996791 /* CallOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2314D4D129F78A2B00996791 /* CallOut.swift */; };
+		2314D4D529F78CE600996791 /* MapCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2314D4D429F78CE600996791 /* MapCustomViewController.swift */; };
+		2314D4D729F7A5CC00996791 /* StoryboardSegue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2314D4D629F7A5CC00996791 /* StoryboardSegue.storyboard */; };
 		231742D929ED28420049E537 /* UICollectionViewInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231742D829ED28420049E537 /* UICollectionViewInTableViewController.swift */; };
 		231742DC29ED2A480049E537 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231742DB29ED2A480049E537 /* TableViewCell.swift */; };
 		231742DF29ED2AFC0049E537 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231742DE29ED2AFC0049E537 /* CollectionViewCell.swift */; };
@@ -51,6 +55,9 @@
 		239F128D29E6B282005313AA /* UiTableMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F128C29E6B282005313AA /* UiTableMovieViewController.swift */; };
 		239F129229E6C23A005313AA /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F129029E6C23A005313AA /* SeriesTableViewCell.swift */; };
 		239F129329E6C23A005313AA /* SeriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239F129129E6C23A005313AA /* SeriesTableViewCell.xib */; };
+		23AF267029F7A81000D10905 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF266F29F7A81000D10905 /* FirstViewController.swift */; };
+		23AF267229F7A81B00D10905 /* SecondViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF267129F7A81B00D10905 /* SecondViewController2.swift */; };
+		23AF267429F7B6ED00D10905 /* UIButtonConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF267329F7B6ED00D10905 /* UIButtonConfigViewController.swift */; };
 		23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF329E5277F00F3748D /* UISliderViewController.swift */; };
 		23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */; };
 		23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */; };
@@ -96,6 +103,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2314D4CF29F789A800996791 /* CallOut.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallOut.xib; sourceTree = "<group>"; };
+		2314D4D129F78A2B00996791 /* CallOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallOut.swift; sourceTree = "<group>"; };
+		2314D4D429F78CE600996791 /* MapCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCustomViewController.swift; sourceTree = "<group>"; };
+		2314D4D629F7A5CC00996791 /* StoryboardSegue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardSegue.storyboard; sourceTree = "<group>"; };
 		231742D829ED28420049E537 /* UICollectionViewInTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewInTableViewController.swift; sourceTree = "<group>"; };
 		231742DB29ED2A480049E537 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		231742DE29ED2AFC0049E537 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -144,6 +155,9 @@
 		239F129029E6C23A005313AA /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
 		239F129129E6C23A005313AA /* SeriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesTableViewCell.xib; sourceTree = "<group>"; };
 		23A2520929A5D1600042B1D2 /* first_playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = first_playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		23AF266F29F7A81000D10905 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		23AF267129F7A81B00D10905 /* SecondViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController2.swift; sourceTree = "<group>"; };
+		23AF267329F7B6ED00D10905 /* UIButtonConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonConfigViewController.swift; sourceTree = "<group>"; };
 		23B31AF329E5277F00F3748D /* UISliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderViewController.swift; sourceTree = "<group>"; };
 		23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressBarViewController.swift; sourceTree = "<group>"; };
 		23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControlViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +213,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2314D4D329F78B2C00996791 /* CustomCallOut */ = {
+			isa = PBXGroup;
+			children = (
+				2314D4CF29F789A800996791 /* CallOut.xib */,
+				2314D4D129F78A2B00996791 /* CallOut.swift */,
+				2314D4D429F78CE600996791 /* MapCustomViewController.swift */,
+			);
+			path = CustomCallOut;
+			sourceTree = "<group>";
+		};
 		231742D729ED27F40049E537 /* CollectionViewInTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +252,8 @@
 		231742E429ED4CCA0049E537 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				23AF266E29F7A7F600D10905 /* Segue */,
+				2314D4D329F78B2C00996791 /* CustomCallOut */,
 				23C3147B29EFF4900017D5F2 /* TabBar */,
 				234C242929EE783600EB917E /* First.pdf */,
 				234C242529EE5FF400EB917E /* PHPickerCollectionView */,
@@ -259,6 +285,7 @@
 				23CC7DA529F65A66002336E3 /* MyAnnotation.swift */,
 				23CC7DA729F65C0B002336E3 /* MyAnnotationView.swift */,
 				23CC7DAB29F69C24002336E3 /* CustomOverlay.swift */,
+				23AF267329F7B6ED00D10905 /* UIButtonConfigViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -272,6 +299,7 @@
 				235980DF29A49FAB009E8C5D /* Storyboard2.storyboard */,
 				23FCACF929E3CEAF00623264 /* UiComponents.storyboard */,
 				23CB508A29E8243A0057E0D7 /* UiComponents2.storyboard */,
+				2314D4D629F7A5CC00996791 /* StoryboardSegue.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -378,6 +406,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		23AF266E29F7A7F600D10905 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				23AF266F29F7A81000D10905 /* FirstViewController.swift */,
+				23AF267129F7A81B00D10905 /* SecondViewController2.swift */,
+			);
+			path = Segue;
+			sourceTree = "<group>";
+		};
 		23C3147B29EFF4900017D5F2 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +518,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2314D4D029F789A800996791 /* CallOut.xib in Resources */,
 				235980E029A49FAB009E8C5D /* Storyboard2.storyboard in Resources */,
 				235980D829A49D0C009E8C5D /* LaunchScreen.storyboard in Resources */,
 				239F128429E6A386005313AA /* TableViewCellOneFor2.xib in Resources */,
@@ -489,6 +527,7 @@
 				239F129329E6C23A005313AA /* SeriesTableViewCell.xib in Resources */,
 				238087DF29E6D72800CBDCD3 /* AnimalTableViewCell.xib in Resources */,
 				235980D529A49D0C009E8C5D /* Assets.xcassets in Resources */,
+				2314D4D729F7A5CC00996791 /* StoryboardSegue.storyboard in Resources */,
 				2339135329DBEE4900505575 /* Main.storyboard in Resources */,
 				239F128B29E6B0FA005313AA /* MovieTableViewCell.xib in Resources */,
 				23CB508B29E8243A0057E0D7 /* UiComponents2.storyboard in Resources */,
@@ -509,6 +548,7 @@
 				238087DE29E6D72800CBDCD3 /* AnimalTableViewCell.swift in Sources */,
 				2380874029E57881004D9AB3 /* UIStepperViewController.swift in Sources */,
 				235980D029A49D0B009E8C5D /* ViewController.swift in Sources */,
+				23AF267229F7A81B00D10905 /* SecondViewController2.swift in Sources */,
 				239F127929E688B6005313AA /* IndexTableViewCell.swift in Sources */,
 				23CB508D29E825400057E0D7 /* UICollectionViewController.swift in Sources */,
 				23D295C229ED1DE5000069E8 /* JobModel.swift in Sources */,
@@ -521,6 +561,7 @@
 				231742DC29ED2A480049E537 /* TableViewCell.swift in Sources */,
 				2343370C29E833E800976581 /* SecondViewController.swift in Sources */,
 				239F129229E6C23A005313AA /* SeriesTableViewCell.swift in Sources */,
+				2314D4D529F78CE600996791 /* MapCustomViewController.swift in Sources */,
 				239F128329E6A386005313AA /* TableViewCellOneFor2.swift in Sources */,
 				23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */,
 				23C3147D29EFF4A90017D5F2 /* TabViewController.swift in Sources */,
@@ -542,6 +583,7 @@
 				233C01AC29ED0445004733A2 /* JobSliderCellCollectionViewCell.swift in Sources */,
 				23E1160529E90AC4000D82EF /* SeriesCollectionModel.swift in Sources */,
 				231742E829ED60190049E537 /* UIActivityIndicatorViewController.swift in Sources */,
+				2314D4D229F78A2B00996791 /* CallOut.swift in Sources */,
 				238087E129E6D86B00CBDCD3 /* AnimalModel.swift in Sources */,
 				23CC7DA629F65A66002336E3 /* MyAnnotation.swift in Sources */,
 				231742E329ED40310049E537 /* UiImagePickerViewController.swift in Sources */,
@@ -549,6 +591,7 @@
 				239F127D29E69CD5005313AA /* EvenTableViewCell.swift in Sources */,
 				2380873E29E56B5B004D9AB3 /* UISegmentViewController.swift in Sources */,
 				23D295C429ED2084000069E8 /* JobCompanyCollectionViewCell.swift in Sources */,
+				23AF267029F7A81000D10905 /* FirstViewController.swift in Sources */,
 				231742EA29ED679F0049E537 /* WKWebViewViewController.swift in Sources */,
 				23FCACFC29E3D98A00623264 /* UILabelViewController.swift in Sources */,
 				23E5A23D29F15ADB009D60DE /* UIDateTimePickerViewController.swift in Sources */,
@@ -566,6 +609,7 @@
 				23E5A23B29F139E6009D60DE /* UIPickerViewViewController.swift in Sources */,
 				23C3148129EFF4F00017D5F2 /* MoviewViewController.swift in Sources */,
 				23E1160B29E90E6A000D82EF /* SeriesCollectionViewCell.swift in Sources */,
+				23AF267429F7B6ED00D10905 /* UIButtonConfigViewController.swift in Sources */,
 				239F128729E6AFD3005313AA /* MovieSeriesModel.swift in Sources */,
 				23FCAD0A29E4227800623264 /* UISwitchViewController.swift in Sources */,
 				23E1161A29E95F89000D82EF /* ExpandedTableViewCell.swift in Sources */,

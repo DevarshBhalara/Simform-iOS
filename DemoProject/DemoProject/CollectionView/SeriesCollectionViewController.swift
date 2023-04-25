@@ -22,6 +22,7 @@ class SeriesCollectionViewController: UIViewController {
         seachBar.delegate = self
         seachBar.setImage(UIImage(systemName: "trash"), for: .search, state: .normal)
         seachBar.setImage(UIImage(systemName: "trash.fill"), for: .clear, state: .normal)
+        seachBar.autocapitalizationType = .none
     }
     
 //    override func viewDidLayoutSubviews() {
@@ -83,7 +84,7 @@ extension SeriesCollectionViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        searchResultSeriesModel = searchText.isEmpty ? seriesModel : seriesModel.filter { $0.seriesName?.starts(with: searchText) ?? false }
+        searchResultSeriesModel = searchText.isEmpty ? seriesModel : seriesModel.filter { $0.seriesName?.localizedCaseInsensitiveContains(searchText) ?? false }
         
         if searchResultSeriesModel.count == 0 {
             isSearchActive = false

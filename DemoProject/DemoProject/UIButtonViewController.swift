@@ -10,10 +10,10 @@ import UIKit
 class UIButtonViewController: UIViewController {
 
     // MARK:  Outlets
-    @IBOutlet weak var btnTapMe: UIButton!
-    @IBOutlet weak var lblTextChange: UILabel!
-    @IBOutlet weak var btnAdd: UIButton!
-    @IBOutlet weak var btnLoading: UIButton!
+    @IBOutlet private weak var btnTapMe: UIButton!
+    @IBOutlet private weak var lblTextChange: UILabel!
+    @IBOutlet private weak var btnAdd: UIButton!
+    @IBOutlet private weak var btnLoading: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

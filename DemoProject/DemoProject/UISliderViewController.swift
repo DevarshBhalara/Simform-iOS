@@ -9,14 +9,14 @@ import UIKit
 
 class UISliderViewController: UIViewController {
 
-    @IBOutlet weak var sliderTest: UISlider!
-    @IBOutlet weak var sliderBrightness: UISlider!
-    @IBOutlet weak var lblShowBrightness: UILabel!
-    @IBOutlet weak var lblCustomize: UILabel!
-    @IBOutlet weak var tfNumber: UITextField!
-    @IBOutlet weak var sliderTfValue: UISlider!
-    @IBOutlet weak var sliderCustom: UISlider!
-    @IBOutlet weak var sliderButton: UISlider!
+    @IBOutlet private weak var sliderTest: UISlider!
+    @IBOutlet private weak var sliderBrightness: UISlider!
+    @IBOutlet private weak var lblShowBrightness: UILabel!
+    @IBOutlet private weak var lblCustomize: UILabel!
+    @IBOutlet private weak var tfNumber: UITextField!
+    @IBOutlet private weak var sliderTfValue: UISlider!
+    @IBOutlet private weak var sliderCustom: UISlider!
+    @IBOutlet private weak var sliderButton: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +31,13 @@ class UISliderViewController: UIViewController {
         configureSliderButton()
     }
     
-    func configureSliderButton() {
+    private func configureSliderButton() {
         sliderButton.minimumValue = 1
         sliderButton.maximumValue = 10
         sliderButton.value = 2
     }
     
-    func configureSliderCustom() {
+    private func configureSliderCustom() {
         let minImage = UIImage(named: "facebookLogo")
         sliderCustom.setMinimumTrackImage(minImage, for: .normal)
         

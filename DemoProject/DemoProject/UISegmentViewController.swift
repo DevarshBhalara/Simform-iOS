@@ -9,14 +9,13 @@ import UIKit
 
 class UISegmentViewController: UIViewController {
 
-    @IBOutlet weak var segmentOne: UISegmentedControl!
+    @IBOutlet private weak var segmentOne: UISegmentedControl!
     
-    @IBOutlet weak var clickSegment: UISegmentedControl!
+    @IBOutlet private weak var clickSegment: UISegmentedControl!
     
-    @IBOutlet weak var dividerImage: UISegmentedControl!
+    @IBOutlet private weak var dividerImage: UISegmentedControl!
+    
     override func viewDidLoad() {
-    
-        
         
         super.viewDidLoad()
         configuredSegment()

@@ -11,9 +11,9 @@ class UiTextFieldViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var tfName: UITextField!
-    @IBOutlet weak var tfCapitalization: UiTextFieldPadding!
-    @IBOutlet weak var tfJustText: UiTextFieldPadding!
+    @IBOutlet private weak var tfName: UITextField!
+    @IBOutlet private weak var tfCapitalization: UiTextFieldPadding!
+    @IBOutlet private weak var tfJustText: UiTextFieldPadding!
     
     override func viewDidLoad() {
         super.viewDidLoad()

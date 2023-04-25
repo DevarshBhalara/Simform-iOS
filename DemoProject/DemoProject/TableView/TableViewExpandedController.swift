@@ -48,8 +48,3 @@ extension TableViewExpandedController: UITableViewDataSource {
         
     }
 }
-
-//MARK: - Extension Delegate
-extension TableViewExpandedController: UITableViewDelegate {
-    
-}

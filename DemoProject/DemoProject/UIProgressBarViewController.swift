@@ -11,15 +11,15 @@ class UIProgressBarViewController: UIViewController {
 
     
     
-    @IBOutlet weak var secondProgressView: UIProgressView!
-    @IBOutlet weak var firstProgressView: UIProgressView!
-    @IBOutlet weak var sliderFirst: UIProgressView!
-    @IBOutlet weak var sliderColorChange: UISlider!
-    @IBOutlet weak var progressView: UIProgressView!
-    @IBOutlet weak var tfName: UITextField!
-    @IBOutlet weak var tfEmail: UITextField!
-    @IBOutlet weak var lblMsg: UILabel!
-    @IBOutlet weak var btnSubmit: UIButton!
+    @IBOutlet private weak var secondProgressView: UIProgressView!
+    @IBOutlet private weak var firstProgressView: UIProgressView!
+    @IBOutlet private weak var sliderFirst: UIProgressView!
+    @IBOutlet private weak var sliderColorChange: UISlider!
+    @IBOutlet private weak var progressView: UIProgressView!
+    @IBOutlet private weak var tfName: UITextField!
+    @IBOutlet private weak var tfEmail: UITextField!
+    @IBOutlet private weak var lblMsg: UILabel!
+    @IBOutlet private weak var btnSubmit: UIButton!
 
     
     let progress = Progress(totalUnitCount: 2)

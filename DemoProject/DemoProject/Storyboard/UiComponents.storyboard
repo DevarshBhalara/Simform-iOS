@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t2n-VS-POz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4bG-vo-90q">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -69,7 +69,7 @@
                                     <fragment content="this label has longggggggggg texttttttttttttttttttttttttttt">
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="17"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -266,7 +266,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name " minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3ow-oD-dhV">
                                 <rect key="frame" x="30" y="99" width="370" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="clickNameTf:" destination="4bG-vo-90q" eventType="editingDidEnd" id="Ywv-TN-tfy"/>
@@ -379,19 +379,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-V9-z4L">
-                                <rect key="frame" x="40" y="99" width="350" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Lorem ipsum dolor sit er elit lamet, consectet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-V9-z4L">
+                                <rect key="frame" x="40" y="99" width="350" height="33"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="wp5-Sh-5Ei"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htP-n5-Dix">
-                                <rect key="frame" x="159" y="269" width="112" height="35"/>
+                                <rect key="frame" x="159" y="564" width="112" height="35"/>
                                 <color key="backgroundColor" red="0.013735878280000001" green="0.47685205939999997" blue="0.99868255849999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.95583004419999995" green="0.95583004419999995" blue="0.95583004419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -401,7 +397,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2H-o6-J8O">
-                                <rect key="frame" x="40" y="382" width="350" height="21"/>
+                                <rect key="frame" x="40" y="677" width="350" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -414,11 +410,11 @@
                             <constraint firstItem="iE7-V9-z4L" firstAttribute="leading" secondItem="Fgi-mt-DLJ" secondAttribute="leading" constant="40" id="GAr-G9-nhI"/>
                             <constraint firstItem="htP-n5-Dix" firstAttribute="leading" secondItem="Fgi-mt-DLJ" secondAttribute="leading" constant="159" id="L7i-9F-QPX"/>
                             <constraint firstItem="M2H-o6-J8O" firstAttribute="top" secondItem="htP-n5-Dix" secondAttribute="bottom" constant="78" id="P4a-lU-tDf"/>
-                            <constraint firstItem="htP-n5-Dix" firstAttribute="top" secondItem="iE7-V9-z4L" secondAttribute="bottom" constant="42" id="POj-0N-9PG"/>
                             <constraint firstItem="Fgi-mt-DLJ" firstAttribute="trailing" secondItem="iE7-V9-z4L" secondAttribute="trailing" constant="40" id="RPX-rh-ces"/>
                             <constraint firstItem="Fgi-mt-DLJ" firstAttribute="trailing" secondItem="M2H-o6-J8O" secondAttribute="trailing" constant="40" id="fTT-0D-KlJ"/>
                             <constraint firstItem="M2H-o6-J8O" firstAttribute="leading" secondItem="Fgi-mt-DLJ" secondAttribute="leading" constant="40" id="in8-GP-OTT"/>
                             <constraint firstItem="iE7-V9-z4L" firstAttribute="top" secondItem="Fgi-mt-DLJ" secondAttribute="top" constant="40" id="knB-UL-rAk"/>
+                            <constraint firstItem="Fgi-mt-DLJ" firstAttribute="bottom" secondItem="M2H-o6-J8O" secondAttribute="bottom" constant="200" id="zw0-fT-Yzw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -945,7 +941,7 @@
                                     <segment title="Series"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <connections>
                                     <action selector="segmentChanged:" destination="3iD-2s-7g7" eventType="valueChanged" id="hmM-ec-mTw"/>
                                 </connections>
@@ -1145,8 +1141,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UM8-p9-12W">
                                 <rect key="frame" x="0.0" y="59" width="430" height="839"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgx-4e-APV">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="839"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgx-4e-APV">
+                                        <rect key="frame" x="-31" y="0.0" width="430" height="839"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcY-ds-Fh0">
                                                 <rect key="frame" x="40" y="34" width="350" height="50"/>
@@ -1725,6 +1721,9 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
