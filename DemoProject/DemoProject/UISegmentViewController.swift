@@ -21,6 +21,7 @@ class UISegmentViewController: UIViewController {
         configuredSegment()
         
         var radius = 20.0
+        
         clickSegment.layer.cornerRadius = radius
         clickSegment.layer.masksToBounds = true
         // Do any additional setup after loading the view.

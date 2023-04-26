@@ -1628,23 +1628,15 @@ example of compression resistance priority
             <point key="canvasLocation" x="-4630" y="-6287"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="bI0-5b-ZUt">
-            <objects>
-                <viewController id="NZZ-kb-Dq6" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OlJ-BI-6kb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4493" y="-3891"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="e7R-Wi-84K">
             <objects>
                 <viewController id="KPV-Oa-KKG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1O2-55-TxI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUl-xb-rKI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EH-yB-C1J">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
@@ -1700,7 +1692,7 @@ example of compression resistance priority
                             <constraint firstItem="FUl-xb-rKI" firstAttribute="top" secondItem="qef-Nw-FzD" secondAttribute="top" id="fpP-TG-O1U"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="1100"/>
+                    <size key="freeformSize" width="414" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBQ-R0-NdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

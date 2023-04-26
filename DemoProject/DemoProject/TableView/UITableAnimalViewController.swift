@@ -57,6 +57,7 @@ extension UITableAnimalViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
 //        return animalDict.keys.map { String($0) }.sorted().firstIndex(of: title) ?? 0
+        print(animalStructArray.map { $0.animalSectionName }.firstIndex(of: title) ?? -1)
         return animalStructArray.map { $0.animalSectionName }.firstIndex(of: title) ?? -1
     }
 }

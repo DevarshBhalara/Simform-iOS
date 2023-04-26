@@ -50,7 +50,9 @@ class WKWebViewViewController: UIViewController {
 
         /** Custom bar Item Demo  */
         
-//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 60)) For custom View in barItem
+//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 60))
+//        view.backgroundColor = .red
+//        let customViewBarItem = UIBarButtonItem(customView: view)
         
         let barItem = UIBarButtonItem(image: UIImage(systemName: "trash.fill"), style: .plain, target: self, action: nil)
 //For custom View in barItem

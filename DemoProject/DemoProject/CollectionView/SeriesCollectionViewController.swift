@@ -84,8 +84,9 @@ extension SeriesCollectionViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        searchResultSeriesModel = searchText.isEmpty ? seriesModel : seriesModel.filter { $0.seriesName?.localizedCaseInsensitiveContains(searchText) ?? false }
-        
+        searchResultSeriesModel = searchText.isEmpty ? seriesModel : seriesModel.filter { $0.seriesName?.lowercased().starts(with: searchText) ?? false
+        }
+            
         if searchResultSeriesModel.count == 0 {
             isSearchActive = false
         } else {

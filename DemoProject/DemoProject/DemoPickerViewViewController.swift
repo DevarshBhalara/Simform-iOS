@@ -25,7 +25,7 @@ class DemoPickerViewViewController: UIViewController {
     
     let dateFormatter = DateFormatter()
     
-    var country_list = ["Afghanistan","Albania","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Ecuador","Egypt","El Salvador","Equatorial Guinea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia"]
+    var country_list = [  "Afghanistan","Albania","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Ecuador","Egypt","El Salvador","Equatorial Guinea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia" ]
     let imageArray = [
         UIImage(named: "avtar"),
         UIImage(named: "13reason"),
@@ -35,6 +35,13 @@ class DemoPickerViewViewController: UIViewController {
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        
+        setupUI()
+        
+       
+        
+    }
+    private func setupUI() {
         setUpTimePicker()
         setUpDatePicker()
         setUpCustomPicker()
@@ -43,7 +50,6 @@ class DemoPickerViewViewController: UIViewController {
         countryPicker.dataSource = self
         imagePicker.delegate = self
         imagePicker.dataSource = self
-        
     }
     
     private func setUpImagePicker() {
@@ -106,7 +112,10 @@ class DemoPickerViewViewController: UIViewController {
         textFieldDate.inputAccessoryView = toolBarDatePicker
     }
     
-    @objc func setImageTextField() {
+    @objc func setImageTextField(sender: UITextField) {
+        if sender == textFieldImage {
+            print("image")
+        }
         textFieldImage.resignFirstResponder()
     }
     
@@ -194,6 +203,24 @@ extension DemoPickerViewViewController: UIPickerViewDelegate {
         
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if component == 0 {
+            return country_list[row]
+        } else {
+            
+            return ""
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+   
+            if pickerView == countryPicker {
+                textFieldPicker.text = country_list[row]
+            } else {
+                imageView.image = imageArray[row]
+            }
+    }
+    
 }
 extension DemoPickerViewViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -210,25 +237,7 @@ extension DemoPickerViewViewController: UIPickerViewDataSource {
         
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if component == 0 {
-            return country_list[row]
-        } else {
-            
-            return ""
-        }
-        
-        
-    }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-   
-            if pickerView == countryPicker {
-                textFieldPicker.text = country_list[row]
-            } else {
-                imageView.image = imageArray[row]
-            }
-    }
     
     
 }
