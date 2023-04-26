@@ -266,7 +266,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name " minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3ow-oD-dhV">
                                 <rect key="frame" x="30" y="99" width="370" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="clickNameTf:" destination="4bG-vo-90q" eventType="editingDidEnd" id="Ywv-TN-tfy"/>
@@ -1399,7 +1399,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="4994" y="-2840"/>
+            <point key="canvasLocation" x="4651" y="-2813"/>
         </scene>
         <!--Table Content View Controller2-->
         <scene sceneID="BeO-jt-E4W">
