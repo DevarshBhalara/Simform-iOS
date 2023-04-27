@@ -14,7 +14,7 @@ class TestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        header.frame = CGRect(x: 0.0, y: 0.0, width: tableView.frame.size.width, height: 400)
+        header.frame = CGRect(x: 0.0, y: 0.0, width: tableView.frame.size.width, height: 700)
         header.frame.origin.y = 0
         tableView.tableHeaderView = header
         

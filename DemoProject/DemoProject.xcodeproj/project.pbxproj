@@ -41,6 +41,13 @@
 		238087DE29E6D72800CBDCD3 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238087DC29E6D72800CBDCD3 /* AnimalTableViewCell.swift */; };
 		238087DF29E6D72800CBDCD3 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238087DD29E6D72800CBDCD3 /* AnimalTableViewCell.xib */; };
 		238087E129E6D86B00CBDCD3 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238087E029E6D86B00CBDCD3 /* AnimalModel.swift */; };
+		238FCD3729FA44AC0005C623 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238FCD3629FA44AC0005C623 /* CardCollectionViewCell.swift */; };
+		238FCD3D29FA4B110005C623 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238FCD3B29FA4B110005C623 /* GroupTableViewCell.swift */; };
+		238FCD3E29FA4B110005C623 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238FCD3C29FA4B110005C623 /* GroupTableViewCell.xib */; };
+		238FCD4129FA4E120005C623 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238FCD4029FA4E120005C623 /* GroupModel.swift */; };
+		238FCD4329FA4E710005C623 /* GroupStructureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238FCD4229FA4E710005C623 /* GroupStructureModel.swift */; };
+		238FCD4C29FA60F10005C623 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238FCD4A29FA60F10005C623 /* HeaderTableViewCell.swift */; };
+		238FCD4D29FA60F10005C623 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238FCD4B29FA60F10005C623 /* HeaderTableViewCell.xib */; };
 		2390D1FE29F9643100D16056 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2390D1FD29F9643100D16056 /* TestViewController.swift */; };
 		239F127629E684F2005313AA /* UITableContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F127529E684F2005313AA /* UITableContentViewController.swift */; };
 		239F127929E688B6005313AA /* IndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F127729E688B6005313AA /* IndexTableViewCell.swift */; };
@@ -143,6 +150,13 @@
 		238087DC29E6D72800CBDCD3 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
 		238087DD29E6D72800CBDCD3 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalTableViewCell.xib; sourceTree = "<group>"; };
 		238087E029E6D86B00CBDCD3 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
+		238FCD3629FA44AC0005C623 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		238FCD3B29FA4B110005C623 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		238FCD3C29FA4B110005C623 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
+		238FCD4029FA4E120005C623 /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
+		238FCD4229FA4E710005C623 /* GroupStructureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStructureModel.swift; sourceTree = "<group>"; };
+		238FCD4A29FA60F10005C623 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		238FCD4B29FA60F10005C623 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		2390D1FD29F9643100D16056 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		239F127529E684F2005313AA /* UITableContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableContentViewController.swift; sourceTree = "<group>"; };
 		239F127729E688B6005313AA /* IndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexTableViewCell.swift; sourceTree = "<group>"; };
@@ -377,6 +391,34 @@
 			path = DemoProject;
 			sourceTree = "<group>";
 		};
+		238FCD3529FA448A0005C623 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				238FCD3629FA44AC0005C623 /* CardCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		238FCD3829FA4AE10005C623 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				238FCD3B29FA4B110005C623 /* GroupTableViewCell.swift */,
+				238FCD3C29FA4B110005C623 /* GroupTableViewCell.xib */,
+				238FCD4A29FA60F10005C623 /* HeaderTableViewCell.swift */,
+				238FCD4B29FA60F10005C623 /* HeaderTableViewCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		238FCD3F29FA4DF70005C623 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				238FCD4029FA4E120005C623 /* GroupModel.swift */,
+				238FCD4229FA4E710005C623 /* GroupStructureModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		239F127229E68476005313AA /* cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +513,9 @@
 		23E411DB29F94C9D00C68F83 /* ReverseKT */ = {
 			isa = PBXGroup;
 			children = (
+				238FCD3F29FA4DF70005C623 /* Model */,
+				238FCD3829FA4AE10005C623 /* TableCell */,
+				238FCD3529FA448A0005C623 /* Cell */,
 				23E411DC29F94CB700C68F83 /* GolfHomeViewController.swift */,
 				2390D1FD29F9643100D16056 /* TestViewController.swift */,
 			);
@@ -536,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2314D4D029F789A800996791 /* CallOut.xib in Resources */,
+				238FCD4D29FA60F10005C623 /* HeaderTableViewCell.xib in Resources */,
 				235980E029A49FAB009E8C5D /* Storyboard2.storyboard in Resources */,
 				235980D829A49D0C009E8C5D /* LaunchScreen.storyboard in Resources */,
 				239F128429E6A386005313AA /* TableViewCellOneFor2.xib in Resources */,
@@ -550,6 +596,7 @@
 				23CB508B29E8243A0057E0D7 /* UiComponents2.storyboard in Resources */,
 				23E411DA29F9490E00C68F83 /* ReverstKT.storyboard in Resources */,
 				239F127A29E688B6005313AA /* IndexTableViewCell.xib in Resources */,
+				238FCD3E29FA4B110005C623 /* GroupTableViewCell.xib in Resources */,
 				234C242A29EE783600EB917E /* First.pdf in Resources */,
 				239F127E29E69CD5005313AA /* EvenTableViewCell.xib in Resources */,
 				2349F1F329EEA27B00F2E63A /* Register.storyboard in Resources */,
@@ -582,9 +629,11 @@
 				2314D4D529F78CE600996791 /* MapCustomViewController.swift in Sources */,
 				239F128329E6A386005313AA /* TableViewCellOneFor2.swift in Sources */,
 				23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */,
+				238FCD3D29FA4B110005C623 /* GroupTableViewCell.swift in Sources */,
 				23C3147D29EFF4A90017D5F2 /* TabViewController.swift in Sources */,
 				231742DF29ED2AFC0049E537 /* CollectionViewCell.swift in Sources */,
 				23FCAD0829E41BA600623264 /* UiComponentViewController.swift in Sources */,
+				238FCD4329FA4E710005C623 /* GroupStructureModel.swift in Sources */,
 				234C242829EE602B00EB917E /* ImageCollectionViewCell.swift in Sources */,
 				23FCAD0229E4043000623264 /* UiTextFieldPadding.swift in Sources */,
 				235980CC29A49D0B009E8C5D /* AppDelegate.swift in Sources */,
@@ -613,7 +662,9 @@
 				23AF267029F7A81000D10905 /* FirstViewController.swift in Sources */,
 				231742EA29ED679F0049E537 /* WKWebViewViewController.swift in Sources */,
 				23FCACFC29E3D98A00623264 /* UILabelViewController.swift in Sources */,
+				238FCD4C29FA60F10005C623 /* HeaderTableViewCell.swift in Sources */,
 				23E5A23D29F15ADB009D60DE /* UIDateTimePickerViewController.swift in Sources */,
+				238FCD3729FA44AC0005C623 /* CardCollectionViewCell.swift in Sources */,
 				23FCAD0029E4021600623264 /* UiTextFieldViewController.swift in Sources */,
 				23CB509029E826D10057E0D7 /* FirstCollectionViewCell.swift in Sources */,
 				239F127629E684F2005313AA /* UITableContentViewController.swift in Sources */,
@@ -626,6 +677,7 @@
 				23E1161729E95EF7000D82EF /* TableViewExpandedController.swift in Sources */,
 				23E1160D29E91A4B000D82EF /* FruitColorModel.swift in Sources */,
 				23E5A23B29F139E6009D60DE /* UIPickerViewViewController.swift in Sources */,
+				238FCD4129FA4E120005C623 /* GroupModel.swift in Sources */,
 				23C3148129EFF4F00017D5F2 /* MoviewViewController.swift in Sources */,
 				23E1160B29E90E6A000D82EF /* SeriesCollectionViewCell.swift in Sources */,
 				23AF267429F7B6ED00D10905 /* UIButtonConfigViewController.swift in Sources */,

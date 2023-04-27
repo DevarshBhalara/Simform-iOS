@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "iconsIllustrationSkins.pdf",
+      "filename" : "image3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "iconsIllustrationSkins@2x.png",
+      "filename" : "image3@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "iconsIllustrationSkins@3x.png",
+      "filename" : "image3@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
