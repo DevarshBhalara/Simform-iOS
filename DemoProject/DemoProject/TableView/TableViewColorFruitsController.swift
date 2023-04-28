@@ -16,9 +16,24 @@ class TableViewColorFruitsController: UIViewController {
     //MARK: - Outlet
     @IBOutlet weak var tableView: UITableView!
     
+    
     override func viewDidLoad() {
         
-        self.refreshData = UIRefreshControl()
+        refreshData = UIRefreshControl()
+        refreshData.tintColor = .blue
+        refreshData.backgroundColor = .red
+
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        customView.backgroundColor = .yellow
+        
+        var labelText = UILabel()
+        labelText.text = "Hello"
+        customView.addSubview(labelText)
+//        let myImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//        myImageView.image = UIImage(systemName: "trash")
+        
+        
+//        refreshData.addSubview(customView)
         tableView.addSubview(refreshData)
         self.refreshData.addTarget(self, action: #selector(loadData), for: .valueChanged)
         tableView.alwaysBounceVertical = true

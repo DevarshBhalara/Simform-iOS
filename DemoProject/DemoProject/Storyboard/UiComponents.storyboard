@@ -581,7 +581,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="2" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gP6-tD-R4y">
                                 <rect key="frame" x="18" y="211" width="394" height="31"/>
                                 <imageReference key="minimumValueImage" image="sun.min" catalog="system" symbolScale="default" variableValue="1"/>
-                                <imageReference key="maximumValueImage" image="sun.min" catalog="system" variableValue="1"/>
+                                <imageReference key="maximumValueImage" image="sun.min" catalog="system" symbolScale="default" variableValue="1"/>
                                 <connections>
                                     <action selector="sliderBrightnessValueChanged:" destination="O1X-9z-YlV" eventType="valueChanged" id="YUJ-T1-6x2"/>
                                 </connections>

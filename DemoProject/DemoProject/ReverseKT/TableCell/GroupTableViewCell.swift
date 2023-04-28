@@ -8,43 +8,41 @@
 import UIKit
 
 class GroupTableViewCell: UITableViewCell {
-
-    //MARK: - Outlets
-    @IBOutlet weak var buttonChatIcon: UIButton!
-    @IBOutlet weak var labelAntePanelaties: UILabel!
-    @IBOutlet weak var labelCardsEarned: UILabel!
-    @IBOutlet weak var labelPlayerName: UILabel!
     
-    var changeButton: (() -> ())?
-
+    //MARK: - Outlets
+    @IBOutlet private weak var buttonChatIcon: UIButton!
+    @IBOutlet  weak var labelAntePanelaties: UILabel!
+    @IBOutlet  weak var labelCardsEarned: UILabel!
+    @IBOutlet  weak var labelPlayerName: UILabel!
+    
+    var changeButton: ((Bool) -> ())?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
-    func configureCell(data: GroupModel, row: Int) {
+    func configureCell(data: GroupModel?, row: Int) {
         
-        if row == 1 {
-            labelPlayerName.textColor = .systemGray2
-            labelCardsEarned.textColor = .systemGray2
-            labelAntePanelaties.textColor = .systemGray2
-            
-        } 
+        labelPlayerName.textColor = row == 1 ? .systemGray2 : .white
+        labelCardsEarned.textColor = row == 1 ? .systemGray2 : .white
+        labelAntePanelaties.textColor = row == 1 ? .systemGray2 : .white
+        
         self.backgroundColor = UIColor(white: 1, alpha: 0.2)
-        labelPlayerName.text = data.playerName
-        labelCardsEarned.text = data.cardsEarned
-        labelAntePanelaties.text = data.antePenalities
-        buttonChatIcon.isHidden = !data.isChatVisible
-        buttonChatIcon.isSelected = data.isChatClicked ?? false
+        labelPlayerName.text = row == 1 ? "Player Name" : data?.playerName
+        labelCardsEarned.text = row == 1 ? "Cards Earned" : data?.cardsEarned
+        labelAntePanelaties.text = row == 1 ? "Ante + Panelaties" : data?.antePenalities
+        buttonChatIcon.isHidden = row == 1 ? true : !(data?.isChatVisible ?? false)
+        buttonChatIcon.isSelected = row == 1 ? false :   data?.isChatClicked ?? false
     }
     
     @IBAction func chatIconClicked(_ sender: UIButton) {
-        changeButton?()
+        changeButton?(sender.isSelected)
     }
 }

@@ -14,17 +14,19 @@ struct GroupStructureModel {
     
     static func getAllPlayerData() -> [GroupStructureModel] {
         return [
-            GroupStructureModel(sectionName: "Group A", isSectionIconClick: false ,playerData: [
-                                                        GroupModel(playerName: "Player Name", cardsEarned: "Cards Earned", antePenalities: "Ante + Penalities" ,isChatVisible: false, isChatClicked: false),
-                                                        GroupModel(playerName: "You", cardsEarned: "0", antePenalities: "$12.00" ,isChatVisible: false, isChatClicked: false),
-                                                        GroupModel(playerName: "Gail Forcewind", cardsEarned: "6", antePenalities: "$12.00" ,isChatVisible: true, isChatClicked: false)]),
+            GroupStructureModel(sectionName: "Group A This is just test", isSectionIconClick: false ,playerData: [
+                GroupModel(playerName: "You", cardsEarned: "0", antePenalities: "$12.00" ,isChatVisible: false, isChatClicked: false),
+                GroupModel(playerName: "Gail Forcewind", cardsEarned: "6", antePenalities: "$12.00" ,isChatVisible: true, isChatClicked: false)]),
             
-                                GroupStructureModel(sectionName: "Group B", isSectionIconClick: false ,playerData: [
-                                                                            GroupModel(playerName: "Player Name", cardsEarned: "Cards Earned", antePenalities: "Ante + Penalities" ,isChatVisible: false, isChatClicked: false),
-                                                                            GroupModel(playerName: "You", cardsEarned: "0", antePenalities: "$12.00" ,isChatVisible: false, isChatClicked: false),
-                                                                            GroupModel(playerName: "Gail Forcewind", cardsEarned: "6", antePenalities: "$12.00" ,isChatVisible: true, isChatClicked: false),
-                                                                            GroupModel(playerName: "Gail Forcewind", cardsEarned: "6", antePenalities: "$12.00" ,isChatVisible: true, isChatClicked: false)]
-            )]
+            GroupStructureModel(sectionName: "Group B A This is just test test ", isSectionIconClick: false ,playerData: [
+                GroupModel(playerName: "You", cardsEarned: "0", antePenalities: "$12.00" ,isChatVisible: false, isChatClicked: false),
+                GroupModel(playerName: "Gail Forcewind", cardsEarned: "6", antePenalities: "$12.00" ,isChatVisible: true, isChatClicked: false),
+                GroupModel(playerName: "Gail Forcewind", cardsEarned: "6", antePenalities: "$12.00" ,isChatVisible: true, isChatClicked: false)]),
+            
+            GroupStructureModel(sectionName: "Group B", isSectionIconClick: false ,playerData: [
+                GroupModel(playerName: "You", cardsEarned: "0", antePenalities: "$12.00" ,isChatVisible: false, isChatClicked: false),
+                GroupModel(playerName: "Gail Forcewind", cardsEarned: "6", antePenalities: "$12.00" ,isChatVisible: true, isChatClicked: false),
+                GroupModel(playerName: "Gail Forcewind", cardsEarned: "6", antePenalities: "$12.00" ,isChatVisible: true, isChatClicked: false)])]
     }
     
 }

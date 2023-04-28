@@ -8,41 +8,34 @@
 import UIKit
 
 class HeaderTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var chatIconButton: UIButton!
-    @IBOutlet weak var viewHorizontalLine: UIView!
-    @IBOutlet weak var labelViewScore: UILabel!
-    @IBOutlet weak var imageEye: UIImageView!
-    @IBOutlet weak var labelGroupName: UILabel!
+    
+    @IBOutlet private weak var chatIconButton: UIButton!
+    @IBOutlet private weak var viewHorizontalLine: UIView!
+    @IBOutlet private weak var labelViewScore: UILabel!
+    @IBOutlet private weak var imageEye: UIImageView!
+    @IBOutlet private weak var labelGroupName: UILabel!
     
     var chatButtonClickedClosure: ((Bool) -> ())?
-
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     @IBAction func chatButtonClicked(_ sender: UIButton) {
         chatButtonClickedClosure?(sender.isSelected)
- 
+        
     }
     
     func configureCell(data: GroupStructureModel, sectionNumber: Int) {
         labelGroupName.text = data.sectionName
         chatIconButton.isSelected = data.isSectionIconClick ?? false
-        
-        if sectionNumber != 0 {
-            imageEye.isHidden = true
-            labelViewScore.isHidden = true
-            viewHorizontalLine.isHidden = true
-        }
+        imageEye.isHidden = sectionNumber != 0
+        labelViewScore.isHidden = sectionNumber != 0
+        viewHorizontalLine.isHidden = sectionNumber != 0
+        labelGroupName.preferredMaxLayoutWidth = sectionNumber == 0 ? 140 : self.frame.size.width - chatIconButton.frame.size.width
+        print(labelGroupName.preferredMaxLayoutWidth)
     }
     
 }

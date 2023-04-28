@@ -20,6 +20,8 @@ class UiTextFieldViewController: UIViewController, UITextFieldDelegate {
         print(tfCapitalization.padding)
         print(tfJustText.text ?? "no text")
         tfJustText.delegate = self
+        tfCapitalization.delegate = self
+        tfJustText.delegate = self
    
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -53,12 +55,18 @@ class UiTextFieldViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, willDismissEditMenuWith animator: UIEditMenuInteractionAnimating) {
-        print("while entring character this called")
+        print("wiilDismissEditMenuWith")
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let txtAfterUpdate: NSString = self.tfCapitalization.text! as NSString
-        txtAfterUpdate.replacingCharacters(in: range, with: string)
+        
+        if textField == tfJustText {
+            let txtAfterUpdate =
+            (self.tfJustText.text! as NSString).replacingCharacters(in: range, with: string) 
+            return true
+        }
         return true
+    
+        
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == tfJustText {

@@ -6,10 +6,11 @@
 //
 
 import Foundation
+
 struct GroupModel {
     var playerName: String?
     var cardsEarned: String?
     var antePenalities: String?
-    var isChatVisible: Bool
+    var isChatVisible: Bool?
     var isChatClicked: Bool?
 }
