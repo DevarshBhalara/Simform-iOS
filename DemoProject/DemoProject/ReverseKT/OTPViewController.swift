@@ -28,31 +28,89 @@ class OTPViewController: UIViewController {
         tfNumberThree.delegate = self
         tfNumberFour.delegate = self
         tfNumberFive.delegate = self
+        tfNumberOne.becomeFirstResponder()
+        
+//        self.tfNumberOne.addTarget(self, action: #selector(self.changeCharacter), for: .editingChanged)
+//        self.tfNumberTwo.addTarget(self, action: #selector(self.changeCharacter), for: .editingChanged)
+//        self.tfNumberThree.addTarget(self, action: #selector(self.changeCharacter), for: .editingChanged)
+//        self.tfNumberFour.addTarget(self, action: #selector(self.changeCharacter), for: .editingChanged)
+//        self.tfNumberFive.addTarget(self, action: #selector(self.changeCharacter), for: .editingChanged)
     }
+    
+//    @objc func changeCharacter(textField : UITextField){
+//            if textField.text?.utf8.count == 1 {
+//                switch textField {
+//                case tfNumberOne:
+//                    tfNumberTwo.becomeFirstResponder()
+//                case tfNumberTwo:
+//                    tfNumberThree.becomeFirstResponder()
+//                case tfNumberThree:
+//                    tfNumberFour.becomeFirstResponder()
+//                case tfNumberFour:
+//                    tfNumberFive.becomeFirstResponder()
+//                case tfNumberFive:
+//                    tfNumberFive.resignFirstResponder()
+//                default:
+//                    break
+//                }
+//            }else if textField.text!.isEmpty {
+//                switch textField {
+//                case tfNumberFive:
+//                    tfNumberFour.becomeFirstResponder()
+//                case tfNumberFour:
+//                    tfNumberThree.becomeFirstResponder()
+//                case tfNumberThree:
+//                    tfNumberTwo.becomeFirstResponder()
+//                case tfNumberTwo:
+//                    tfNumberOne.becomeFirstResponder()
+//                default:
+//                    break
+//                }
+//            }
+//        }
 }
 
 extension OTPViewController: UITextFieldDelegate {
     
-    
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        if textField == tfNumberOne {
-    
-            if (textField.text?.count ?? 0) < 1 {
-                textField.text = string
+        if range.length == 0 {
+            switch textField {
+            case tfNumberOne:
                 tfNumberTwo.becomeFirstResponder()
-                return true
-            } else {
-                tfNumberTwo.becomeFirstResponder()
-                return false
+            case tfNumberTwo:
+                tfNumberThree.becomeFirstResponder()
+            case tfNumberThree:
+                tfNumberFour.becomeFirstResponder()
+            case tfNumberFour:
+                tfNumberFive.becomeFirstResponder()
+            case tfNumberFive:
+                tfNumberFive.resignFirstResponder()
+            default:
+                break
             }
+            textField.text = string
+            return false
+        } else if range.length == 1 {
+            switch textField {
+            case tfNumberFive:
+                tfNumberFour.becomeFirstResponder()
+            case tfNumberFour:
+                tfNumberThree.becomeFirstResponder()
+            case tfNumberThree:
+                tfNumberTwo.becomeFirstResponder()
+            case tfNumberTwo:
+                tfNumberOne.becomeFirstResponder()
+            default:
+                break
+            }
+            textField.text = ""
+            return false
         }
         return true
         
-        
+
     }
-    
+
     
     
 }
