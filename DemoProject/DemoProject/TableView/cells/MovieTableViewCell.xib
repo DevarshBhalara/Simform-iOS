@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="78" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="DemoProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="369" height="78"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BcG-Sb-o9W">
+                        <rect key="frame" x="10" y="9.6666666666666679" width="73.666666666666671" height="58.666666666666657"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAu-a8-hjn">
+                        <rect key="frame" x="103.66666666666666" y="9.6666666666666643" width="94.666666666666657" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNV-LM-2Ef">
+                        <rect key="frame" x="249" y="22.000000000000004" width="100" height="34.333333333333343"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Watched?"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae5-yy-5qV">
+                        <rect key="frame" x="103.66666666666667" y="38" width="48.666666666666671" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="YNV-LM-2Ef" secondAttribute="trailing" constant="20" symbolic="YES" id="PiX-IM-zRS"/>
+                    <constraint firstItem="BcG-Sb-o9W" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.2" id="QDc-Ua-0hq"/>
+                    <constraint firstItem="BcG-Sb-o9W" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.75" id="SEM-mh-c3u"/>
+                    <constraint firstItem="YNV-LM-2Ef" firstAttribute="centerY" secondItem="BcG-Sb-o9W" secondAttribute="centerY" id="XA5-ly-Ifm"/>
+                    <constraint firstItem="ae5-yy-5qV" firstAttribute="leading" secondItem="fAu-a8-hjn" secondAttribute="leading" id="bcC-Ns-Eo6"/>
+                    <constraint firstItem="ae5-yy-5qV" firstAttribute="top" secondItem="fAu-a8-hjn" secondAttribute="bottom" constant="7.3333333333333357" id="fde-TS-Jju"/>
+                    <constraint firstItem="BcG-Sb-o9W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gJZ-n9-td6"/>
+                    <constraint firstItem="BcG-Sb-o9W" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gWf-YV-xd5"/>
+                    <constraint firstItem="fAu-a8-hjn" firstAttribute="top" secondItem="BcG-Sb-o9W" secondAttribute="top" id="o5k-zb-yP7"/>
+                    <constraint firstItem="fAu-a8-hjn" firstAttribute="leading" secondItem="BcG-Sb-o9W" secondAttribute="trailing" constant="20" id="rhc-eN-x2z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnWatchNow" destination="YNV-LM-2Ef" id="HE3-aW-PO6"/>
+                <outlet property="imgMovie" destination="BcG-Sb-o9W" id="00D-35-9At"/>
+                <outlet property="lblMovieName" destination="fAu-a8-hjn" id="Hdh-4j-mSt"/>
+                <outlet property="lblrating" destination="ae5-yy-5qV" id="VJL-Np-sNl"/>
+            </connections>
+            <point key="canvasLocation" x="25.190839694656489" y="0.70422535211267612"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
