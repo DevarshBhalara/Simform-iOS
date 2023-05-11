@@ -18,19 +18,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        let storyboard = UIStoryboard(name: "Storyboard2", bundle: nil)
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .red
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
-        if let windowScene = scene as? UIWindowScene {
-            self.window = UIWindow(windowScene: windowScene)
-            self.window!.rootViewController = storyboard.instantiateViewController(withIdentifier: "Storyboard2")
-            self.window!.makeKeyAndVisible()
-            
-            
-            
-            
-            
-            
-        }
+        /**State management **/
+        let storyBoard = UIStoryboard(name: "NavigationController", bundle: nil)
+        let rootVC = UpdateUserDetails.updateUserDetails.isLoggedIn() ? storyBoard.instantiateViewController(withIdentifier: "TabbarNavigation") : storyBoard.instantiateViewController(withIdentifier: "LoginNavigationViewController")
+        let navigationController = UINavigationController(rootViewController: rootVC)
+        window?.rootViewController = navigationController
+        navigationController.setNavigationBarHidden(true, animated: true)
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

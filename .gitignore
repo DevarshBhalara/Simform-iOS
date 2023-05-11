@@ -79,3 +79,4 @@ fastlane/test_output# Code Injection
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings# End of https://www.toptal.com/developers/gitignore/api/swift,xcode,macos
+DemoProject/DemoProject.xcodeproj/project.xcworkspace/xcuserdata/devarsh.xcuserdatad/UserInterfaceState.xcuserstate
