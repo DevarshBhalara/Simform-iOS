@@ -21,7 +21,6 @@ class UITableAnimalViewController: UIViewController {
     }
     
     private func setUpUI() {
-        tableViewAnimal.delegate = self
         tableViewAnimal.dataSource = self
         tableViewAnimal.register(UINib(nibName: "AnimalTableViewCell", bundle: nil), forCellReuseIdentifier: "animalCell")
     }

@@ -86,7 +86,6 @@
 		23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF329E5277F00F3748D /* UISliderViewController.swift */; };
 		23B31AF629E53A1A00F3748D /* UIProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */; };
 		23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */; };
-		23BBB4DF2A021ADB00BDF4A4 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BBB4DE2A021ADB00BDF4A4 /* Register.storyboard */; };
 		23BBB4E12A021B8500BDF4A4 /* NavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BBB4E02A021B8500BDF4A4 /* NavigationController.storyboard */; };
 		23BBB4E42A02209700BDF4A4 /* FirstNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BBB4E32A02209700BDF4A4 /* FirstNavigationViewController.swift */; };
 		23BBB4E62A0220B500BDF4A4 /* SecondNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BBB4E52A0220B500BDF4A4 /* SecondNavigationViewController.swift */; };
@@ -233,7 +232,6 @@
 		23B31AF329E5277F00F3748D /* UISliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderViewController.swift; sourceTree = "<group>"; };
 		23B31AF529E53A1A00F3748D /* UIProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressBarViewController.swift; sourceTree = "<group>"; };
 		23B31AF729E554EB00F3748D /* UIPageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControlViewController.swift; sourceTree = "<group>"; };
-		23BBB4DE2A021ADB00BDF4A4 /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Register.storyboard; path = ../../../../../../.Trash/Register.storyboard; sourceTree = "<group>"; };
 		23BBB4E02A021B8500BDF4A4 /* NavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationController.storyboard; sourceTree = "<group>"; };
 		23BBB4E32A02209700BDF4A4 /* FirstNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNavigationViewController.swift; sourceTree = "<group>"; };
 		23BBB4E52A0220B500BDF4A4 /* SecondNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNavigationViewController.swift; sourceTree = "<group>"; };
@@ -391,7 +389,6 @@
 			isa = PBXGroup;
 			children = (
 				235980D129A49D0B009E8C5D /* Main.storyboard */,
-				23BBB4DE2A021ADB00BDF4A4 /* Register.storyboard */,
 				235980D629A49D0C009E8C5D /* LaunchScreen.storyboard */,
 				235980DF29A49FAB009E8C5D /* Storyboard2.storyboard */,
 				23FCACF929E3CEAF00623264 /* UiComponents.storyboard */,
@@ -767,7 +764,6 @@
 				238FCD3E29FA4B110005C623 /* GroupTableViewCell.xib in Resources */,
 				234C242A29EE783600EB917E /* First.pdf in Resources */,
 				239F127E29E69CD5005313AA /* EvenTableViewCell.xib in Resources */,
-				23BBB4DF2A021ADB00BDF4A4 /* Register.storyboard in Resources */,
 				23BBB4E12A021B8500BDF4A4 /* NavigationController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
