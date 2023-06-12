@@ -53,6 +53,15 @@
 		238087DE29E6D72800CBDCD3 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238087DC29E6D72800CBDCD3 /* AnimalTableViewCell.swift */; };
 		238087DF29E6D72800CBDCD3 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238087DD29E6D72800CBDCD3 /* AnimalTableViewCell.xib */; };
 		238087E129E6D86B00CBDCD3 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238087E029E6D86B00CBDCD3 /* AnimalModel.swift */; };
+		2385E7CE2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2385E7CD2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard */; };
+		2385E7D02A36F08E00E41156 /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7CF2A36F08E00E41156 /* GameListViewController.swift */; };
+		2385E7D42A36F37100E41156 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7D32A36F37100E41156 /* GameTableViewCell.swift */; };
+		2385E7D62A36F3FF00E41156 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7D52A36F3FF00E41156 /* Game.swift */; };
+		2385E7D82A36F62D00E41156 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7D72A36F62D00E41156 /* UserListViewController.swift */; };
+		2385E7DA2A37003900E41156 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7D92A37003900E41156 /* User.swift */; };
+		2385E7DE2A3725E600E41156 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7DD2A3725E600E41156 /* UserCell.swift */; };
+		2385E7E02A37316E00E41156 /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7DF2A37316E00E41156 /* UserRegister.swift */; };
+		2385E7E22A373ED600E41156 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7E12A373ED600E41156 /* AddUserViewController.swift */; };
 		238FCD3729FA44AC0005C623 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238FCD3629FA44AC0005C623 /* CardCollectionViewCell.swift */; };
 		238FCD3D29FA4B110005C623 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238FCD3B29FA4B110005C623 /* GroupTableViewCell.swift */; };
 		238FCD3E29FA4B110005C623 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238FCD3C29FA4B110005C623 /* GroupTableViewCell.xib */; };
@@ -198,6 +207,15 @@
 		238087DC29E6D72800CBDCD3 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
 		238087DD29E6D72800CBDCD3 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalTableViewCell.xib; sourceTree = "<group>"; };
 		238087E029E6D86B00CBDCD3 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
+		2385E7CD2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebServiceStoaryBoard.storyboard; sourceTree = "<group>"; };
+		2385E7CF2A36F08E00E41156 /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
+		2385E7D32A36F37100E41156 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		2385E7D52A36F3FF00E41156 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		2385E7D72A36F62D00E41156 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		2385E7D92A37003900E41156 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2385E7DD2A3725E600E41156 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		2385E7DF2A37316E00E41156 /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
+		2385E7E12A373ED600E41156 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		238FCD3629FA44AC0005C623 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		238FCD3B29FA4B110005C623 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		238FCD3C29FA4B110005C623 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
@@ -459,6 +477,7 @@
 		235980CA29A49D0B009E8C5D /* DemoProject */ = {
 			isa = PBXGroup;
 			children = (
+				2385E7CC2A36EE5000E41156 /* WebServices */,
 				23E411DB29F94C9D00C68F83 /* ReverseKT */,
 				231742E529ED4D9C0049E537 /* Storyboard */,
 				231742E429ED4CCA0049E537 /* ViewController */,
@@ -471,6 +490,38 @@
 				2327A44329DC585B0055D904 /* CustomTraitCollectionViewController.swift */,
 			);
 			path = DemoProject;
+			sourceTree = "<group>";
+		};
+		2385E7CC2A36EE5000E41156 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				2385E7D22A36F0A800E41156 /* Model */,
+				2385E7D12A36F09E00E41156 /* Cell */,
+				2385E7CD2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard */,
+				2385E7CF2A36F08E00E41156 /* GameListViewController.swift */,
+				2385E7D72A36F62D00E41156 /* UserListViewController.swift */,
+				2385E7E12A373ED600E41156 /* AddUserViewController.swift */,
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
+		2385E7D12A36F09E00E41156 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2385E7D32A36F37100E41156 /* GameTableViewCell.swift */,
+				2385E7DD2A3725E600E41156 /* UserCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2385E7D22A36F0A800E41156 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2385E7D52A36F3FF00E41156 /* Game.swift */,
+				2385E7D92A37003900E41156 /* User.swift */,
+				2385E7DF2A37316E00E41156 /* UserRegister.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		238FCD3529FA448A0005C623 /* Cell */ = {
@@ -758,6 +809,7 @@
 				235980D529A49D0C009E8C5D /* Assets.xcassets in Resources */,
 				2314D4D729F7A5CC00996791 /* StoryboardSegue.storyboard in Resources */,
 				2339135329DBEE4900505575 /* Main.storyboard in Resources */,
+				2385E7CE2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard in Resources */,
 				239F128B29E6B0FA005313AA /* MovieTableViewCell.xib in Resources */,
 				23CB508B29E8243A0057E0D7 /* UiComponents2.storyboard in Resources */,
 				239F127A29E688B6005313AA /* IndexTableViewCell.xib in Resources */,
@@ -791,6 +843,7 @@
 				23CB508429E804CF0057E0D7 /* FruitTableViewCell.swift in Sources */,
 				235351072A036EDA00350318 /* UICombineViewController.swift in Sources */,
 				23CC7DA829F65C0B002336E3 /* MyAnnotationView.swift in Sources */,
+				2385E7D62A36F3FF00E41156 /* Game.swift in Sources */,
 				23C3147F29EFF4DE0017D5F2 /* SeriesViewController.swift in Sources */,
 				23E38B5F2A08B8F700DD2850 /* ThirdPassViewController.swift in Sources */,
 				231742D929ED28420049E537 /* UICollectionViewInTableViewController.swift in Sources */,
@@ -831,6 +884,7 @@
 				23AEEDEC2A050DAB00DF0DAC /* SecondViewViewController.swift in Sources */,
 				23DBE39929F235C700298103 /* UIPickerViewImageViewController.swift in Sources */,
 				233C01AC29ED0445004733A2 /* JobSliderCellCollectionViewCell.swift in Sources */,
+				2385E7E02A37316E00E41156 /* UserRegister.swift in Sources */,
 				23E1160529E90AC4000D82EF /* SeriesCollectionModel.swift in Sources */,
 				23BBB4F32A0287D000BDF4A4 /* FirstWithTitleViewController.swift in Sources */,
 				230207052A00F092009D2592 /* ProfileViewController.swift in Sources */,
@@ -852,10 +906,12 @@
 				23D295C429ED2084000069E8 /* JobCompanyCollectionViewCell.swift in Sources */,
 				23AF267029F7A81000D10905 /* FirstViewController.swift in Sources */,
 				231742EA29ED679F0049E537 /* WKWebViewViewController.swift in Sources */,
+				2385E7DA2A37003900E41156 /* User.swift in Sources */,
 				23FCACFC29E3D98A00623264 /* UILabelViewController.swift in Sources */,
 				2353510E2A037F9400350318 /* UIScrollViewHorizontal.swift in Sources */,
 				238FCD4C29FA60F10005C623 /* HeaderTableViewCell.swift in Sources */,
 				230207092A00F0A7009D2592 /* Tab3ViewController.swift in Sources */,
+				2385E7D02A36F08E00E41156 /* GameListViewController.swift in Sources */,
 				23E5A23D29F15ADB009D60DE /* UIDateTimePickerViewController.swift in Sources */,
 				238FCD3729FA44AC0005C623 /* CardCollectionViewCell.swift in Sources */,
 				23FCAD0029E4021600623264 /* UiTextFieldViewController.swift in Sources */,
@@ -864,17 +920,20 @@
 				239F128029E6A33F005313AA /* UITableContentViewController2.swift in Sources */,
 				23CB508229E7FD540057E0D7 /* TableViewColorFruitsController.swift in Sources */,
 				23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */,
+				2385E7E22A373ED600E41156 /* AddUserViewController.swift in Sources */,
 				230207012A00EFB2009D2592 /* TabViewViewController.swift in Sources */,
 				23BBB4EE2A02606E00BDF4A4 /* MySegue.swift in Sources */,
 				23AEEDEA2A050B4E00DF0DAC /* FourthViewViewController.swift in Sources */,
 				23FCAD0429E4151F00623264 /* UITextViewExtension.swift in Sources */,
 				235517F729F25E0B00B46BDA /* DemoPickerViewViewController.swift in Sources */,
 				23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */,
+				2385E7D82A36F62D00E41156 /* UserListViewController.swift in Sources */,
 				23E38B5D2A08B8EB00DD2850 /* SecondPassViewController.swift in Sources */,
 				23E1161729E95EF7000D82EF /* TableViewExpandedController.swift in Sources */,
 				23E1160D29E91A4B000D82EF /* FruitColorModel.swift in Sources */,
 				23E5A23B29F139E6009D60DE /* UIPickerViewViewController.swift in Sources */,
 				238FCD4129FA4E120005C623 /* GroupModel.swift in Sources */,
+				2385E7DE2A3725E600E41156 /* UserCell.swift in Sources */,
 				23C3148129EFF4F00017D5F2 /* MoviewViewController.swift in Sources */,
 				23E1160B29E90E6A000D82EF /* SeriesCollectionViewCell.swift in Sources */,
 				230207072A00F09E009D2592 /* MoneyViewController.swift in Sources */,
@@ -887,6 +946,7 @@
 				23E38B5B2A08B8E000DD2850 /* FirstPassViewController.swift in Sources */,
 				235980CE29A49D0B009E8C5D /* SceneDelegate.swift in Sources */,
 				23CB508829E80F7A0057E0D7 /* ColorTableViewCell.swift in Sources */,
+				2385E7D42A36F37100E41156 /* GameTableViewCell.swift in Sources */,
 				233C01AA29ED0158004733A2 /* UIJobCollectionViewController.swift in Sources */,
 				238087DB29E6D3C900CBDCD3 /* UITableAnimalViewController.swift in Sources */,
 				23BBB4E82A0223D100BDF4A4 /* ThirdNavigationViewController.swift in Sources */,

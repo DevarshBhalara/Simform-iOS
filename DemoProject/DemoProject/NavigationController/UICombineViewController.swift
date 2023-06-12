@@ -15,10 +15,13 @@ struct CombineScreenData {
     static private let stoardBoardForUiComponentsOne = "UiComponents"
     static private let stoardBoardForUiComponentsTwo = "UiComponents2"
     static private let stoardBoardForReverseKT = "ReverseKT"
+    static private let stoardBoardForWebService = "WebServiceStoaryBoard"
     
     static func getAllData() -> [CombineScreenData] {
         
         return [
+            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "UserListViewController", title: "User List (Web Service)"),
+            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "AddUserViewController", title: "Add User (Web Service)"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UILabelViewController", title: "UILabelViewController"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UIButtonViewController", title: "UIButtonViewController"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UiTextFieldViewController", title: "UITexField Demo"),
