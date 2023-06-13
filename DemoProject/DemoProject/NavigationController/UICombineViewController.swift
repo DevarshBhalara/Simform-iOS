@@ -21,6 +21,7 @@ struct CombineScreenData {
         
         return [
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "UserListViewController", title: "User List (Web Service)"),
+            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "UploadImageViewController", title: "Upload Image"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "AddUserViewController", title: "Add User (Web Service)"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UILabelViewController", title: "UILabelViewController"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UIButtonViewController", title: "UIButtonViewController"),

@@ -24,6 +24,9 @@
 		231742E829ED60190049E537 /* UIActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231742E729ED60190049E537 /* UIActivityIndicatorViewController.swift */; };
 		231742EA29ED679F0049E537 /* WKWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231742E929ED679F0049E537 /* WKWebViewViewController.swift */; };
 		2327A44429DC585B0055D904 /* CustomTraitCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327A44329DC585B0055D904 /* CustomTraitCollectionViewController.swift */; };
+		23368CE42A388094008DF0B5 /* URLextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23368CE32A388094008DF0B5 /* URLextension.swift */; };
+		23368CE62A3880C6008DF0B5 /* ImageReponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23368CE52A3880C6008DF0B5 /* ImageReponseModel.swift */; };
+		23368CE92A3885F2008DF0B5 /* ImageUploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23368CE82A3885F2008DF0B5 /* ImageUploadViewModel.swift */; };
 		2339135329DBEE4900505575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235980D129A49D0B009E8C5D /* Main.storyboard */; };
 		233C01AA29ED0158004733A2 /* UIJobCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233C01A929ED0158004733A2 /* UIJobCollectionViewController.swift */; };
 		233C01AC29ED0445004733A2 /* JobSliderCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233C01AB29ED0445004733A2 /* JobSliderCellCollectionViewCell.swift */; };
@@ -62,6 +65,9 @@
 		2385E7DE2A3725E600E41156 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7DD2A3725E600E41156 /* UserCell.swift */; };
 		2385E7E02A37316E00E41156 /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7DF2A37316E00E41156 /* UserRegister.swift */; };
 		2385E7E22A373ED600E41156 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7E12A373ED600E41156 /* AddUserViewController.swift */; };
+		2385E7E52A38271B00E41156 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7E42A38271B00E41156 /* ApiClient.swift */; };
+		2385E7E72A384D1500E41156 /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7E62A384D1500E41156 /* UploadImageViewController.swift */; };
+		2385E7E92A385AB900E41156 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7E82A385AB900E41156 /* ImageRequest.swift */; };
 		238FCD3729FA44AC0005C623 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238FCD3629FA44AC0005C623 /* CardCollectionViewCell.swift */; };
 		238FCD3D29FA4B110005C623 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238FCD3B29FA4B110005C623 /* GroupTableViewCell.swift */; };
 		238FCD3E29FA4B110005C623 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238FCD3C29FA4B110005C623 /* GroupTableViewCell.xib */; };
@@ -176,6 +182,9 @@
 		231742E729ED60190049E537 /* UIActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		231742E929ED679F0049E537 /* WKWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewViewController.swift; sourceTree = "<group>"; };
 		2327A44329DC585B0055D904 /* CustomTraitCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTraitCollectionViewController.swift; sourceTree = "<group>"; };
+		23368CE32A388094008DF0B5 /* URLextension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLextension.swift; sourceTree = "<group>"; };
+		23368CE52A3880C6008DF0B5 /* ImageReponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReponseModel.swift; sourceTree = "<group>"; };
+		23368CE82A3885F2008DF0B5 /* ImageUploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewModel.swift; sourceTree = "<group>"; };
 		233C01A929ED0158004733A2 /* UIJobCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIJobCollectionViewController.swift; sourceTree = "<group>"; };
 		233C01AB29ED0445004733A2 /* JobSliderCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSliderCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		2341A8DD29FB8CE200720C14 /* ReverseKT.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReverseKT.storyboard; sourceTree = "<group>"; };
@@ -216,6 +225,9 @@
 		2385E7DD2A3725E600E41156 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		2385E7DF2A37316E00E41156 /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
 		2385E7E12A373ED600E41156 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		2385E7E42A38271B00E41156 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		2385E7E62A384D1500E41156 /* UploadImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageViewController.swift; sourceTree = "<group>"; };
+		2385E7E82A385AB900E41156 /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
 		238FCD3629FA44AC0005C623 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		238FCD3B29FA4B110005C623 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		238FCD3C29FA4B110005C623 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
@@ -433,6 +445,22 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		23368CE22A388082008DF0B5 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				23368CE32A388094008DF0B5 /* URLextension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		23368CE72A3885DB008DF0B5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				23368CE82A3885F2008DF0B5 /* ImageUploadViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		234C242529EE5FF400EB917E /* PHPickerCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,12 +523,16 @@
 		2385E7CC2A36EE5000E41156 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				23368CE72A3885DB008DF0B5 /* ViewModel */,
+				23368CE22A388082008DF0B5 /* extension */,
+				2385E7E32A38270100E41156 /* ApiManager */,
 				2385E7D22A36F0A800E41156 /* Model */,
 				2385E7D12A36F09E00E41156 /* Cell */,
 				2385E7CD2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard */,
 				2385E7CF2A36F08E00E41156 /* GameListViewController.swift */,
 				2385E7D72A36F62D00E41156 /* UserListViewController.swift */,
 				2385E7E12A373ED600E41156 /* AddUserViewController.swift */,
+				2385E7E62A384D1500E41156 /* UploadImageViewController.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -520,8 +552,18 @@
 				2385E7D52A36F3FF00E41156 /* Game.swift */,
 				2385E7D92A37003900E41156 /* User.swift */,
 				2385E7DF2A37316E00E41156 /* UserRegister.swift */,
+				2385E7E82A385AB900E41156 /* ImageRequest.swift */,
+				23368CE52A3880C6008DF0B5 /* ImageReponseModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2385E7E32A38270100E41156 /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				2385E7E42A38271B00E41156 /* ApiClient.swift */,
+			);
+			path = ApiManager;
 			sourceTree = "<group>";
 		};
 		238FCD3529FA448A0005C623 /* Cell */ = {
@@ -854,6 +896,8 @@
 				2353510C2A037D8700350318 /* UIScrollViewViewController.swift in Sources */,
 				235351122A03E01900350318 /* UIProfileTabViewController.swift in Sources */,
 				239F129229E6C23A005313AA /* SeriesTableViewCell.swift in Sources */,
+				23368CE92A3885F2008DF0B5 /* ImageUploadViewModel.swift in Sources */,
+				2385E7E72A384D1500E41156 /* UploadImageViewController.swift in Sources */,
 				2314D4D529F78CE600996791 /* MapCustomViewController.swift in Sources */,
 				239F128329E6A386005313AA /* TableViewCellOneFor2.swift in Sources */,
 				230207032A00F082009D2592 /* HomeViewController.swift in Sources */,
@@ -898,11 +942,13 @@
 				239A39642A0918B000A0A5DC /* UpdateUserDetails.swift in Sources */,
 				2353510A2A0373D700350318 /* CombineScreenTableViewCell.swift in Sources */,
 				23BBB4EA2A022D5600BDF4A4 /* FourthNavigationViewController.swift in Sources */,
+				2385E7E52A38271B00E41156 /* ApiClient.swift in Sources */,
 				23E51FA12A04FF5C0050D9CA /* PatientViewController.swift in Sources */,
 				239F127D29E69CD5005313AA /* EvenTableViewCell.swift in Sources */,
 				2380873E29E56B5B004D9AB3 /* UISegmentViewController.swift in Sources */,
 				23BBB4F52A02880700BDF4A4 /* SecondWithTitleViewController.swift in Sources */,
 				235351102A03DC0800350318 /* LoginNavigationViewController.swift in Sources */,
+				23368CE62A3880C6008DF0B5 /* ImageReponseModel.swift in Sources */,
 				23D295C429ED2084000069E8 /* JobCompanyCollectionViewCell.swift in Sources */,
 				23AF267029F7A81000D10905 /* FirstViewController.swift in Sources */,
 				231742EA29ED679F0049E537 /* WKWebViewViewController.swift in Sources */,
@@ -918,6 +964,7 @@
 				23CB509029E826D10057E0D7 /* FirstCollectionViewCell.swift in Sources */,
 				239F127629E684F2005313AA /* UITableContentViewController.swift in Sources */,
 				239F128029E6A33F005313AA /* UITableContentViewController2.swift in Sources */,
+				2385E7E92A385AB900E41156 /* ImageRequest.swift in Sources */,
 				23CB508229E7FD540057E0D7 /* TableViewColorFruitsController.swift in Sources */,
 				23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */,
 				2385E7E22A373ED600E41156 /* AddUserViewController.swift in Sources */,
@@ -937,6 +984,7 @@
 				23C3148129EFF4F00017D5F2 /* MoviewViewController.swift in Sources */,
 				23E1160B29E90E6A000D82EF /* SeriesCollectionViewCell.swift in Sources */,
 				230207072A00F09E009D2592 /* MoneyViewController.swift in Sources */,
+				23368CE42A388094008DF0B5 /* URLextension.swift in Sources */,
 				239A39602A090B8E00A0A5DC /* DiscardSecondViewController.swift in Sources */,
 				23AF267429F7B6ED00D10905 /* UIButtonConfigViewController.swift in Sources */,
 				239F128729E6AFD3005313AA /* MovieSeriesModel.swift in Sources */,

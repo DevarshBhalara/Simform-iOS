@@ -17,46 +17,69 @@ class UserListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getDataFromServer()
+//        getDataFromServer()
+        getDataFromServerBaseApi()
     }
     
-    //get Data from server
-    private func getDataFromServer() {
-        
-        if let url = URL(string: "https://reqres.in/api/users?page=2") {
-            let urlRequest = URLRequest(url: url)
-            let dataTask = URLSession.shared.dataTask(with: urlRequest, completionHandler: {
-                (data, urlResponse, error) in
-                
-                guard let responseData = data else {
-                    return
-                }
-                print("Data: \(responseData)")
-                
-                if let urlResponse = urlResponse {
-                    print("urlResponse: \(urlResponse)")
-                }
-                
-                if let error = error {
-                    print("Error: \(error)")
-                }
-                
+    ///get data using Base ApiManagerClass
+    private func getDataFromServerBaseApi() {
+        ApiManager.request(urlString: "https://reqres.in/api/users?per_page=12", completion: {
+            result in
+            switch result {
+            case .success(let data):
                 do {
-                    
-                    self.users = try JSONDecoder().decode(UserList.self, from: responseData)
+                    self.users = try JSONDecoder().decode(UserList.self, from: data)
                     
                     DispatchQueue.main.async {
                         self.userTableVIew.reloadData()
                     }
-                    
-                    
                 } catch let error {
-                    print("Error \(error.localizedDescription)")
+                    print("Error \(error)")
                 }
-            })
-            dataTask.resume()
-        }
+             
+            case .failure(_):
+                print("Fail to Call")
+            }
+        })
     }
+    
+    ///get Data from server using URLSession
+//    private func getDataFromServer() {
+//
+//        if let url = URL(string: "https://reqres.in/api/users?page=2") {
+//            let urlRequest = URLRequest(url: url)
+//            let dataTask = URLSession.shared.dataTask(with: urlRequest, completionHandler: {
+//                (data, urlResponse, error) in
+//
+//                guard let responseData = data else {
+//                    return
+//                }
+//                print("Data: \(responseData)")
+//
+//                if let urlResponse = urlResponse {
+//                    print("urlResponse: \(urlResponse)")
+//                }
+//
+//                if let error = error {
+//                    print("Error: \(error)")
+//                }
+//
+//                do {
+//
+//                    self.users = try JSONDecoder().decode(UserList.self, from: responseData)
+//
+//                    DispatchQueue.main.async {
+//                        self.userTableVIew.reloadData()
+//                    }
+//
+//
+//                } catch let error {
+//                    print("Error \(error.localizedDescription)")
+//                }
+//            })
+//            dataTask.resume()
+//        }
+//    }
 
 }
 
