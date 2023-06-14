@@ -27,69 +27,31 @@ class AddUserViewController: UIViewController {
     
     ///post Request using ApiManager class
     func registerUserWithApiManager(user: UserRegister) {
-        ApiManager.request(urlString: "https://reqres.in/api/register", requestType: "POST", parameter: user, completion: {
-            result in
-
+ 
+        APIManager.shared.callAPI(urlString: "https://reqres.in/api/register", requestMethod: "POST", parameter: user) { [weak self]
+            (result: Result<RegisterResponse, Error>) in
+            
             switch result {
-            case .success(let data):
-                do {
-                    let decoder = JSONDecoder()
-                    let userResponse = try decoder.decode(RegisterResponse.self, from: data)
-                    DispatchQueue.main.async {
-                        self.showAlertDialog(id: userResponse.id ?? 0, token: userResponse.token ?? "")
-                    }
-                } catch let error {
-                    print("Error in response \(error)")
+            case .success(let responese):
+                print("id \(String(describing: responese.id))")
+                print("id \(responese.token ?? "")")
+                DispatchQueue.main.async {
+                    self?.showAlertDialog(id: responese.id ?? 0, token: responese.token ?? "N/A")
                 }
-            case .failure(_):
-                print("Fail to get Data")
+                
+            case .failure(let error):
+                print("Error \(error)")
             }
-        })
+            
+        }
     }
     
+   
     ///Show alert Dialog method
     private func showAlertDialog(id: Int, token: String) {
         let alert = UIAlertController(title: "Registration Successfull", message: "id: \(id), Token: \(token)", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true)
     }
-    
-    ///post request using URLSession
-//    func registerUser(user: UserRegister) {
-//        if let url = URL(string: "https://reqres.in/api/register") {
-//            var urlRequest = URLRequest(url: url)
-//            urlRequest.httpMethod = "POST"
-//
-//            do {
-//                urlRequest.httpBody = try JSONEncoder().encode(user)
-//            } catch let error {
-//                print("Error \(error)")
-//            }
-//            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//            urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
-//
-//            let dataTask = URLSession.shared.dataTask(with: urlRequest, completionHandler: { data, urlReponse, error in
-//
-//                if let error = error {
-//                    print("Erro : \(error)")
-//                }
-//
-//                guard let responseData = data else {
-//                    return
-//                }
-//
-//                do {
-//                    let decoder = JSONDecoder()
-//                    let userResponse = try decoder.decode(RegisterResponse.self, from: responseData)
-//                    print("id \(String(describing: userResponse.id))")
-//                    print("id \(userResponse.token ?? "")")
-//                } catch let error {
-//                    print("error in decode : \(error)")
-//                }
-//
-//            })
-//            dataTask.resume()
-//        }
-//    }
 
 }

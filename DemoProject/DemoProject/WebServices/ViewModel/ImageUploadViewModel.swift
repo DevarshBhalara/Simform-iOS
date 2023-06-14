@@ -13,6 +13,10 @@ class ImageUploadViewModel: NSObject {
         super.init()
     }
     
+    static let shared = ImageUploadViewModel()
+    var delegate: URLSessionTaskDelegate?
+    
+    //Image upload using base64 string
     func uplaodImage(image: UIImageView) {
         
         if var url = URL(string: "https://api.imgbb.com/1/upload") {
@@ -32,10 +36,12 @@ class ImageUploadViewModel: NSObject {
                     }
                 }
             }
+            uploadTask.delegate = delegate
             uploadTask.resume()
         }
     }
     
+    //image upload using BinaryFile
     func uploadImaggeUsingBinary(image: UIImageView) {
 
         if var url = URL(string: "https://api.imgbb.com/1/upload") {
@@ -48,7 +54,6 @@ class ImageUploadViewModel: NSObject {
             let uploadTask = URLSession.shared.uploadTask(with: urlRequest, from: body) { (data, urlResponse, error) in
                 if let data = data {
                     do {
-
                         let response = try JSONDecoder().decode(ImageUploadResponse.self, from: data)
                         print(response)
                     } catch let error {
@@ -56,6 +61,7 @@ class ImageUploadViewModel: NSObject {
                     }
                 }
             }
+            uploadTask.delegate = delegate
             uploadTask.resume()
         }
     }

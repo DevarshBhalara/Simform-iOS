@@ -23,63 +23,32 @@ class UserListViewController: UIViewController {
     
     ///get data using Base ApiManagerClass
     private func getDataFromServerBaseApi() {
-        ApiManager.request(urlString: "https://reqres.in/api/users?per_page=12", completion: {
-            result in
+        APIManager.shared.callAPI(urlString: "https://reqres.in/api/users?page=2") {
+            (result: Result<UserList, Error>) in
+            
             switch result {
-            case .success(let data):
-                do {
-                    self.users = try JSONDecoder().decode(UserList.self, from: data)
-                    
-                    DispatchQueue.main.async {
-                        self.userTableVIew.reloadData()
-                    }
-                } catch let error {
-                    print("Error \(error)")
+            case .success(let users):
+                self.users = users
+                
+                DispatchQueue.main.async {
+                    self.userTableVIew.reloadData()
                 }
-             
-            case .failure(_):
-                print("Fail to Call")
+            case .failure(let error):
+                    print("error \(error)")
             }
-        })
+    
+        }
     }
     
-    ///get Data from server using URLSession
-//    private func getDataFromServer() {
-//
-//        if let url = URL(string: "https://reqres.in/api/users?page=2") {
-//            let urlRequest = URLRequest(url: url)
-//            let dataTask = URLSession.shared.dataTask(with: urlRequest, completionHandler: {
-//                (data, urlResponse, error) in
-//
-//                guard let responseData = data else {
-//                    return
-//                }
-//                print("Data: \(responseData)")
-//
-//                if let urlResponse = urlResponse {
-//                    print("urlResponse: \(urlResponse)")
-//                }
-//
-//                if let error = error {
-//                    print("Error: \(error)")
-//                }
-//
-//                do {
-//
-//                    self.users = try JSONDecoder().decode(UserList.self, from: responseData)
-//
-//                    DispatchQueue.main.async {
-//                        self.userTableVIew.reloadData()
-//                    }
-//
-//
-//                } catch let error {
-//                    print("Error \(error.localizedDescription)")
-//                }
-//            })
-//            dataTask.resume()
-//        }
-//    }
+    //Show dialog for delete
+    private func showAlertDialog(id: Int) {
+        let alert = UIAlertController(title: "Are you sure?", message: "Do you want to delete user with id \(id) ? ", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {_ in
+            
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true)
+    }
 
 }
 
@@ -105,5 +74,33 @@ extension UserListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _,_,_ in
+            
+            APIManager.shared.callAPI(urlString: "https://reqres.in/api/users/\(indexPath.row)", requestMethod: "DELETE") {
+                (result: Result<DeleteResponse, Error>) in
+                
+                switch result {
+                case .success(let response):
+                    print("\(response.code ?? 0)")
+                    DispatchQueue.main.async {
+                        self?.showAlertDialog(id: indexPath.row)
+                        self?.users.data.remove(at: indexPath.row)
+                        self?.userTableVIew.deleteRows(at: [indexPath], with: .automatic)
+                    }
+                    
+                case .failure(let error):
+                    print("Error: \(error)")
+                }
+            }
+        }
+        deleteAction.image = UIImage(systemName: "trash")
+        deleteAction.backgroundColor = .red
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return configuration
+        
+    }
+    
     
 }
