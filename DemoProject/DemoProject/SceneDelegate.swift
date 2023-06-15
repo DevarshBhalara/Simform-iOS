@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .red
+        appearance.backgroundColor = .white
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
         /**State management **/

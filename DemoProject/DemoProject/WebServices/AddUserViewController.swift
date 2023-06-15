@@ -27,7 +27,7 @@ class AddUserViewController: UIViewController {
     
     ///post Request using ApiManager class
     func registerUserWithApiManager(user: UserRegister) {
- 
+        
         APIManager.shared.callAPI(urlString: "https://reqres.in/api/register", requestMethod: "POST", parameter: user) { [weak self]
             (result: Result<RegisterResponse, Error>) in
             

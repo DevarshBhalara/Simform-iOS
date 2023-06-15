@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0A807A09-9496-43AB-A55D-89D55FD2D2E9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoProject/WebServices/UploadImageViewController.swift"
@@ -18,6 +18,134 @@
             endingLineNumber = "35"
             landmarkName = "urlSession(_:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB4D17D0-528F-485D-A3FF-FDF772148BF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoProject/WebServices/AlamoFire/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "loginUser(user:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3870468-859B-43AD-9ED3-E7E854340F5B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoProject/WebServices/ApiManager/ApiManagerAF.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "callAPI(urlString:method:parameter:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB315B1B-778E-40F8-8549-9DC104B5AC11"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoProject/WebServices/ApiManager/ApiManagerAF.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "callAPI(urlString:method:parameter:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FB315B1B-778E-40F8-8549-9DC104B5AC11 - fd4ffb9615dc63b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DemoProject.ApiManagerAF.callAPI&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, method: Alamofire.HTTPMethod, parameter: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DemoProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devarsh/Documents/Project/Simform_iOS/DemoProject/DemoProject/WebServices/ApiManager/ApiManagerAF.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "426">
+               </Location>
+               <Location
+                  uuid = "FB315B1B-778E-40F8-8549-9DC104B5AC11 - ca4968b34977eafd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;&#x3c4;_0_0, Alamofire.AFError&gt;) -&gt; () in DemoProject.ApiManagerAF.callAPI&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, method: Alamofire.HTTPMethod, parameter: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DemoProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devarsh/Documents/Project/Simform_iOS/DemoProject/DemoProject/WebServices/ApiManager/ApiManagerAF.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "695">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC7F6FDB-C3A4-4E71-864D-CE071941C3CA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoProject/WebServices/AlamoFire/ViewModel/ProductViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getAllProduct()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AC7F6FDB-C3A4-4E71-864D-CE071941C3CA - 2325b9ce220e7318"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DemoProject.ProductViewModel.getAllProduct() -&gt; ()"
+                  moduleName = "DemoProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devarsh/Documents/Project/Simform_iOS/DemoProject/DemoProject/WebServices/AlamoFire/ViewModel/ProductViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "AC7F6FDB-C3A4-4E71-864D-CE071941C3CA - 2334fc6b322e8c5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;DemoProject.Product&gt;, Swift.Error&gt;) -&gt; () in DemoProject.ProductViewModel.getAllProduct() -&gt; ()"
+                  moduleName = "DemoProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devarsh/Documents/Project/Simform_iOS/DemoProject/DemoProject/WebServices/AlamoFire/ViewModel/ProductViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

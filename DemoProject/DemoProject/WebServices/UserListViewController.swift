@@ -41,10 +41,11 @@ class UserListViewController: UIViewController {
     }
     
     //Show dialog for delete
-    private func showAlertDialog(id: Int) {
-        let alert = UIAlertController(title: "Are you sure?", message: "Do you want to delete user with id \(id) ? ", preferredStyle: UIAlertController.Style.alert)
+    private func showAlertDialog(indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Are you sure?", message: "Do you want to delete user with id \(indexPath.row) ? ", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {_ in
-            
+            self.users.data.remove(at: indexPath.row)
+            self.userTableVIew.deleteRows(at: [indexPath], with: .automatic)
         }))
         alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true)
@@ -85,9 +86,8 @@ extension UserListViewController: UITableViewDelegate {
                 case .success(let response):
                     print("\(response.code ?? 0)")
                     DispatchQueue.main.async {
-                        self?.showAlertDialog(id: indexPath.row)
-                        self?.users.data.remove(at: indexPath.row)
-                        self?.userTableVIew.deleteRows(at: [indexPath], with: .automatic)
+                        self?.showAlertDialog(indexPath: indexPath)
+                       
                     }
                     
                 case .failure(let error):
