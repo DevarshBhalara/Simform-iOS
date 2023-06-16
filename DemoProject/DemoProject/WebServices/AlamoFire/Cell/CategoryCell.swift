@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import Alamofire
 
 class CategoryCell: UICollectionViewCell {
-    
     @IBOutlet weak var btnCategory: UIButton!
     
     func configure(name: String) {

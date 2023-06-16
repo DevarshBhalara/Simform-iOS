@@ -10,6 +10,7 @@ import UIKit
 protocol GetProductCategory {
     func productsCategories(categories: [String])
     func getAllProducts(products: [Product])
+    func getFilterProduct(filterProducts: [Product])
 }
 
 class ProductViewController: UIViewController {
@@ -21,6 +22,7 @@ class ProductViewController: UIViewController {
     
     //MARK: - variable
     var products: [Product] = []
+    var allProducts: [Product] = []
     var categories: [String] = []
     var viewModel = ProductViewModel()
     
@@ -57,6 +59,14 @@ extension ProductViewController: GetProductCategory {
     
     func getAllProducts(products: [Product]) {
         self.products = products
+        self.allProducts = products
+        DispatchQueue.main.async {
+            self.productCollectionView.reloadData()
+        }
+    }
+    
+    func getFilterProduct(filterProducts: [Product]) {
+        self.products = filterProducts
         DispatchQueue.main.async {
             self.productCollectionView.reloadData()
         }
@@ -96,13 +106,7 @@ extension ProductViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if collectionView == catogoryCollectionView {
-            let filteredProducts = products.filter {
-                
-                $0.category == categories[indexPath.row]
-            }
-            products = filteredProducts
-            productCollectionView.reloadData()
-            print(filteredProducts)
+            viewModel.filterProduct(category: categories[indexPath.row])
             
         } else {
             let productViewController = ProductDetailViewController()

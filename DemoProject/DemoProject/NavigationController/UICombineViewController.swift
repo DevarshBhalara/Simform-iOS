@@ -17,10 +17,13 @@ struct CombineScreenData {
     static private let stoardBoardForReverseKT = "ReverseKT"
     static private let stoardBoardForWebService = "WebServiceStoaryBoard"
     static private let stoardBoardForAlamoFire = "AlamoFireDemo"
+    static private let stoardBoardForAlamoFireStructured = "AlamoFireStructured"
     
     static func getAllData() -> [CombineScreenData] {
         
         return [
+            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFireStructured, vcName: "LoginAlamoFireViewController", title: "Login VM"),
+            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFireStructured, vcName: "RegisterUserViewController", title: "SignUp VM"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFire, vcName: "LoginViewController", title: "E-Commerce"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "UserListViewController", title: "User List (Web Service)"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "UserListAlamoFireViewController", title: "User List (Web Service AlamoFire)"),
