@@ -15,6 +15,7 @@ enum RequestItemsType: Equatable {
     case signUp
     case getUser
     case updateUser
+    case uploadImage
 }
 
 extension RequestItemsType {
@@ -25,13 +26,22 @@ extension RequestItemsType {
             return "https://reqres.in/"
         case .signUp, .getUser, .updateUser:
             return "https://648c3d218620b8bae7ec85b9.mockapi.io/"
+        case .uploadImage :
+            return "https://api.imgbb.com/"
         }
         
     }
     
     
+    
+    
     var api: String {
-        return "api/"
+        switch self {
+        case .getUser, .login, .signUp, .updateUser:
+            return "api/"
+        case .uploadImage:
+            return "1/"
+        }
     }
     
     var path: String {
@@ -40,12 +50,14 @@ extension RequestItemsType {
             return "login"
         case .signUp, .getUser, .updateUser:
             return "users"
+        case .uploadImage:
+            return "upload"
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
-        case .login, .signUp:
+        case .login, .signUp, .uploadImage:
             return .post
         case .getUser:
             return .get
@@ -60,12 +72,14 @@ extension RequestItemsType {
             return URL(string: self.baseURL + self.api + self.path)!
         case .getUser, .updateUser:
             return URL(string: self.baseURL + self.api + self.path + "/" + UserDefaults.standard.string(forKey: "userid")! )!
+        case .uploadImage:
+            return URL(string: self.baseURL + self.api + self.path + "?" + "key=f8fe9a449ea4b2a9b7387b9e0d3d59c7")!
         }
     }
     
     var encoding: ParameterEncoding {
         switch self {
-        case .signUp, .login, .getUser, .updateUser :
+        case .signUp, .login, .getUser, .updateUser, .uploadImage :
             return JSONEncoding.default
         }
     }

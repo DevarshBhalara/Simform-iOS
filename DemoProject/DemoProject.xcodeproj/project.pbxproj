@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		116A22B32A3D72B70073A2D6 /* First.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 116A22B22A3D72B70073A2D6 /* First.pdf */; };
+		116A22B52A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B42A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift */; };
+		116A22B82A3D97FB0073A2D6 /* UploadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B72A3D97FB0073A2D6 /* UploadImageViewModel.swift */; };
+		116A22BA2A3DAF310073A2D6 /* DownloadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B92A3DAF310073A2D6 /* DownloadImageViewModel.swift */; };
+		116A22BC2A3DB0960073A2D6 /* DownloadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22BB2A3DB0960073A2D6 /* DownloadImageViewController.swift */; };
 		230207012A00EFB2009D2592 /* TabViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230207002A00EFB2009D2592 /* TabViewViewController.swift */; };
 		230207032A00F082009D2592 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230207022A00F082009D2592 /* HomeViewController.swift */; };
 		230207052A00F092009D2592 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230207042A00F092009D2592 /* ProfileViewController.swift */; };
@@ -61,7 +66,6 @@
 		23487C5B2A3C5A5800DA3DF5 /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23487C5A2A3C5A5800DA3DF5 /* LoginRequestModel.swift */; };
 		234C242429EE5B5100EB917E /* PHPickerImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234C242329EE5B5100EB917E /* PHPickerImageViewController.swift */; };
 		234C242829EE602B00EB917E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234C242729EE602B00EB917E /* ImageCollectionViewCell.swift */; };
-		234C242A29EE783600EB917E /* First.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 234C242929EE783600EB917E /* First.pdf */; };
 		235351072A036EDA00350318 /* UICombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235351062A036EDA00350318 /* UICombineViewController.swift */; };
 		2353510A2A0373D700350318 /* CombineScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235351092A0373D700350318 /* CombineScreenTableViewCell.swift */; };
 		2353510C2A037D8700350318 /* UIScrollViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2353510B2A037D8700350318 /* UIScrollViewViewController.swift */; };
@@ -197,6 +201,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		116A22B22A3D72B70073A2D6 /* First.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = First.pdf; path = ../../../../Downloads/First.pdf; sourceTree = "<group>"; };
+		116A22B42A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UplaodImageViewControllerAF.swift; sourceTree = "<group>"; };
+		116A22B62A3D76110073A2D6 /* First.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = First.pdf; sourceTree = "<group>"; };
+		116A22B72A3D97FB0073A2D6 /* UploadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageViewModel.swift; sourceTree = "<group>"; };
+		116A22B92A3DAF310073A2D6 /* DownloadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewModel.swift; sourceTree = "<group>"; };
+		116A22BB2A3DB0960073A2D6 /* DownloadImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewController.swift; sourceTree = "<group>"; };
 		230207002A00EFB2009D2592 /* TabViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewViewController.swift; sourceTree = "<group>"; };
 		230207022A00F082009D2592 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		230207042A00F092009D2592 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -250,7 +260,6 @@
 		23487C5A2A3C5A5800DA3DF5 /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
 		234C242329EE5B5100EB917E /* PHPickerImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerImageViewController.swift; sourceTree = "<group>"; };
 		234C242729EE602B00EB917E /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		234C242929EE783600EB917E /* First.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = First.pdf; path = ../../../../../Downloads/First.pdf; sourceTree = "<group>"; };
 		235351062A036EDA00350318 /* UICombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICombineViewController.swift; sourceTree = "<group>"; };
 		235351092A0373D700350318 /* CombineScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineScreenTableViewCell.swift; sourceTree = "<group>"; };
 		2353510B2A037D8700350318 /* UIScrollViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewViewController.swift; sourceTree = "<group>"; };
@@ -446,7 +455,7 @@
 				23AF266E29F7A7F600D10905 /* Segue */,
 				2314D4D329F78B2C00996791 /* CustomCallOut */,
 				23C3147B29EFF4900017D5F2 /* TabBar */,
-				234C242929EE783600EB917E /* First.pdf */,
+				116A22B62A3D76110073A2D6 /* First.pdf */,
 				234C242529EE5FF400EB917E /* PHPickerCollectionView */,
 				231742E629ED4FD80049E537 /* TableView */,
 				23FCACFB29E3D98A00623264 /* UILabelViewController.swift */,
@@ -618,6 +627,8 @@
 				2374DFA62A3C724B006D488C /* RegisterUserViewController.swift */,
 				23487C532A3C494000DA3DF5 /* LoginAlamoFireViewController.swift */,
 				2374DFB22A3C8237006D488C /* UpdateUserDataViewController.swift */,
+				116A22B42A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift */,
+				116A22BB2A3DB0960073A2D6 /* DownloadImageViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -636,6 +647,8 @@
 				23487C562A3C499600DA3DF5 /* LoginViewModel.swift */,
 				2374DFA82A3C776B006D488C /* RegisterViewModel.swift */,
 				2374DFB52A3C8311006D488C /* UpdateUserViewModel.swift */,
+				116A22B72A3D97FB0073A2D6 /* UploadImageViewModel.swift */,
+				116A22B92A3DAF310073A2D6 /* DownloadImageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -697,6 +710,7 @@
 				235980D929A49D0C009E8C5D /* Info.plist */,
 				23A2520929A5D1600042B1D2 /* first_playground.playground */,
 				2327A44329DC585B0055D904 /* CustomTraitCollectionViewController.swift */,
+				116A22B22A3D72B70073A2D6 /* First.pdf */,
 			);
 			path = DemoProject;
 			sourceTree = "<group>";
@@ -1062,6 +1076,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2341A8DE29FB8CE200720C14 /* ReverseKT.storyboard in Resources */,
+				116A22B32A3D72B70073A2D6 /* First.pdf in Resources */,
 				2314D4D029F789A800996791 /* CallOut.xib in Resources */,
 				238FCD4D29FA60F10005C623 /* HeaderTableViewCell.xib in Resources */,
 				235980E029A49FAB009E8C5D /* Storyboard2.storyboard in Resources */,
@@ -1080,7 +1095,6 @@
 				23487C4A2A3C377B00DA3DF5 /* AlamoFireStructured.storyboard in Resources */,
 				239F127A29E688B6005313AA /* IndexTableViewCell.xib in Resources */,
 				238FCD3E29FA4B110005C623 /* GroupTableViewCell.xib in Resources */,
-				234C242A29EE783600EB917E /* First.pdf in Resources */,
 				239F127E29E69CD5005313AA /* EvenTableViewCell.xib in Resources */,
 				23368CF32A3ADB13008DF0B5 /* AlamoFireDemo.storyboard in Resources */,
 				23BBB4E12A021B8500BDF4A4 /* NavigationController.storyboard in Resources */,
@@ -1270,6 +1284,7 @@
 				235517F729F25E0B00B46BDA /* DemoPickerViewViewController.swift in Sources */,
 				23487C502A3C43C300DA3DF5 /* CustomError.swift in Sources */,
 				23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */,
+				116A22BA2A3DAF310073A2D6 /* DownloadImageViewModel.swift in Sources */,
 				2385E7D82A36F62D00E41156 /* UserListViewController.swift in Sources */,
 				23E38B5D2A08B8EB00DD2850 /* SecondPassViewController.swift in Sources */,
 				23E1161729E95EF7000D82EF /* TableViewExpandedController.swift in Sources */,
@@ -1284,7 +1299,9 @@
 				239A39602A090B8E00A0A5DC /* DiscardSecondViewController.swift in Sources */,
 				23AF267429F7B6ED00D10905 /* UIButtonConfigViewController.swift in Sources */,
 				239F128729E6AFD3005313AA /* MovieSeriesModel.swift in Sources */,
+				116A22BC2A3DB0960073A2D6 /* DownloadImageViewController.swift in Sources */,
 				23FCAD0A29E4227800623264 /* UISwitchViewController.swift in Sources */,
+				116A22B82A3D97FB0073A2D6 /* UploadImageViewModel.swift in Sources */,
 				23E1161A29E95F89000D82EF /* ExpandedTableViewCell.swift in Sources */,
 				23C3147A29EFEF5A0017D5F2 /* UIStackViewViewController.swift in Sources */,
 				23E38B5B2A08B8E000DD2850 /* FirstPassViewController.swift in Sources */,
@@ -1297,6 +1314,7 @@
 				23E1161529E94FC5000D82EF /* CollapseTableViewCell.swift in Sources */,
 				23E1160229E904FF000D82EF /* SeriesCollectionViewController.swift in Sources */,
 				239A395E2A090B7E00A0A5DC /* DiscardFirstViewController.swift in Sources */,
+				116A22B52A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift in Sources */,
 				23E1160F29E93323000D82EF /* FruitColordata.swift in Sources */,
 				23BBB4E42A02209700BDF4A4 /* FirstNavigationViewController.swift in Sources */,
 			);

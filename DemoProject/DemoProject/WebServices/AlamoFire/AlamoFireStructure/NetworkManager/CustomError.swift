@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 class CustomError: Error {
 
     // MARK: Vars & Lets

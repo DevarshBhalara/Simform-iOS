@@ -45,6 +45,63 @@ class APIManagerDemo {
         }
     }
     
+    func callUploadApi<T>(type: RequestItemsType, image: UIImage ,params: Parameters? = nil, handler: @escaping (Result<T, CustomError>) -> Void, progress: @escaping (Progress) -> Void) where T: Codable {
+        
+        guard let imageData = image.jpegData(compressionQuality: 0.8) else {
+            handler(.failure(.init(title: "Appname", body: "Image not found")))
+            return
+        }
+        
+        
+        AF.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(imageData, withName: "image", fileName: "image.jpg", mimeType: "image/jpeg")
+        }, to: type.url)
+        .responseData { response in
+            print(response)
+            
+            guard let data = response.data else {
+                handler(.failure(.init(title: "AppName", body: "Data not Found")))
+                return
+            }
+            
+            if self.handleResponseCode(res: response) {
+                do {
+                    let response = try JSONDecoder().decode(T.self, from: data)
+                    print(response)
+                    handler(.success(response))
+                } catch let error {
+                    handler(.failure(.init(title: "AppNmae", body: "Not able to response \(error)")))
+                }
+            }
+        }.uploadProgress {
+            progressCount in
+            progress(progressCount)
+        }
+    }
+    
+    func downloadAndSaveImage(url: String, destinationPath: String, completion: @escaping (URL?, Error?) -> Void, progress: @escaping (Progress) -> Void) {
+        AF.download(url).responseData { response in
+            switch response.result {
+            case .success(let data):
+                let fileURL = URL(fileURLWithPath: destinationPath)
+                do {
+                    try data.write(to: fileURL)
+                    
+                    completion(fileURL, nil)
+                } catch {
+                    completion(nil, error)
+                }
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }.downloadProgress {
+            progressCount in
+            print("Download \(progressCount.fractionCompleted)")
+            progress(progressCount)
+        }
+    }
+    
+    
     //Handle Response
     private func handleResponseCode(res: AFDataResponse<Data>?) -> Bool {
         var isSuccess: Bool = false

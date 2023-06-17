@@ -23,6 +23,8 @@ struct CombineScreenData {
         
         return [
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFireStructured, vcName: "LoginAlamoFireViewController", title: "Login VM"),
+            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFireStructured, vcName: "UplaodImageViewControllerAF", title: "Uplaod Image AF"),
+            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFireStructured, vcName: "DownloadImageViewController", title: "Download Image AF"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFireStructured, vcName: "RegisterUserViewController", title: "SignUp VM"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFire, vcName: "LoginViewController", title: "E-Commerce"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "UserListViewController", title: "User List (Web Service)"),
