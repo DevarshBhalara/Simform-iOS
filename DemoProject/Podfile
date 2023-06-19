@@ -8,4 +8,5 @@ target 'DemoProject' do
   # Pods for DemoProject
 
 pod 'Alamofire'
+pod 'ReachabilitySwift'
 end

@@ -7,6 +7,8 @@
 
 import Foundation
 import Alamofire
+import UIKit
+import Reachability
 
 class APIManagerDemo {
     
@@ -14,8 +16,16 @@ class APIManagerDemo {
     
     private let sessionManager: Session = Session()
     static var shared = APIManagerDemo()
+    let reachability = try? Reachability()
     
+    //MARK: - Call Api
     func call<T>(type: RequestItemsType, params: Parameters? = nil, handler: @escaping (Result<T, CustomError>) -> Void) where T: Codable {
+        
+        guard reachability?.connection ?? .unavailable != .unavailable else {
+            handler(.failure(CustomError(title: "AppName", body: "No Internet Available")))
+            return
+        }
+        
         self.sessionManager.request(type.url,
                                     method: type.httpMethod,
                                     parameters: params,
@@ -25,7 +35,7 @@ class APIManagerDemo {
             if self.handleResponseCode(res: data) {
                 do {
                     guard let jsonData = data.data else {
-                        //handle
+                        handler(.failure(.init(title: "AppName", body: "Data not Found")))
                         return
                     }
                     let jsonDecoder = JSONDecoder()
@@ -45,15 +55,21 @@ class APIManagerDemo {
         }
     }
     
+    //MARK: - Uplaod Image Api
     func callUploadApi<T>(type: RequestItemsType, image: UIImage ,params: Parameters? = nil, handler: @escaping (Result<T, CustomError>) -> Void, progress: @escaping (Progress) -> Void) where T: Codable {
+        
+        
+        guard reachability?.connection ?? .unavailable != .unavailable else {
+            handler(.failure(CustomError(title: "AppName", body: "No Internet Available")))
+            return
+        }
         
         guard let imageData = image.jpegData(compressionQuality: 0.8) else {
             handler(.failure(.init(title: "Appname", body: "Image not found")))
             return
         }
         
-        
-        AF.upload(multipartFormData: { multipartFormData in
+        self.sessionManager.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(imageData, withName: "image", fileName: "image.jpg", mimeType: "image/jpeg")
         }, to: type.url)
         .responseData { response in
@@ -70,7 +86,7 @@ class APIManagerDemo {
                     print(response)
                     handler(.success(response))
                 } catch let error {
-                    handler(.failure(.init(title: "AppNmae", body: "Not able to response \(error)")))
+                    handler(.failure(.init(title: "AppName", body: "Not able to response \(error)")))
                 }
             }
         }.uploadProgress {
@@ -79,25 +95,55 @@ class APIManagerDemo {
         }
     }
     
-    func downloadAndSaveImage(url: String, destinationPath: String, completion: @escaping (URL?, Error?) -> Void, progress: @escaping (Progress) -> Void) {
-        AF.download(url).responseData { response in
+    
+    //MARK: - Download file api
+    func downloadAndSaveImage(url: String, destinationPath: String, handler: @escaping (URL?, CustomError?) -> Void, progress: @escaping (Progress) -> Void) {
+        
+        
+        guard reachability?.connection ?? .unavailable != .unavailable else {
+            handler(nil, CustomError(title: "AppName", body: "Not Internet Availabel"))
+            return
+        }
+        
+        self.sessionManager.download(url).responseData { response in
             switch response.result {
             case .success(let data):
                 let fileURL = URL(fileURLWithPath: destinationPath)
                 do {
                     try data.write(to: fileURL)
-                    
-                    completion(fileURL, nil)
+                    handler(fileURL, nil)
                 } catch {
-                    completion(nil, error)
+                    handler(nil, CustomError(title: "AppName", body: "Not able to Save File"))
                 }
             case .failure(let error):
-                completion(nil, error)
+                print(error)
+                handler(nil, CustomError(title: "AppName", body: "Not Able to download file"))
             }
         }.downloadProgress {
             progressCount in
             print("Download \(progressCount.fractionCompleted)")
             progress(progressCount)
+        }
+    }
+    
+    //MARK: - Load image from URL api
+    func callLoadImage(url: String, complition: @escaping (Result<UIImage, CustomError>) -> Void) {
+        
+        guard reachability?.connection ?? .unavailable != .unavailable else {
+            complition(.failure(CustomError(title: "AppName", body: "No Internet Available")))
+            return
+        }
+        
+        self.sessionManager.request(url).responseData {
+            response in
+            
+            guard let imageData = response.data, let image = UIImage(data: imageData) else{
+                complition(.failure(.init(title: "App", body: "Not Found")))
+                return
+            }
+            
+            complition(.success(image))
+            
         }
     }
     

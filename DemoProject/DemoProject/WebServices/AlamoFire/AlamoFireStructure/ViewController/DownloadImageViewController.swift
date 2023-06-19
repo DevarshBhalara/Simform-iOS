@@ -12,7 +12,10 @@ class DownloadImageViewController: UIViewController {
     //MARK: Outlets
     @IBOutlet weak var btnDownload: UIButton!
     @IBOutlet weak var progressDownload: UIProgressView!
+    @IBOutlet weak var lblProgress: UILabel!
+    @IBOutlet weak var lblDownload: UILabel!
     @IBOutlet weak var tfDownloadUrl: UITextField!
+    @IBOutlet weak var lblLocation: UILabel!
     
     //MARK: Variable
     let viewModel = DownloadImageViewModel()
@@ -23,20 +26,23 @@ class DownloadImageViewController: UIViewController {
     }
     
     private func setUpUi() {
-        viewModel.error.bind {
+        viewModel.error.bind { [weak self]
             message in
-            self.showAlertDialog(message: message)
+            self?.showAlertDialog(message: message)
             
         }
         
-        viewModel.downloadSuccess.bind {
+        viewModel.downloadSuccess.bind { [weak self]
             message in
-            self.showAlertDialog(message: "Image Download Successfully at \(message)")
+            self?.showAlertDialog(message: "Image Download Successfully at \(message)")
+            self?.lblLocation.text = message
         }
         
-        viewModel.progress.bind {
+        viewModel.progress.bind { [weak self]
             progress in
-            self.progressDownload.progress = progress
+            self?.progressDownload.progress = progress
+            self?.lblDownload.text =  String((Int(Float(progress) * 100))) + "%"
+            print("Progress in vc \(progress)")
         }
     }
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 class UpdateUserViewModel{
 
     //MARK: - variable
@@ -14,7 +15,13 @@ class UpdateUserViewModel{
     var updateSuccess = Dynamic<Void>(())
     var validationError = Dynamic<String>("")
     
-    func validateData(email: String, number: String, state: String, name: String) {
+    let uplaodSuccess = Dynamic<String>("")
+    let uploadError = Dynamic<String>("")
+    let getProgress = Dynamic<Float>(0.0)
+    let image = Dynamic<UIImage?>(nil)
+    
+    
+    func validateData(email: String, number: String, state: String, name: String, imageUrl: String) {
         var error = false
         if email.isEmpty {
             self.validationError.value = "Please enter email!"
@@ -31,7 +38,7 @@ class UpdateUserViewModel{
         }
         
         if !error {
-            self.callUpdateApi(email: email, number: number, state: state, name: name)
+            self.callUpdateApi(email: email, number: number, state: state, name: name, avatarUrl: imageUrl)
         }
         
     }
@@ -44,7 +51,7 @@ class UpdateUserViewModel{
             case .success(let user):
                 print("User \(user)")
                 self?.getUser.value = user
-                self?.updateSuccess.fire()
+                self?.getUser.fire()
             case .failure(let error):
                 print(error.body)
                 self?.error.value = error.body
@@ -52,8 +59,8 @@ class UpdateUserViewModel{
         }
     }
     
-    func callUpdateApi(email: String, number: String, state: String, name: String) {
-        let param = SignUp(name: name, email: email, mobilenumber: number, state: state)
+    func callUpdateApi(email: String, number: String, state: String, name: String, avatarUrl: String) {
+        let param = SignUp(name: name, email: email, mobilenumber: number, state: state, avatar: avatarUrl)
         APIManagerDemo.shared.call(type: .updateUser, params: param.requestParameter()) { [weak self]
             (result: Result<GetUserResponse, CustomError>) in
             
@@ -66,4 +73,46 @@ class UpdateUserViewModel{
             }
         }
     }
+    
+    func callLoadImageApi(url: String) {
+        APIManagerDemo.shared.callLoadImage(url: url) {
+            [weak self] (result: Result<UIImage, CustomError>) in
+            
+            switch result {
+            case .success(let res):
+                self?.image.value = res
+                self?.image.fire()
+            case .failure(let error):
+                print("Error image load \(error)")
+            }
+        }
+    }
+    
+    func callUplaodApi(image: UIImage) {
+        
+        APIManagerDemo.shared.callUploadApi(type: .uploadImage, image: image) { [weak self]
+            (result: Result<ImageUploadResponse, CustomError>) in
+            
+            switch result {
+            case .success(let res):
+                print(res.data?.title ?? "N/A")
+                print(res.data?.url ?? "N/A")
+                if let url = res.data?.url {
+                    self?.uplaodSuccess.value = url
+                    self?.uplaodSuccess.fire()
+                }
+                
+            case .failure(let error):
+                print(error)
+                self?.uploadError.fire()
+            }
+        } progress: {
+            progress in
+            print("Progress \(progress.fractionCompleted * 100)")
+            self.getProgress.value = Float(progress.fractionCompleted)
+            self.getProgress.fire()
+        }
+    }
+    
+    
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 class RegisterViewModel {
     
     //MARK: - Variables
@@ -13,7 +14,12 @@ class RegisterViewModel {
     let signUpSuccess = Dynamic<String>("")
     let validationError = Dynamic<String>("")
     
-    func validateData(email: String, number: String, state: String, name: String) {
+    let uplaodSuccess = Dynamic<String>("")
+    let uploadError = Dynamic<String>("")
+    let getProgress = Dynamic<Float>(0.0)
+    
+    
+    func validateData(email: String, number: String, state: String, name: String, imageUrl: String) {
         var error = false
         if email.isEmpty {
             self.validationError.value = "Please enter email!"
@@ -27,10 +33,12 @@ class RegisterViewModel {
         } else if name.isEmpty {
             self.validationError.value = "Please enter Name!"
             error = true
+        } else if imageUrl.isEmpty {
+            self.validationError.value = "Image Not uploaded try again!"
         }
         
         if !error {
-            self.callSignUpApi(email: email, number: number, state: state, name: name)
+            self.callSignUpApi(email: email, number: number, state: state, name: name, imageUrl: imageUrl)
         }
         
             
@@ -51,8 +59,8 @@ class RegisterViewModel {
         }
     }
     
-    func callSignUpApi(email: String, number: String, state: String, name: String) {
-        let param = SignUp(name: name, email: email, mobilenumber: number, state: state)
+    func callSignUpApi(email: String, number: String, state: String, name: String, imageUrl: String) {
+        let param = SignUp(name: name, email: email, mobilenumber: number, state: state, avatar: imageUrl)
         APIManagerDemo.shared.call(type: .signUp, params: param.requestParameter()) { [weak self]
             (result: Result<SignUpResponse, CustomError>) in
             
@@ -65,6 +73,32 @@ class RegisterViewModel {
             case .failure(let error):
                 self?.error.value = error.body
             }
+        }
+    }
+    
+    func callUplaodApi(image: UIImage) {
+        
+        APIManagerDemo.shared.callUploadApi(type: .uploadImage, image: image) { [weak self]
+            (result: Result<ImageUploadResponse, CustomError>) in
+            
+            switch result {
+            case .success(let res):
+                print(res.data?.title ?? "N/A")
+                print(res.data?.url ?? "N/A")
+                if let url = res.data?.url {
+                    self?.uplaodSuccess.value = url
+                    self?.uplaodSuccess.fire()
+                }
+                
+            case .failure(let error):
+                print(error)
+                self?.uploadError.fire()
+            }
+        } progress: {
+            progress in
+            print("Progress \(progress.fractionCompleted * 100)")
+            self.getProgress.value = Float(progress.fractionCompleted)
+            self.getProgress.fire()
         }
     }
     

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		116A22B32A3D72B70073A2D6 /* First.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 116A22B22A3D72B70073A2D6 /* First.pdf */; };
 		116A22B52A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B42A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift */; };
 		116A22B82A3D97FB0073A2D6 /* UploadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B72A3D97FB0073A2D6 /* UploadImageViewModel.swift */; };
 		116A22BA2A3DAF310073A2D6 /* DownloadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B92A3DAF310073A2D6 /* DownloadImageViewModel.swift */; };
@@ -29,6 +28,7 @@
 		231742E829ED60190049E537 /* UIActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231742E729ED60190049E537 /* UIActivityIndicatorViewController.swift */; };
 		231742EA29ED679F0049E537 /* WKWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231742E929ED679F0049E537 /* WKWebViewViewController.swift */; };
 		2327A44429DC585B0055D904 /* CustomTraitCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327A44329DC585B0055D904 /* CustomTraitCollectionViewController.swift */; };
+		232B0FB22A405F5200AE63C7 /* WebServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232B0FB12A405F5200AE63C7 /* WebServiceCell.swift */; };
 		23368CE42A388094008DF0B5 /* URLextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23368CE32A388094008DF0B5 /* URLextension.swift */; };
 		23368CE62A3880C6008DF0B5 /* ImageReponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23368CE52A3880C6008DF0B5 /* ImageReponseModel.swift */; };
 		23368CE92A3885F2008DF0B5 /* ImageUploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23368CE82A3885F2008DF0B5 /* ImageUploadViewModel.swift */; };
@@ -79,6 +79,9 @@
 		235980D529A49D0C009E8C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235980D429A49D0C009E8C5D /* Assets.xcassets */; };
 		235980D829A49D0C009E8C5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235980D629A49D0C009E8C5D /* LaunchScreen.storyboard */; };
 		235980E029A49FAB009E8C5D /* Storyboard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235980DF29A49FAB009E8C5D /* Storyboard2.storyboard */; };
+		2369110C2A405FD000C369BB /* WebServiceCombine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2369110B2A405FD000C369BB /* WebServiceCombine.storyboard */; };
+		2369110F2A40604900C369BB /* WebServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2369110E2A40604900C369BB /* WebServiceViewController.swift */; };
+		236911122A40614B00C369BB /* CombineScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236911112A40614B00C369BB /* CombineScreen.swift */; };
 		2374DFA72A3C724B006D488C /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2374DFA62A3C724B006D488C /* RegisterUserViewController.swift */; };
 		2374DFA92A3C776B006D488C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2374DFA82A3C776B006D488C /* RegisterViewModel.swift */; };
 		2374DFAB2A3C78E2006D488C /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2374DFAA2A3C78E2006D488C /* SignUpModel.swift */; };
@@ -93,6 +96,7 @@
 		238087DE29E6D72800CBDCD3 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238087DC29E6D72800CBDCD3 /* AnimalTableViewCell.swift */; };
 		238087DF29E6D72800CBDCD3 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238087DD29E6D72800CBDCD3 /* AnimalTableViewCell.xib */; };
 		238087E129E6D86B00CBDCD3 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238087E029E6D86B00CBDCD3 /* AnimalModel.swift */; };
+		2383E3612A400E2800BDF7F0 /* First.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2383E3602A400E2800BDF7F0 /* First.pdf */; };
 		2385E7CE2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2385E7CD2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard */; };
 		2385E7D42A36F37100E41156 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7D32A36F37100E41156 /* GameTableViewCell.swift */; };
 		2385E7D82A36F62D00E41156 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385E7D72A36F62D00E41156 /* UserListViewController.swift */; };
@@ -201,9 +205,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		116A22B22A3D72B70073A2D6 /* First.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = First.pdf; path = ../../../../Downloads/First.pdf; sourceTree = "<group>"; };
 		116A22B42A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UplaodImageViewControllerAF.swift; sourceTree = "<group>"; };
-		116A22B62A3D76110073A2D6 /* First.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = First.pdf; sourceTree = "<group>"; };
 		116A22B72A3D97FB0073A2D6 /* UploadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageViewModel.swift; sourceTree = "<group>"; };
 		116A22B92A3DAF310073A2D6 /* DownloadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewModel.swift; sourceTree = "<group>"; };
 		116A22BB2A3DB0960073A2D6 /* DownloadImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		231742E729ED60190049E537 /* UIActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		231742E929ED679F0049E537 /* WKWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewViewController.swift; sourceTree = "<group>"; };
 		2327A44329DC585B0055D904 /* CustomTraitCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTraitCollectionViewController.swift; sourceTree = "<group>"; };
+		232B0FB12A405F5200AE63C7 /* WebServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceCell.swift; sourceTree = "<group>"; };
 		23368CE32A388094008DF0B5 /* URLextension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLextension.swift; sourceTree = "<group>"; };
 		23368CE52A3880C6008DF0B5 /* ImageReponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReponseModel.swift; sourceTree = "<group>"; };
 		23368CE82A3885F2008DF0B5 /* ImageUploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewModel.swift; sourceTree = "<group>"; };
@@ -276,6 +279,9 @@
 		235980D729A49D0C009E8C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		235980D929A49D0C009E8C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		235980DF29A49FAB009E8C5D /* Storyboard2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard2.storyboard; sourceTree = "<group>"; };
+		2369110B2A405FD000C369BB /* WebServiceCombine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebServiceCombine.storyboard; sourceTree = "<group>"; };
+		2369110E2A40604900C369BB /* WebServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceViewController.swift; sourceTree = "<group>"; };
+		236911112A40614B00C369BB /* CombineScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineScreen.swift; sourceTree = "<group>"; };
 		2374DFA62A3C724B006D488C /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterUserViewController.swift; path = DemoProject/WebServices/AlamoFire/AlamoFireStructure/ViewController/RegisterUserViewController.swift; sourceTree = SOURCE_ROOT; };
 		2374DFA82A3C776B006D488C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2374DFAA2A3C78E2006D488C /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
@@ -290,6 +296,7 @@
 		238087DC29E6D72800CBDCD3 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
 		238087DD29E6D72800CBDCD3 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalTableViewCell.xib; sourceTree = "<group>"; };
 		238087E029E6D86B00CBDCD3 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
+		2383E3602A400E2800BDF7F0 /* First.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = First.pdf; path = ../../../../../Downloads/First.pdf; sourceTree = "<group>"; };
 		2385E7CD2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebServiceStoaryBoard.storyboard; sourceTree = "<group>"; };
 		2385E7D32A36F37100E41156 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		2385E7D72A36F62D00E41156 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
@@ -455,7 +462,6 @@
 				23AF266E29F7A7F600D10905 /* Segue */,
 				2314D4D329F78B2C00996791 /* CustomCallOut */,
 				23C3147B29EFF4900017D5F2 /* TabBar */,
-				116A22B62A3D76110073A2D6 /* First.pdf */,
 				234C242529EE5FF400EB917E /* PHPickerCollectionView */,
 				231742E629ED4FD80049E537 /* TableView */,
 				23FCACFB29E3D98A00623264 /* UILabelViewController.swift */,
@@ -519,6 +525,33 @@
 				23E1161629E95EF7000D82EF /* TableViewExpandedController.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		232B0FAD2A405ECB00AE63C7 /* CombineScreen */ = {
+			isa = PBXGroup;
+			children = (
+				236911102A40613D00C369BB /* Model */,
+				2369110D2A40603200C369BB /* Controller */,
+				232B0FB32A405F9E00AE63C7 /* View */,
+				232B0FB02A405F2C00AE63C7 /* Cell */,
+			);
+			path = CombineScreen;
+			sourceTree = "<group>";
+		};
+		232B0FB02A405F2C00AE63C7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				232B0FB12A405F5200AE63C7 /* WebServiceCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		232B0FB32A405F9E00AE63C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2369110B2A405FD000C369BB /* WebServiceCombine.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		23368CE22A388082008DF0B5 /* extension */ = {
@@ -710,9 +743,25 @@
 				235980D929A49D0C009E8C5D /* Info.plist */,
 				23A2520929A5D1600042B1D2 /* first_playground.playground */,
 				2327A44329DC585B0055D904 /* CustomTraitCollectionViewController.swift */,
-				116A22B22A3D72B70073A2D6 /* First.pdf */,
+				2383E3602A400E2800BDF7F0 /* First.pdf */,
 			);
 			path = DemoProject;
+			sourceTree = "<group>";
+		};
+		2369110D2A40603200C369BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2369110E2A40604900C369BB /* WebServiceViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		236911102A40613D00C369BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				236911112A40614B00C369BB /* CombineScreen.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2374DFAC2A3C7A81006D488C /* Resources */ = {
@@ -734,6 +783,7 @@
 		2385E7CC2A36EE5000E41156 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				232B0FAD2A405ECB00AE63C7 /* CombineScreen */,
 				23368CFA2A3AFA30008DF0B5 /* AlamoFire */,
 				23368CE72A3885DB008DF0B5 /* ViewModel */,
 				23368CE22A388082008DF0B5 /* extension */,
@@ -1076,7 +1126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2341A8DE29FB8CE200720C14 /* ReverseKT.storyboard in Resources */,
-				116A22B32A3D72B70073A2D6 /* First.pdf in Resources */,
+				2383E3612A400E2800BDF7F0 /* First.pdf in Resources */,
 				2314D4D029F789A800996791 /* CallOut.xib in Resources */,
 				238FCD4D29FA60F10005C623 /* HeaderTableViewCell.xib in Resources */,
 				235980E029A49FAB009E8C5D /* Storyboard2.storyboard in Resources */,
@@ -1086,6 +1136,7 @@
 				23E1161B29E95F89000D82EF /* ExpandedTableViewCell.xib in Resources */,
 				239F129329E6C23A005313AA /* SeriesTableViewCell.xib in Resources */,
 				238087DF29E6D72800CBDCD3 /* AnimalTableViewCell.xib in Resources */,
+				2369110C2A405FD000C369BB /* WebServiceCombine.storyboard in Resources */,
 				235980D529A49D0C009E8C5D /* Assets.xcassets in Resources */,
 				2314D4D729F7A5CC00996791 /* StoryboardSegue.storyboard in Resources */,
 				2339135329DBEE4900505575 /* Main.storyboard in Resources */,
@@ -1196,6 +1247,7 @@
 				23368CF52A3ADEEB008DF0B5 /* UserListAlamoFireViewController.swift in Sources */,
 				23368CEF2A39A5DB008DF0B5 /* DownloadFileViewController.swift in Sources */,
 				238FCD4329FA4E710005C623 /* GroupStructureModel.swift in Sources */,
+				232B0FB22A405F5200AE63C7 /* WebServiceCell.swift in Sources */,
 				234C242829EE602B00EB917E /* ImageCollectionViewCell.swift in Sources */,
 				23FCAD0229E4043000623264 /* UiTextFieldPadding.swift in Sources */,
 				235980CC29A49D0B009E8C5D /* AppDelegate.swift in Sources */,
@@ -1206,6 +1258,7 @@
 				23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */,
 				2327A44429DC585B0055D904 /* CustomTraitCollectionViewController.swift in Sources */,
 				23BBB4E62A0220B500BDF4A4 /* SecondNavigationViewController.swift in Sources */,
+				236911122A40614B00C369BB /* CombineScreen.swift in Sources */,
 				2374DFB62A3C8311006D488C /* UpdateUserViewModel.swift in Sources */,
 				23E1161D29E96114000D82EF /* ExpanedModel.swift in Sources */,
 				239A39622A090B9900A0A5DC /* DiscardThirdViewController.swift in Sources */,
@@ -1283,6 +1336,7 @@
 				23368D062A3B19C5008DF0B5 /* CategoryCollectionViewCell.swift in Sources */,
 				235517F729F25E0B00B46BDA /* DemoPickerViewViewController.swift in Sources */,
 				23487C502A3C43C300DA3DF5 /* CustomError.swift in Sources */,
+				2369110F2A40604900C369BB /* WebServiceViewController.swift in Sources */,
 				23FCACFE29E3E85900623264 /* UIButtonViewController.swift in Sources */,
 				116A22BA2A3DAF310073A2D6 /* DownloadImageViewModel.swift in Sources */,
 				2385E7D82A36F62D00E41156 /* UserListViewController.swift in Sources */,

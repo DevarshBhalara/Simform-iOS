@@ -11,6 +11,7 @@ struct SignUp: Codable {
     let email: String
     let mobilenumber: String
     let state: String
+    let avatar: String
     
     func requestParameter() -> [String: Any] {
         var param: [String: Any] = [:]
@@ -19,6 +20,7 @@ struct SignUp: Codable {
         param["email"] = email
         param["mobilenumber"] = mobilenumber
         param["state"] = state
+        param["avatar"] = avatar
         return param
     }
 }

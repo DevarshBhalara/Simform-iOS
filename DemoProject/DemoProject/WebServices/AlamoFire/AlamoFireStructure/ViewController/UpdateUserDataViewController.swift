@@ -10,15 +10,20 @@ import UIKit
 class UpdateUserDataViewController: UIViewController {
     
     //MARK: - Outlets
+    @IBOutlet weak var imgAvatar: UIImageView!
     @IBOutlet weak var tfId: MyTextField!
     @IBOutlet weak var tfState: MyTextField!
+    @IBOutlet weak var btnUpdateProfile: UIButton!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tfNumber: MyTextField!
+    @IBOutlet weak var btnUpdate: UIButton!
     @IBOutlet weak var tfEmail: MyTextField!
     @IBOutlet weak var tfName: MyTextField!
     @IBOutlet weak var card: UIView!
     
     //MARK: - Variable
     var viewModel: UpdateUserViewModel = UpdateUserViewModel()
+    var imageUrl = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +35,27 @@ class UpdateUserDataViewController: UIViewController {
         bindViewModel()
         bindUpdateUI()
         viewModel.getUserData()
+        
     }
     
     private func bindViewModel() {
         viewModel.validationError.bind {
             message in
             print("Message \(message)")
+        }
+        
+        viewModel.uplaodSuccess.bind { [weak self]
+            url in
+            self?.imageUrl = url
+            print("bind \(self?.imageUrl ?? "NA")")
+            
+        }
+        
+        viewModel.image.bind { [weak self]
+            image in
+            self?.imgAvatar.image = image
+            self?.imgAvatar.layer.cornerRadius = (self?.imgAvatar.frame.height ?? 0) / 2
+            self?.loadingIndicator.stopAnimating()
         }
     }
     
@@ -50,7 +70,7 @@ class UpdateUserDataViewController: UIViewController {
         }
         
         viewModel.updateSuccess.bind {
-            print("Updated")
+            self.showAlertDialog(message: "Profile Updated")
         }
     }
     
@@ -61,11 +81,49 @@ class UpdateUserDataViewController: UIViewController {
         tfState.text = data.state
         tfEmail.text = data.email
         tfNumber.text = data.mobilenumber
+        viewModel.callLoadImageApi(url: data.avatar ?? "")
+      
+       
     }
 
-    @IBAction func updateBtnClick(_ sender: Any) {
+    @IBAction func btnUpdateProfile(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        self.present(imagePicker, animated: true)
+    }
+    
+    @IBAction func updateBtnClick(_ sender: UIButton) {
+        sender.configuration?.showsActivityIndicator = true
         if let name = tfName.text, let email = tfEmail.text, let number = tfNumber.text, let state = tfState.text {
-            viewModel.callUpdateApi(email: email, number: number, state: state, name: name)
+            viewModel.callUpdateApi(email: email, number: number, state: state, name: name, avatarUrl: imageUrl)
         }
+    }
+    
+    ///Show alert Dialog method
+    private func showAlertDialog(message: String) {
+        let alert = UIAlertController(title: "Demo App", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: {_ in
+            self.btnUpdate.configuration?.showsActivityIndicator = false
+        }))
+        self.present(alert, animated: true)
+    }
+}
+
+//MARK: - UIImage picker delegate
+extension UpdateUserDataViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        guard let image = info[.editedImage] else {
+            return
+        }
+        let imageAvatar = image as? UIImage
+        
+        if let imageAvatar = imageAvatar {
+            viewModel.callUplaodApi(image: imageAvatar)
+            self.imgAvatar.image = imageAvatar
+            self.imgAvatar.layer.cornerRadius = self.imgAvatar.frame.height / 2
+        }
+        dismiss(animated: true)
     }
 }

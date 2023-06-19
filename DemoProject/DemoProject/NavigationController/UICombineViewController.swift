@@ -22,18 +22,6 @@ struct CombineScreenData {
     static func getAllData() -> [CombineScreenData] {
         
         return [
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFireStructured, vcName: "LoginAlamoFireViewController", title: "Login VM"),
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFireStructured, vcName: "UplaodImageViewControllerAF", title: "Uplaod Image AF"),
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFireStructured, vcName: "DownloadImageViewController", title: "Download Image AF"),
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFireStructured, vcName: "RegisterUserViewController", title: "SignUp VM"),
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForAlamoFire, vcName: "LoginViewController", title: "E-Commerce"),
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "UserListViewController", title: "User List (Web Service)"),
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "UserListAlamoFireViewController", title: "User List (Web Service AlamoFire)"),
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "DeleteUserViewController", title: "User Delete Request"),
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "DownloadFileViewController", title: "Download task"),
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "UploadImageViewController", title: "Upload Image"),
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "AddUserViewController", title: "Add User (Web Service)"),
-            CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForWebService, vcName: "AlamoFIreAddUserViewController", title: "Add User (Web Service AlamoFire)"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UILabelViewController", title: "UILabelViewController"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UIButtonViewController", title: "UIButtonViewController"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UiTextFieldViewController", title: "UITexField Demo"),

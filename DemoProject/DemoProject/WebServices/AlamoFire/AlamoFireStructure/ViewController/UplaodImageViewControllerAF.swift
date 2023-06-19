@@ -12,6 +12,7 @@ class UplaodImageViewControllerAF: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var imgUplaod: UIImageView!
     @IBOutlet weak var btnUplaodImage: UIButton!
+    @IBOutlet weak var lblProgress: UILabel!
     @IBOutlet weak var progress: UIProgressView!
     @IBOutlet weak var btnSelectImage: UIButton!
     
@@ -37,6 +38,7 @@ class UplaodImageViewControllerAF: UIViewController {
         viewModel.getProgress.bind {
             progress in
             self.progress.progress = progress
+            self.lblProgress.text =  String((Int(Float(progress) * 100))) + "%"
             print("Progress in vc \(progress)")
         }
     }
