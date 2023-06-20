@@ -52,12 +52,11 @@ extension WebServiceViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == getAllScreenData.count - 1 {
+        if indexPath.row == 0 {
             navigationController?.navigationItem.largeTitleDisplayMode = .never
             let appCoordinator = AppCoordinator(navigationController: navigationController!)
             UserManager.shared.sceneDelegate?.appCoordinator = appCoordinator
             appCoordinator.start()
-            
            
         } else {
             let viewController = UIStoryboard(name: getAllScreenData[indexPath.row].storyBoardName, bundle: nil).instantiateViewController(withIdentifier: getAllScreenData[indexPath.row].vcName)

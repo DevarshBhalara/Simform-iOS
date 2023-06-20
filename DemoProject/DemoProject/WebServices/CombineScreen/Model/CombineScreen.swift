@@ -15,10 +15,13 @@ struct CombineScreenDataWebService {
     static private let stoardBoardForAlamoFire = "AlamoFireDemo"
     static private let stoardBoardForAlamoFireStructured = "AlamoFireStructured"
     static private let stoardBoardForMVVM = "Authentication"
+    static private let stoardBoardForMVP = "MVPDemo"
     
     static func getAllData() -> [CombineScreenDataWebService] {
         
         return [
+            CombineScreenDataWebService(storyBoardName: CombineScreenDataWebService.stoardBoardForMVVM, vcName: "LoginVC", title: "MVVMDemo"),
+            CombineScreenDataWebService(storyBoardName: CombineScreenDataWebService.stoardBoardForMVP, vcName: "LoginMVPVC", title: "MVP Demo"),
             CombineScreenDataWebService(storyBoardName: CombineScreenDataWebService.stoardBoardForWebService, vcName: "UserListViewController", title: "User List (Web Service)"),
             CombineScreenDataWebService(storyBoardName: CombineScreenDataWebService.stoardBoardForWebService, vcName: "AddUserViewController", title: "Add User (Web Service)"),
             CombineScreenDataWebService(storyBoardName: CombineScreenDataWebService.stoardBoardForWebService, vcName: "DeleteUserViewController", title: "User Delete Request"),
@@ -32,7 +35,7 @@ struct CombineScreenDataWebService {
             CombineScreenDataWebService(storyBoardName: CombineScreenDataWebService.stoardBoardForAlamoFireStructured, vcName: "DownloadImageViewController", title: "Download Image AF"),
             CombineScreenDataWebService(storyBoardName: CombineScreenDataWebService.stoardBoardForAlamoFireStructured, vcName: "RegisterUserViewController", title: "SignUp VM"),
             CombineScreenDataWebService(storyBoardName: CombineScreenDataWebService.stoardBoardForAlamoFire, vcName: "LoginViewController", title: "E-Commerce"),
-            CombineScreenDataWebService(storyBoardName: CombineScreenDataWebService.stoardBoardForMVVM, vcName: "LoginVC", title: "MVVMDemo"),
+            
         ]
     }
 }

@@ -67,6 +67,11 @@
 		2344EA582A41920000BC49F7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2344EA572A41920000BC49F7 /* Home.storyboard */; };
 		2344EA5A2A4192BA00BC49F7 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA592A4192BA00BC49F7 /* HomeCoordinator.swift */; };
 		2344EA5E2A41932900BC49F7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA5D2A41932900BC49F7 /* HomeVC.swift */; };
+		2344EA662A41D22B00BC49F7 /* MVPDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2344EA652A41D22B00BC49F7 /* MVPDemo.storyboard */; };
+		2344EA682A41D32B00BC49F7 /* LoginMVPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA672A41D32B00BC49F7 /* LoginMVPVC.swift */; };
+		2344EA6A2A41D36E00BC49F7 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA692A41D36E00BC49F7 /* LoginPresenter.swift */; };
+		2344EA6C2A41D3D700BC49F7 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA6B2A41D3D700BC49F7 /* AuthenticationService.swift */; };
+		2344EA6E2A41D40900BC49F7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA6D2A41D40900BC49F7 /* Authentication.swift */; };
 		23487C422A3B437300DA3DF5 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23487C412A3B437300DA3DF5 /* ProductDetailViewController.swift */; };
 		23487C4A2A3C377B00DA3DF5 /* AlamoFireStructured.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23487C492A3C377B00DA3DF5 /* AlamoFireStructured.storyboard */; };
 		23487C4C2A3C3FDD00DA3DF5 /* APIManager+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23487C4B2A3C3FDD00DA3DF5 /* APIManager+Request.swift */; };
@@ -276,6 +281,11 @@
 		2344EA572A41920000BC49F7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2344EA592A4192BA00BC49F7 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		2344EA5D2A41932900BC49F7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		2344EA652A41D22B00BC49F7 /* MVPDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MVPDemo.storyboard; sourceTree = "<group>"; };
+		2344EA672A41D32B00BC49F7 /* LoginMVPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMVPVC.swift; sourceTree = "<group>"; };
+		2344EA692A41D36E00BC49F7 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		2344EA6B2A41D3D700BC49F7 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		2344EA6D2A41D40900BC49F7 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		23487C412A3B437300DA3DF5 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		23487C492A3C377B00DA3DF5 /* AlamoFireStructured.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlamoFireStructured.storyboard; sourceTree = "<group>"; };
 		23487C4B2A3C3FDD00DA3DF5 /* APIManager+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Request.swift"; sourceTree = "<group>"; };
@@ -727,6 +737,50 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2344EA5F2A41D1DB00BC49F7 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA632A41D21000BC49F7 /* DataSource */,
+				2344EA622A41D20900BC49F7 /* View */,
+				2344EA612A41D1FD00BC49F7 /* Presenter */,
+				2344EA602A41D1F500BC49F7 /* Model */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		2344EA602A41D1F500BC49F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA6D2A41D40900BC49F7 /* Authentication.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2344EA612A41D1FD00BC49F7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA692A41D36E00BC49F7 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2344EA622A41D20900BC49F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA652A41D22B00BC49F7 /* MVPDemo.storyboard */,
+				2344EA672A41D32B00BC49F7 /* LoginMVPVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2344EA632A41D21000BC49F7 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA6B2A41D3D700BC49F7 /* AuthenticationService.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		23487C432A3C35C400DA3DF5 /* AlamoFireStructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -898,6 +952,7 @@
 		2385E7CC2A36EE5000E41156 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				2344EA5F2A41D1DB00BC49F7 /* MVP */,
 				2344EA3D2A4179DE00BC49F7 /* MVVM Architecture */,
 				232B0FAD2A405ECB00AE63C7 /* CombineScreen */,
 				23368CFA2A3AFA30008DF0B5 /* AlamoFire */,
@@ -1260,6 +1315,7 @@
 				2339135329DBEE4900505575 /* Main.storyboard in Resources */,
 				2385E7CE2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard in Resources */,
 				239F128B29E6B0FA005313AA /* MovieTableViewCell.xib in Resources */,
+				2344EA662A41D22B00BC49F7 /* MVPDemo.storyboard in Resources */,
 				23CB508B29E8243A0057E0D7 /* UiComponents2.storyboard in Resources */,
 				23487C4A2A3C377B00DA3DF5 /* AlamoFireStructured.storyboard in Resources */,
 				239F127A29E688B6005313AA /* IndexTableViewCell.xib in Resources */,
@@ -1350,6 +1406,7 @@
 				2343370C29E833E800976581 /* SecondViewController.swift in Sources */,
 				2353510C2A037D8700350318 /* UIScrollViewViewController.swift in Sources */,
 				235351122A03E01900350318 /* UIProfileTabViewController.swift in Sources */,
+				2344EA6E2A41D40900BC49F7 /* Authentication.swift in Sources */,
 				239F129229E6C23A005313AA /* SeriesTableViewCell.swift in Sources */,
 				23368CE92A3885F2008DF0B5 /* ImageUploadViewModel.swift in Sources */,
 				23368CFC2A3AFA42008DF0B5 /* LoginViewController.swift in Sources */,
@@ -1385,6 +1442,7 @@
 				2344EA512A41827700BC49F7 /* AuthenticationCoordinator.swift in Sources */,
 				23E1161D29E96114000D82EF /* ExpanedModel.swift in Sources */,
 				239A39622A090B9900A0A5DC /* DiscardThirdViewController.swift in Sources */,
+				2344EA6C2A41D3D700BC49F7 /* AuthenticationService.swift in Sources */,
 				234C242429EE5B5100EB917E /* PHPickerImageViewController.swift in Sources */,
 				23FCAD0629E415AB00623264 /* UITextViewViewController.swift in Sources */,
 				23C8969C29FFB8210049E4F9 /* TableTestViewController.swift in Sources */,
@@ -1393,6 +1451,7 @@
 				23368CF72A3ADF37008DF0B5 /* ApiManagerAF.swift in Sources */,
 				2344EA5A2A4192BA00BC49F7 /* HomeCoordinator.swift in Sources */,
 				23BBB4EC2A022E7E00BDF4A4 /* FifthNavigationViewController.swift in Sources */,
+				2344EA682A41D32B00BC49F7 /* LoginMVPVC.swift in Sources */,
 				23AEEDEC2A050DAB00DF0DAC /* SecondViewViewController.swift in Sources */,
 				23DBE39929F235C700298103 /* UIPickerViewImageViewController.swift in Sources */,
 				233C01AC29ED0445004733A2 /* JobSliderCellCollectionViewCell.swift in Sources */,
@@ -1404,6 +1463,7 @@
 				230207052A00F092009D2592 /* ProfileViewController.swift in Sources */,
 				231742E829ED60190049E537 /* UIActivityIndicatorViewController.swift in Sources */,
 				2314D4D229F78A2B00996791 /* CallOut.swift in Sources */,
+				2344EA6A2A41D36E00BC49F7 /* LoginPresenter.swift in Sources */,
 				23E411DD29F94CB700C68F83 /* GolfHomeViewController.swift in Sources */,
 				238087E129E6D86B00CBDCD3 /* AnimalModel.swift in Sources */,
 				23CC7DA629F65A66002336E3 /* MyAnnotation.swift in Sources */,
