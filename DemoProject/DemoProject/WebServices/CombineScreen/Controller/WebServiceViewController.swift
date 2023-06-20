@@ -17,7 +17,6 @@ class WebServiceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 }
@@ -53,9 +52,19 @@ extension WebServiceViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = UIStoryboard(name: getAllScreenData[indexPath.row].storyBoardName, bundle: nil).instantiateViewController(withIdentifier: getAllScreenData[indexPath.row].vcName)
-        viewController.navigationItem.largeTitleDisplayMode = .never
-        self.navigationController?.pushViewController(viewController, animated: true)
+        if indexPath.row == getAllScreenData.count - 1 {
+            navigationController?.navigationItem.largeTitleDisplayMode = .never
+            let appCoordinator = AppCoordinator(navigationController: navigationController!)
+            UserManager.shared.sceneDelegate?.appCoordinator = appCoordinator
+            appCoordinator.start()
+            
+           
+        } else {
+            let viewController = UIStoryboard(name: getAllScreenData[indexPath.row].storyBoardName, bundle: nil).instantiateViewController(withIdentifier: getAllScreenData[indexPath.row].vcName)
+            viewController.navigationItem.largeTitleDisplayMode = .never
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+        
     }
 }
 

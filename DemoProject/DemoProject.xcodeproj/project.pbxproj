@@ -55,6 +55,18 @@
 		2341A8DE29FB8CE200720C14 /* ReverseKT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2341A8DD29FB8CE200720C14 /* ReverseKT.storyboard */; };
 		2343370A29E8334F00976581 /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343370929E8334F00976581 /* SecondCollectionViewCell.swift */; };
 		2343370C29E833E800976581 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2343370B29E833E800976581 /* SecondViewController.swift */; };
+		2344EA432A417A3B00BC49F7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA422A417A3B00BC49F7 /* Coordinator.swift */; };
+		2344EA452A417ABC00BC49F7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA442A417ABC00BC49F7 /* AppCoordinator.swift */; };
+		2344EA482A417B4E00BC49F7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA472A417B4E00BC49F7 /* UserManager.swift */; };
+		2344EA4A2A417E4E00BC49F7 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2344EA492A417E4E00BC49F7 /* Authentication.storyboard */; };
+		2344EA4D2A4180B200BC49F7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA4C2A4180B200BC49F7 /* LoginVC.swift */; };
+		2344EA4F2A4180F000BC49F7 /* Stoaryboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA4E2A4180F000BC49F7 /* Stoaryboarded.swift */; };
+		2344EA512A41827700BC49F7 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA502A41827700BC49F7 /* AuthenticationCoordinator.swift */; };
+		2344EA532A41852300BC49F7 /* SignUPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA522A41852300BC49F7 /* SignUPVC.swift */; };
+		2344EA562A41869D00BC49F7 /* LoginViewModelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA552A41869D00BC49F7 /* LoginViewModelCoordinator.swift */; };
+		2344EA582A41920000BC49F7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2344EA572A41920000BC49F7 /* Home.storyboard */; };
+		2344EA5A2A4192BA00BC49F7 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA592A4192BA00BC49F7 /* HomeCoordinator.swift */; };
+		2344EA5E2A41932900BC49F7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA5D2A41932900BC49F7 /* HomeVC.swift */; };
 		23487C422A3B437300DA3DF5 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23487C412A3B437300DA3DF5 /* ProductDetailViewController.swift */; };
 		23487C4A2A3C377B00DA3DF5 /* AlamoFireStructured.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23487C492A3C377B00DA3DF5 /* AlamoFireStructured.storyboard */; };
 		23487C4C2A3C3FDD00DA3DF5 /* APIManager+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23487C4B2A3C3FDD00DA3DF5 /* APIManager+Request.swift */; };
@@ -252,6 +264,18 @@
 		2341A8DD29FB8CE200720C14 /* ReverseKT.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReverseKT.storyboard; sourceTree = "<group>"; };
 		2343370929E8334F00976581 /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
 		2343370B29E833E800976581 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2344EA422A417A3B00BC49F7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2344EA442A417ABC00BC49F7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2344EA472A417B4E00BC49F7 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		2344EA492A417E4E00BC49F7 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		2344EA4C2A4180B200BC49F7 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2344EA4E2A4180F000BC49F7 /* Stoaryboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stoaryboarded.swift; sourceTree = "<group>"; };
+		2344EA502A41827700BC49F7 /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
+		2344EA522A41852300BC49F7 /* SignUPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUPVC.swift; sourceTree = "<group>"; };
+		2344EA552A41869D00BC49F7 /* LoginViewModelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelCoordinator.swift; sourceTree = "<group>"; };
+		2344EA572A41920000BC49F7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2344EA592A4192BA00BC49F7 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		2344EA5D2A41932900BC49F7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		23487C412A3B437300DA3DF5 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		23487C492A3C377B00DA3DF5 /* AlamoFireStructured.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlamoFireStructured.storyboard; sourceTree = "<group>"; };
 		23487C4B2A3C3FDD00DA3DF5 /* APIManager+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Request.swift"; sourceTree = "<group>"; };
@@ -612,6 +636,97 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2344EA3D2A4179DE00BC49F7 /* MVVM Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA462A417B4400BC49F7 /* Helpers */,
+				2344EA402A417A0900BC49F7 /* Storyboard */,
+				2344EA3F2A4179FD00BC49F7 /* Module */,
+				2344EA3E2A4179F300BC49F7 /* Coordinator */,
+			);
+			path = "MVVM Architecture";
+			sourceTree = "<group>";
+		};
+		2344EA3E2A4179F300BC49F7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA422A417A3B00BC49F7 /* Coordinator.swift */,
+				2344EA442A417ABC00BC49F7 /* AppCoordinator.swift */,
+				2344EA4E2A4180F000BC49F7 /* Stoaryboarded.swift */,
+				2344EA502A41827700BC49F7 /* AuthenticationCoordinator.swift */,
+				2344EA592A4192BA00BC49F7 /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2344EA3F2A4179FD00BC49F7 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA5B2A41931100BC49F7 /* Home */,
+				2344EA412A417A1500BC49F7 /* Authentication */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2344EA402A417A0900BC49F7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA492A417E4E00BC49F7 /* Authentication.storyboard */,
+				2344EA572A41920000BC49F7 /* Home.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		2344EA412A417A1500BC49F7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA542A41868800BC49F7 /* ViewModel */,
+				2344EA4B2A41809C00BC49F7 /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		2344EA462A417B4400BC49F7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA472A417B4E00BC49F7 /* UserManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2344EA4B2A41809C00BC49F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA4C2A4180B200BC49F7 /* LoginVC.swift */,
+				2344EA522A41852300BC49F7 /* SignUPVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2344EA542A41868800BC49F7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA552A41869D00BC49F7 /* LoginViewModelCoordinator.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2344EA5B2A41931100BC49F7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA5C2A41931800BC49F7 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2344EA5C2A41931800BC49F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA5D2A41932900BC49F7 /* HomeVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		23487C432A3C35C400DA3DF5 /* AlamoFireStructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,6 +898,7 @@
 		2385E7CC2A36EE5000E41156 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				2344EA3D2A4179DE00BC49F7 /* MVVM Architecture */,
 				232B0FAD2A405ECB00AE63C7 /* CombineScreen */,
 				23368CFA2A3AFA30008DF0B5 /* AlamoFire */,
 				23368CE72A3885DB008DF0B5 /* ViewModel */,
@@ -1134,11 +1250,13 @@
 				239F128429E6A386005313AA /* TableViewCellOneFor2.xib in Resources */,
 				23FCACFA29E3CEAF00623264 /* UiComponents.storyboard in Resources */,
 				23E1161B29E95F89000D82EF /* ExpandedTableViewCell.xib in Resources */,
+				2344EA4A2A417E4E00BC49F7 /* Authentication.storyboard in Resources */,
 				239F129329E6C23A005313AA /* SeriesTableViewCell.xib in Resources */,
 				238087DF29E6D72800CBDCD3 /* AnimalTableViewCell.xib in Resources */,
 				2369110C2A405FD000C369BB /* WebServiceCombine.storyboard in Resources */,
 				235980D529A49D0C009E8C5D /* Assets.xcassets in Resources */,
 				2314D4D729F7A5CC00996791 /* StoryboardSegue.storyboard in Resources */,
+				2344EA582A41920000BC49F7 /* Home.storyboard in Resources */,
 				2339135329DBEE4900505575 /* Main.storyboard in Resources */,
 				2385E7CE2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard in Resources */,
 				239F128B29E6B0FA005313AA /* MovieTableViewCell.xib in Resources */,
@@ -1222,6 +1340,7 @@
 				2374DFAB2A3C78E2006D488C /* SignUpModel.swift in Sources */,
 				23368D022A3B019E008DF0B5 /* AllProductViewController.swift in Sources */,
 				23CC7DA829F65C0B002336E3 /* MyAnnotationView.swift in Sources */,
+				2344EA5E2A41932900BC49F7 /* HomeVC.swift in Sources */,
 				23C3147F29EFF4DE0017D5F2 /* SeriesViewController.swift in Sources */,
 				23E38B5F2A08B8F700DD2850 /* ThirdPassViewController.swift in Sources */,
 				231742D929ED28420049E537 /* UICollectionViewInTableViewController.swift in Sources */,
@@ -1245,9 +1364,11 @@
 				231742DF29ED2AFC0049E537 /* CollectionViewCell.swift in Sources */,
 				23487C592A3C4A7700DA3DF5 /* Dynamic.swift in Sources */,
 				23368CF52A3ADEEB008DF0B5 /* UserListAlamoFireViewController.swift in Sources */,
+				2344EA432A417A3B00BC49F7 /* Coordinator.swift in Sources */,
 				23368CEF2A39A5DB008DF0B5 /* DownloadFileViewController.swift in Sources */,
 				238FCD4329FA4E710005C623 /* GroupStructureModel.swift in Sources */,
 				232B0FB22A405F5200AE63C7 /* WebServiceCell.swift in Sources */,
+				2344EA452A417ABC00BC49F7 /* AppCoordinator.swift in Sources */,
 				234C242829EE602B00EB917E /* ImageCollectionViewCell.swift in Sources */,
 				23FCAD0229E4043000623264 /* UiTextFieldPadding.swift in Sources */,
 				235980CC29A49D0B009E8C5D /* AppDelegate.swift in Sources */,
@@ -1257,9 +1378,11 @@
 				2380874229E593A0004D9AB3 /* UISegmentCustom.swift in Sources */,
 				23B31AF829E554EB00F3748D /* UIPageControlViewController.swift in Sources */,
 				2327A44429DC585B0055D904 /* CustomTraitCollectionViewController.swift in Sources */,
+				2344EA4F2A4180F000BC49F7 /* Stoaryboarded.swift in Sources */,
 				23BBB4E62A0220B500BDF4A4 /* SecondNavigationViewController.swift in Sources */,
 				236911122A40614B00C369BB /* CombineScreen.swift in Sources */,
 				2374DFB62A3C8311006D488C /* UpdateUserViewModel.swift in Sources */,
+				2344EA512A41827700BC49F7 /* AuthenticationCoordinator.swift in Sources */,
 				23E1161D29E96114000D82EF /* ExpanedModel.swift in Sources */,
 				239A39622A090B9900A0A5DC /* DiscardThirdViewController.swift in Sources */,
 				234C242429EE5B5100EB917E /* PHPickerImageViewController.swift in Sources */,
@@ -1268,11 +1391,13 @@
 				239F128D29E6B282005313AA /* UiTableMovieViewController.swift in Sources */,
 				23CB508029E7DB2E0057E0D7 /* AnimalModelStructure.swift in Sources */,
 				23368CF72A3ADF37008DF0B5 /* ApiManagerAF.swift in Sources */,
+				2344EA5A2A4192BA00BC49F7 /* HomeCoordinator.swift in Sources */,
 				23BBB4EC2A022E7E00BDF4A4 /* FifthNavigationViewController.swift in Sources */,
 				23AEEDEC2A050DAB00DF0DAC /* SecondViewViewController.swift in Sources */,
 				23DBE39929F235C700298103 /* UIPickerViewImageViewController.swift in Sources */,
 				233C01AC29ED0445004733A2 /* JobSliderCellCollectionViewCell.swift in Sources */,
 				2385E7E02A37316E00E41156 /* UserRegister.swift in Sources */,
+				2344EA4D2A4180B200BC49F7 /* LoginVC.swift in Sources */,
 				2374DFB12A3C7B27006D488C /* Extensions.swift in Sources */,
 				23E1160529E90AC4000D82EF /* SeriesCollectionModel.swift in Sources */,
 				23BBB4F32A0287D000BDF4A4 /* FirstWithTitleViewController.swift in Sources */,
@@ -1317,6 +1442,7 @@
 				23487C5B2A3C5A5800DA3DF5 /* LoginRequestModel.swift in Sources */,
 				23368CF92A3AE499008DF0B5 /* AlamoFIreAddUserViewController.swift in Sources */,
 				23368D102A3B266D008DF0B5 /* Product.swift in Sources */,
+				2344EA532A41852300BC49F7 /* SignUPVC.swift in Sources */,
 				238FCD3729FA44AC0005C623 /* CardCollectionViewCell.swift in Sources */,
 				23FCAD0029E4021600623264 /* UiTextFieldViewController.swift in Sources */,
 				23CB509029E826D10057E0D7 /* FirstCollectionViewCell.swift in Sources */,
@@ -1327,6 +1453,7 @@
 				23368CED2A398C88008DF0B5 /* DeleteUserViewController.swift in Sources */,
 				23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */,
 				23487C4C2A3C3FDD00DA3DF5 /* APIManager+Request.swift in Sources */,
+				2344EA562A41869D00BC49F7 /* LoginViewModelCoordinator.swift in Sources */,
 				2385E7E22A373ED600E41156 /* AddUserViewController.swift in Sources */,
 				230207012A00EFB2009D2592 /* TabViewViewController.swift in Sources */,
 				23BBB4EE2A02606E00BDF4A4 /* MySegue.swift in Sources */,
@@ -1357,6 +1484,7 @@
 				23FCAD0A29E4227800623264 /* UISwitchViewController.swift in Sources */,
 				116A22B82A3D97FB0073A2D6 /* UploadImageViewModel.swift in Sources */,
 				23E1161A29E95F89000D82EF /* ExpandedTableViewCell.swift in Sources */,
+				2344EA482A417B4E00BC49F7 /* UserManager.swift in Sources */,
 				23C3147A29EFEF5A0017D5F2 /* UIStackViewViewController.swift in Sources */,
 				23E38B5B2A08B8E000DD2850 /* FirstPassViewController.swift in Sources */,
 				235980CE29A49D0B009E8C5D /* SceneDelegate.swift in Sources */,
