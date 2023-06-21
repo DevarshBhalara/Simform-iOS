@@ -125,8 +125,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MK6-0D-Xwj">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-nn-zPu">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="jlv-vu-ixC" id="yuP-Hc-vLK"/>
+                                        </connections>
+                                    </searchBar>
                                     <collectionView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zMH-si-3mB">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                        <rect key="frame" x="0.0" y="56" width="393" height="60"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="hN7-Vs-ZW5"/>
@@ -180,7 +187,7 @@
                                         </connections>
                                     </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FlO-2B-f1g" customClass="p">
-                                        <rect key="frame" x="0.0" y="68" width="393" height="691"/>
+                                        <rect key="frame" x="0.0" y="124" width="393" height="635"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XM3-7U-fHC">
                                             <size key="itemSize" width="212" height="281"/>
@@ -253,6 +260,7 @@
                     <connections>
                         <outlet property="catogoryCollectionView" destination="zMH-si-3mB" id="0zD-bz-lui"/>
                         <outlet property="productCollectionView" destination="FlO-2B-f1g" id="WpM-cc-EUh"/>
+                        <outlet property="searchBar" destination="2YQ-nn-zPu" id="1tc-HG-3KE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ws4-ky-kYt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

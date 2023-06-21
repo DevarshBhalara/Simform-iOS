@@ -37,7 +37,7 @@ class AppCoordinator: Coordinator {
     func goToHome() {
         let homeCoordinator = HomeCoordinator(navigationController: navigationController)
 //        self.window.rootViewController = navigationController
-        homeCoordinator.start()
+        homeCoordinator.start() 
     }
     
     

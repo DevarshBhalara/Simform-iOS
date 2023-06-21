@@ -20,7 +20,7 @@ class AuthenticationCoordinator: Coordinator {
     func start() {
         let loginVC = LoginVC.instantiate(from: .authentication)
         loginVC.coordinator = self
-        self.navigationController.pushViewController(loginVC, animated: true)
+        self.navigationController.viewControllers[1...] = [loginVC]
     }
     
     func goToSignUp() {

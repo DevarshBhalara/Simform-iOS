@@ -18,19 +18,22 @@ class ProductViewController: UIViewController {
     //MARK: Outlet
     @IBOutlet weak var productCollectionView: UICollectionView!
     @IBOutlet weak var catogoryCollectionView: UICollectionView!
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     //MARK: - variable
     var products: [Product] = []
+    var searchResultProduct: [Product] = []
     var allProducts: [Product] = []
     var categories: [String] = []
     var viewModel = ProductViewModel()
+    var searchTimer: Timer?
+    var isSearchActive: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
     }
-        
+    
     private func setUpUI() {
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
@@ -40,11 +43,11 @@ class ProductViewController: UIViewController {
         catogoryCollectionView.allowsMultipleSelection = false
         viewModel.getCategory()
         viewModel.getAllProduct()
-        
+        searchBar.delegate = self
         
     }
-
-
+    
+    
 }
 
 //MARK: - Category protocol
@@ -113,13 +116,34 @@ extension ProductViewController: UICollectionViewDelegate {
             productViewController.product = products[indexPath.row]
             navigationController?.pushViewController(productViewController, animated: true)
         }
-       
+        
     }
 }
 
 //MARK: - Collection Flow layout
 extension ProductViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: collectionView.frame.size.width / 2 - 15, height: collectionView.frame.size.height / 2)
+        return CGSize(width: collectionView.frame.size.width / 2 - 15, height: collectionView.frame.size.height / 2)
+    }
+}
+
+//MARK: Searchbar delegate
+extension ProductViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.searchTimer?.invalidate()
+        
+        if searchText.isEmpty {
+            products = self.allProducts
+        } else {
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { timer in
+                DispatchQueue.main.async {
+                    self.products = self.allProducts.filter { $0.title.contains(searchText) }
+                    print(self.products.count)
+                    self.productCollectionView.reloadData()
+                }
+            })
+        }
+       
     }
 }

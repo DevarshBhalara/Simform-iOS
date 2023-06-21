@@ -20,8 +20,6 @@ class HomeCoordinator: Coordinator {
     func start() {
         let homeVC = HomeVC.instantiate(from: .home)
         homeVC.coordinator = self
-        navigationController.viewControllers = [homeVC]
+        navigationController.viewControllers[1...] = [homeVC]
     }
-    
-    
 }

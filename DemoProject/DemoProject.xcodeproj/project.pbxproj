@@ -72,6 +72,13 @@
 		2344EA6A2A41D36E00BC49F7 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA692A41D36E00BC49F7 /* LoginPresenter.swift */; };
 		2344EA6C2A41D3D700BC49F7 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA6B2A41D3D700BC49F7 /* AuthenticationService.swift */; };
 		2344EA6E2A41D40900BC49F7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA6D2A41D40900BC49F7 /* Authentication.swift */; };
+		2344EA762A42C3EA00BC49F7 /* Viper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2344EA752A42C3EA00BC49F7 /* Viper.storyboard */; };
+		2344EA792A42C46800BC49F7 /* ViperLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA782A42C46800BC49F7 /* ViperLoginVC.swift */; };
+		2344EA7B2A42C4D200BC49F7 /* ViperLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA7A2A42C4D200BC49F7 /* ViperLoginModel.swift */; };
+		2344EA7D2A42C62F00BC49F7 /* VIperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA7C2A42C62F00BC49F7 /* VIperPresenter.swift */; };
+		2344EA812A42C6F000BC49F7 /* ViperHomeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA802A42C6F000BC49F7 /* ViperHomeRoute.swift */; };
+		2344EA832A42C7E900BC49F7 /* ViperHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA822A42C7E900BC49F7 /* ViperHomeVC.swift */; };
+		2344EA852A42CB0200BC49F7 /* ViperLoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344EA842A42CB0200BC49F7 /* ViperLoginInteractor.swift */; };
 		23487C422A3B437300DA3DF5 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23487C412A3B437300DA3DF5 /* ProductDetailViewController.swift */; };
 		23487C4A2A3C377B00DA3DF5 /* AlamoFireStructured.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23487C492A3C377B00DA3DF5 /* AlamoFireStructured.storyboard */; };
 		23487C4C2A3C3FDD00DA3DF5 /* APIManager+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23487C4B2A3C3FDD00DA3DF5 /* APIManager+Request.swift */; };
@@ -286,6 +293,13 @@
 		2344EA692A41D36E00BC49F7 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		2344EA6B2A41D3D700BC49F7 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		2344EA6D2A41D40900BC49F7 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		2344EA752A42C3EA00BC49F7 /* Viper.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Viper.storyboard; sourceTree = "<group>"; };
+		2344EA782A42C46800BC49F7 /* ViperLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperLoginVC.swift; sourceTree = "<group>"; };
+		2344EA7A2A42C4D200BC49F7 /* ViperLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperLoginModel.swift; sourceTree = "<group>"; };
+		2344EA7C2A42C62F00BC49F7 /* VIperPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIperPresenter.swift; sourceTree = "<group>"; };
+		2344EA802A42C6F000BC49F7 /* ViperHomeRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperHomeRoute.swift; sourceTree = "<group>"; };
+		2344EA822A42C7E900BC49F7 /* ViperHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperHomeVC.swift; sourceTree = "<group>"; };
+		2344EA842A42CB0200BC49F7 /* ViperLoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperLoginInteractor.swift; sourceTree = "<group>"; };
 		23487C412A3B437300DA3DF5 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		23487C492A3C377B00DA3DF5 /* AlamoFireStructured.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlamoFireStructured.storyboard; sourceTree = "<group>"; };
 		23487C4B2A3C3FDD00DA3DF5 /* APIManager+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Request.swift"; sourceTree = "<group>"; };
@@ -781,6 +795,60 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		2344EA6F2A42C37000BC49F7 /* Viper Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA742A42C3D400BC49F7 /* View */,
+				2344EA732A42C3B400BC49F7 /* Entity */,
+				2344EA722A42C3A300BC49F7 /* Presenter */,
+				2344EA712A42C39100BC49F7 /* Interactor */,
+				2344EA702A42C37E00BC49F7 /* Route */,
+			);
+			path = "Viper Architecture";
+			sourceTree = "<group>";
+		};
+		2344EA702A42C37E00BC49F7 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA802A42C6F000BC49F7 /* ViperHomeRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		2344EA712A42C39100BC49F7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA842A42CB0200BC49F7 /* ViperLoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2344EA722A42C3A300BC49F7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA7C2A42C62F00BC49F7 /* VIperPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2344EA732A42C3B400BC49F7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA7A2A42C4D200BC49F7 /* ViperLoginModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2344EA742A42C3D400BC49F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2344EA752A42C3EA00BC49F7 /* Viper.storyboard */,
+				2344EA782A42C46800BC49F7 /* ViperLoginVC.swift */,
+				2344EA822A42C7E900BC49F7 /* ViperHomeVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		23487C432A3C35C400DA3DF5 /* AlamoFireStructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,6 +1020,7 @@
 		2385E7CC2A36EE5000E41156 /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				2344EA6F2A42C37000BC49F7 /* Viper Architecture */,
 				2344EA5F2A41D1DB00BC49F7 /* MVP */,
 				2344EA3D2A4179DE00BC49F7 /* MVVM Architecture */,
 				232B0FAD2A405ECB00AE63C7 /* CombineScreen */,
@@ -1313,6 +1382,7 @@
 				2314D4D729F7A5CC00996791 /* StoryboardSegue.storyboard in Resources */,
 				2344EA582A41920000BC49F7 /* Home.storyboard in Resources */,
 				2339135329DBEE4900505575 /* Main.storyboard in Resources */,
+				2344EA762A42C3EA00BC49F7 /* Viper.storyboard in Resources */,
 				2385E7CE2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard in Resources */,
 				239F128B29E6B0FA005313AA /* MovieTableViewCell.xib in Resources */,
 				2344EA662A41D22B00BC49F7 /* MVPDemo.storyboard in Resources */,
@@ -1423,6 +1493,7 @@
 				23368CF52A3ADEEB008DF0B5 /* UserListAlamoFireViewController.swift in Sources */,
 				2344EA432A417A3B00BC49F7 /* Coordinator.swift in Sources */,
 				23368CEF2A39A5DB008DF0B5 /* DownloadFileViewController.swift in Sources */,
+				2344EA7B2A42C4D200BC49F7 /* ViperLoginModel.swift in Sources */,
 				238FCD4329FA4E710005C623 /* GroupStructureModel.swift in Sources */,
 				232B0FB22A405F5200AE63C7 /* WebServiceCell.swift in Sources */,
 				2344EA452A417ABC00BC49F7 /* AppCoordinator.swift in Sources */,
@@ -1506,13 +1577,16 @@
 				238FCD3729FA44AC0005C623 /* CardCollectionViewCell.swift in Sources */,
 				23FCAD0029E4021600623264 /* UiTextFieldViewController.swift in Sources */,
 				23CB509029E826D10057E0D7 /* FirstCollectionViewCell.swift in Sources */,
+				2344EA7D2A42C62F00BC49F7 /* VIperPresenter.swift in Sources */,
 				239F127629E684F2005313AA /* UITableContentViewController.swift in Sources */,
 				239F128029E6A33F005313AA /* UITableContentViewController2.swift in Sources */,
 				2385E7E92A385AB900E41156 /* ImageRequest.swift in Sources */,
 				23CB508229E7FD540057E0D7 /* TableViewColorFruitsController.swift in Sources */,
 				23368CED2A398C88008DF0B5 /* DeleteUserViewController.swift in Sources */,
 				23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */,
+				2344EA852A42CB0200BC49F7 /* ViperLoginInteractor.swift in Sources */,
 				23487C4C2A3C3FDD00DA3DF5 /* APIManager+Request.swift in Sources */,
+				2344EA792A42C46800BC49F7 /* ViperLoginVC.swift in Sources */,
 				2344EA562A41869D00BC49F7 /* LoginViewModelCoordinator.swift in Sources */,
 				2385E7E22A373ED600E41156 /* AddUserViewController.swift in Sources */,
 				230207012A00EFB2009D2592 /* TabViewViewController.swift in Sources */,
@@ -1521,6 +1595,7 @@
 				23FCAD0429E4151F00623264 /* UITextViewExtension.swift in Sources */,
 				2374DFAE2A3C7ABF006D488C /* TextFieldRightImage.swift in Sources */,
 				23368D062A3B19C5008DF0B5 /* CategoryCollectionViewCell.swift in Sources */,
+				2344EA812A42C6F000BC49F7 /* ViperHomeRoute.swift in Sources */,
 				235517F729F25E0B00B46BDA /* DemoPickerViewViewController.swift in Sources */,
 				23487C502A3C43C300DA3DF5 /* CustomError.swift in Sources */,
 				2369110F2A40604900C369BB /* WebServiceViewController.swift in Sources */,
@@ -1555,6 +1630,7 @@
 				23BBB4E82A0223D100BDF4A4 /* ThirdNavigationViewController.swift in Sources */,
 				23E1161529E94FC5000D82EF /* CollapseTableViewCell.swift in Sources */,
 				23E1160229E904FF000D82EF /* SeriesCollectionViewController.swift in Sources */,
+				2344EA832A42C7E900BC49F7 /* ViperHomeVC.swift in Sources */,
 				239A395E2A090B7E00A0A5DC /* DiscardFirstViewController.swift in Sources */,
 				116A22B52A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift in Sources */,
 				23E1160F29E93323000D82EF /* FruitColordata.swift in Sources */,
