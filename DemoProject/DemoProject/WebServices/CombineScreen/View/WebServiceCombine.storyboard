@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WebService-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="WebServiceViewController" customModule="DemoProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2az-OT-HI0">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="WebServiceCell" rowHeight="84" id="0KN-B6-vhB" customClass="WebServiceCell" customModule="DemoProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0KN-B6-vhB" id="DJb-VR-Qry">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ago-o8-Dga">
+                                                    <rect key="frame" x="50" y="24.666666666666671" width="293" height="35"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="VC Name"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ago-o8-Dga" secondAttribute="bottom" constant="13.33" id="3e0-57-ctr"/>
+                                                <constraint firstItem="Ago-o8-Dga" firstAttribute="leading" secondItem="DJb-VR-Qry" secondAttribute="leadingMargin" constant="30" id="5ql-ts-cFr"/>
+                                                <constraint firstItem="Ago-o8-Dga" firstAttribute="top" secondItem="DJb-VR-Qry" secondAttribute="topMargin" constant="13.67" id="W5b-VW-bsj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ago-o8-Dga" secondAttribute="trailing" constant="30" id="yrE-5l-Iyt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnVCName" destination="Ago-o8-Dga" id="Xm4-oo-31x"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="JJT-Ru-1vC"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="4dG-SK-cs7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="2az-OT-HI0" secondAttribute="bottom" id="G8H-wn-GJr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2az-OT-HI0" secondAttribute="trailing" id="TgE-PM-USq"/>
+                            <constraint firstItem="2az-OT-HI0" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Y1m-6y-Om6"/>
+                            <constraint firstItem="2az-OT-HI0" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="a7y-og-mdL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="WebService" id="tPD-53-dA7"/>
+                    <connections>
+                        <outlet property="tblView" destination="2az-OT-HI0" id="z2j-cc-HMt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.2519083969464" y="-34.507042253521128"/>
+        </scene>
+        <!--Web Service-->
+        <scene sceneID="a6j-gi-edH">
+            <objects>
+                <navigationController storyboardIdentifier="WebServiceNavigation" automaticallyAdjustsScrollViewInsets="NO" id="gkc-kS-Knz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Web Service" image="cloud" catalog="system" selectedImage="cloud" id="jUw-e0-UI9"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dpx-aJ-vH1">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="gWC-Qo-kEX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eh3-0B-6sb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud" catalog="system" width="128" height="87"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
