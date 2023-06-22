@@ -15,6 +15,9 @@ struct CombineScreenData {
     static private let stoardBoardForUiComponentsOne = "UiComponents"
     static private let stoardBoardForUiComponentsTwo = "UiComponents2"
     static private let stoardBoardForReverseKT = "ReverseKT"
+    static private let stoardBoardForWebService = "WebServiceStoaryBoard"
+    static private let stoardBoardForAlamoFire = "AlamoFireDemo"
+    static private let stoardBoardForAlamoFireStructured = "AlamoFireStructured"
     
     static func getAllData() -> [CombineScreenData] {
         

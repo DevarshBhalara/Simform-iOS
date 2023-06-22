@@ -18,7 +18,6 @@ class UITableContentViewController2: UIViewController {
     }
     
     private func setUpUI() {
-        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TableViewCellOneFor2", bundle: nil), forCellReuseIdentifier: "cell1")
     }
