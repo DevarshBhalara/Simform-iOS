@@ -10,16 +10,24 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var appCoordinator: AppCoordinator?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+//        let windowCoordinator = UIWindow(windowScene: windowScene)
+//        appCoordinator = AppCoordinator(navigationController: UINavigationController(), window: windowCoordinator)
+//        appCoordinator?.start()
+//        self.window = windowCoordinator
+//        self.window?.makeKeyAndVisible()
+        
+        
         
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .red
+        appearance.backgroundColor = .white
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
         /**State management **/
@@ -28,6 +36,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = navigationController
         navigationController.setNavigationBarHidden(true, animated: true)
+        
+//        let windowCoordinator = UIWindow(windowScene: windowScene)
+ 
+//        appCoordinator?.start()
+//        self.window = windowCoordinator
+        
         window?.makeKeyAndVisible()
     }
 
