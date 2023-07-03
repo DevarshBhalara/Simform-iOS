@@ -15,9 +15,7 @@ struct CombineScreenData {
     static private let stoardBoardForUiComponentsOne = "UiComponents"
     static private let stoardBoardForUiComponentsTwo = "UiComponents2"
     static private let stoardBoardForReverseKT = "ReverseKT"
-    static private let stoardBoardForWebService = "WebServiceStoaryBoard"
-    static private let stoardBoardForAlamoFire = "AlamoFireDemo"
-    static private let stoardBoardForAlamoFireStructured = "AlamoFireStructured"
+    static private let stoaryBoardForCustomControls = "CustomControls"
     
     static func getAllData() -> [CombineScreenData] {
         
@@ -57,6 +55,7 @@ struct CombineScreenData {
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForReverseKT, vcName: "GolfHomeViewController", title: "Reverse KT Golf Home Screen"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForReverseKT, vcName: "OTPViewController", title: "ReverseKT OTP Screen"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForReverseKT, vcName: "TabbarDemoReverseKT", title: "ReverseKT Auto Resize TextView and Tabbar"),
+            CombineScreenData(storyBoardName: CombineScreenData.stoaryBoardForCustomControls, vcName: "CustomControlViewController", title: "CustomControls"),
         ]
     }
 }

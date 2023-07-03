@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Control View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CustomControlViewController" id="Y6W-OH-hqX" customClass="CustomControlViewController" customModule="DemoProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gku-pn-bZM" customClass="CustomTextField" customModule="DemoProject" customModuleProvider="target">
+                                <rect key="frame" x="30" y="74" width="333" height="42.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="mail" catalog="system"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="alarm" catalog="system"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjI-Nq-0uh" customClass="CustomButton" customModule="DemoProject" customModuleProvider="target">
+                                <rect key="frame" x="155.33333333333334" y="136.66666666666666" width="82.666666666666657" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Custom Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimary" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsv-Ph-LAf" customClass="RadioButton" customModule="DemoProject" customModuleProvider="target">
+                                <rect key="frame" x="166.33333333333334" y="191" width="60.666666666666657" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Male"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnRadioOneSelected:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ObE-EJ-VFB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYy-eV-jod" customClass="RadioButton" customModule="DemoProject" customModuleProvider="target">
+                                <rect key="frame" x="157" y="230.33333333333334" width="79.333333333333314" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Female"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnRadioTwoSelected:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hF5-Rx-5fW"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="v3n-IN-0to">
+                                <rect key="frame" x="41" y="279.66666666666669" width="157.66666666666666" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9u-t5-2ov" customClass="CheckBox" customModule="DemoProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Movie"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKl-XO-3xJ" customClass="CheckBox" customModule="DemoProject" customModuleProvider="target">
+                                        <rect key="frame" x="86.333333333333343" y="0.0" width="71.333333333333343" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Series"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bjI-Nq-0uh" firstAttribute="top" secondItem="gku-pn-bZM" secondAttribute="bottom" constant="20" id="89i-78-mjI"/>
+                            <constraint firstItem="Dsv-Ph-LAf" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="8wN-BZ-hZb"/>
+                            <constraint firstItem="gku-pn-bZM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="MgE-rv-52l"/>
+                            <constraint firstItem="v3n-IN-0to" firstAttribute="top" secondItem="lYy-eV-jod" secondAttribute="bottom" constant="15" id="RcD-Oz-J0Z"/>
+                            <constraint firstItem="bjI-Nq-0uh" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="XBm-AB-PeS"/>
+                            <constraint firstItem="lYy-eV-jod" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fq4-by-5sO"/>
+                            <constraint firstItem="lYy-eV-jod" firstAttribute="top" secondItem="Dsv-Ph-LAf" secondAttribute="bottom" constant="5" id="o82-uh-YUZ"/>
+                            <constraint firstItem="Dsv-Ph-LAf" firstAttribute="top" secondItem="bjI-Nq-0uh" secondAttribute="bottom" constant="20" id="sSV-JH-rL3"/>
+                            <constraint firstItem="gku-pn-bZM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="siy-Qt-OEQ"/>
+                            <constraint firstItem="v3n-IN-0to" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="41" id="td5-Yz-P9B"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gku-pn-bZM" secondAttribute="trailing" constant="30" id="yv1-X8-6Gd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnRadio1" destination="Dsv-Ph-LAf" id="Om8-RS-yMc"/>
+                        <outlet property="btnRadio2" destination="lYy-eV-jod" id="l3M-ql-h8V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="Dsv-Ph-LAf">
+            <size key="intrinsicContentSize" width="60.666666666666664" height="34.333333333333336"/>
+        </designable>
+        <designable name="Y9u-t5-2ov">
+            <size key="intrinsicContentSize" width="69.666666666666671" height="34.333333333333336"/>
+        </designable>
+        <designable name="bjI-Nq-0uh">
+            <size key="intrinsicContentSize" width="82.666666666666671" height="34.333333333333336"/>
+        </designable>
+        <designable name="gku-pn-bZM">
+            <size key="intrinsicContentSize" width="133.33333333333334" height="42.666666666666664"/>
+        </designable>
+        <designable name="lYy-eV-jod">
+            <size key="intrinsicContentSize" width="79.333333333333329" height="34.333333333333336"/>
+        </designable>
+        <designable name="mKl-XO-3xJ">
+            <size key="intrinsicContentSize" width="71.333333333333329" height="34.333333333333336"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="alarm" catalog="system" width="123" height="128"/>
+        <image name="mail" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

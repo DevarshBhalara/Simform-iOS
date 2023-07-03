@@ -199,6 +199,13 @@
 		23E51FA42A0500EF0050D9CA /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E51FA32A0500EF0050D9CA /* PatientTableViewCell.swift */; };
 		23E5A23B29F139E6009D60DE /* UIPickerViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5A23A29F139E6009D60DE /* UIPickerViewViewController.swift */; };
 		23E5A23D29F15ADB009D60DE /* UIDateTimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5A23C29F15ADB009D60DE /* UIDateTimePickerViewController.swift */; };
+		23E717B72A52A82300FA1E7D /* CustomControls.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E717B62A52A82300FA1E7D /* CustomControls.storyboard */; };
+		23E717B92A52A83C00FA1E7D /* CustomControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E717B82A52A83C00FA1E7D /* CustomControlViewController.swift */; };
+		23E717BC2A52A8D900FA1E7D /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E717BB2A52A8D900FA1E7D /* RangeSlider.swift */; };
+		23E717BE2A52C49500FA1E7D /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E717BD2A52C49500FA1E7D /* CustomTextfield.swift */; };
+		23E717C02A52C74C00FA1E7D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E717BF2A52C74C00FA1E7D /* CustomButton.swift */; };
+		23E717C42A52D35F00FA1E7D /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E717C32A52D35F00FA1E7D /* RadioButton.swift */; };
+		23E717C62A52D94F00FA1E7D /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E717C52A52D94F00FA1E7D /* CheckBox.swift */; };
 		23F0DDA22A0A44FB00EEE847 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0DDA12A0A44FB00EEE847 /* FourthViewController.swift */; };
 		23F0DDA42A0A54F900EEE847 /* TabbarNavDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0DDA32A0A54F900EEE847 /* TabbarNavDemoViewController.swift */; };
 		23F0DDA62A0A5B7B00EEE847 /* TabbarButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0DDA52A0A5B7B00EEE847 /* TabbarButtonViewController.swift */; };
@@ -409,6 +416,13 @@
 		23E51FA32A0500EF0050D9CA /* PatientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		23E5A23A29F139E6009D60DE /* UIPickerViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewViewController.swift; sourceTree = "<group>"; };
 		23E5A23C29F15ADB009D60DE /* UIDateTimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDateTimePickerViewController.swift; sourceTree = "<group>"; };
+		23E717B62A52A82300FA1E7D /* CustomControls.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomControls.storyboard; sourceTree = "<group>"; };
+		23E717B82A52A83C00FA1E7D /* CustomControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControlViewController.swift; sourceTree = "<group>"; };
+		23E717BB2A52A8D900FA1E7D /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		23E717BD2A52C49500FA1E7D /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
+		23E717BF2A52C74C00FA1E7D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		23E717C32A52D35F00FA1E7D /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		23E717C52A52D94F00FA1E7D /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		23F0DDA12A0A44FB00EEE847 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		23F0DDA32A0A54F900EEE847 /* TabbarNavDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarNavDemoViewController.swift; sourceTree = "<group>"; };
 		23F0DDA52A0A5B7B00EEE847 /* TabbarButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarButtonViewController.swift; sourceTree = "<group>"; };
@@ -841,6 +855,7 @@
 		235980CA29A49D0B009E8C5D /* DemoProject */ = {
 			isa = PBXGroup;
 			children = (
+				23E717B42A52A4DB00FA1E7D /* CustomControls */,
 				2385E7CC2A36EE5000E41156 /* WebServices */,
 				23E411DB29F94C9D00C68F83 /* ReverseKT */,
 				231742E529ED4D9C0049E537 /* Storyboard */,
@@ -1155,6 +1170,36 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		23E717B42A52A4DB00FA1E7D /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				23E717BA2A52A8C900FA1E7D /* CustomControls */,
+				23E717B52A52A81000FA1E7D /* View */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		23E717B52A52A81000FA1E7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23E717B62A52A82300FA1E7D /* CustomControls.storyboard */,
+				23E717B82A52A83C00FA1E7D /* CustomControlViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23E717BA2A52A8C900FA1E7D /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				23E717BB2A52A8D900FA1E7D /* RangeSlider.swift */,
+				23E717BD2A52C49500FA1E7D /* CustomTextfield.swift */,
+				23E717BF2A52C74C00FA1E7D /* CustomButton.swift */,
+				23E717C32A52D35F00FA1E7D /* RadioButton.swift */,
+				23E717C52A52D94F00FA1E7D /* CheckBox.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
 		467B6CCAF4C26955D2EB8AF3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1241,6 +1286,7 @@
 				239F128429E6A386005313AA /* TableViewCellOneFor2.xib in Resources */,
 				23FCACFA29E3CEAF00623264 /* UiComponents.storyboard in Resources */,
 				23E1161B29E95F89000D82EF /* ExpandedTableViewCell.xib in Resources */,
+				23E717B72A52A82300FA1E7D /* CustomControls.storyboard in Resources */,
 				2344EA4A2A417E4E00BC49F7 /* Authentication.storyboard in Resources */,
 				239F129329E6C23A005313AA /* SeriesTableViewCell.xib in Resources */,
 				238087DF29E6D72800CBDCD3 /* AnimalTableViewCell.xib in Resources */,
@@ -1318,6 +1364,7 @@
 				23F0DDA62A0A5B7B00EEE847 /* TabbarButtonViewController.swift in Sources */,
 				23E51FA42A0500EF0050D9CA /* PatientTableViewCell.swift in Sources */,
 				23BBB4F02A0260CE00BDF4A4 /* CustomSegueViewController.swift in Sources */,
+				23E717BC2A52A8D900FA1E7D /* RangeSlider.swift in Sources */,
 				23AF267229F7A81B00D10905 /* SecondViewController2.swift in Sources */,
 				23368CF12A39DBBB008DF0B5 /* DownloadApi.swift in Sources */,
 				239F127929E688B6005313AA /* IndexTableViewCell.swift in Sources */,
@@ -1326,6 +1373,7 @@
 				23C8969E29FFB8EA0049E4F9 /* TestTableViewCell.swift in Sources */,
 				23CB508D29E825400057E0D7 /* UICollectionViewController.swift in Sources */,
 				23D295C229ED1DE5000069E8 /* JobModel.swift in Sources */,
+				23E717C62A52D94F00FA1E7D /* CheckBox.swift in Sources */,
 				23CB508429E804CF0057E0D7 /* FruitTableViewCell.swift in Sources */,
 				235351072A036EDA00350318 /* UICombineViewController.swift in Sources */,
 				23368D0C2A3B20EB008DF0B5 /* ProductViewModel.swift in Sources */,
@@ -1389,10 +1437,13 @@
 				23DBE39929F235C700298103 /* UIPickerViewImageViewController.swift in Sources */,
 				233C01AC29ED0445004733A2 /* JobSliderCellCollectionViewCell.swift in Sources */,
 				2344EA4D2A4180B200BC49F7 /* LoginVC.swift in Sources */,
+				23E717BE2A52C49500FA1E7D /* CustomTextfield.swift in Sources */,
 				2374DFB12A3C7B27006D488C /* Extensions.swift in Sources */,
 				23E1160529E90AC4000D82EF /* SeriesCollectionModel.swift in Sources */,
 				23BBB4F32A0287D000BDF4A4 /* FirstWithTitleViewController.swift in Sources */,
 				230207052A00F092009D2592 /* ProfileViewController.swift in Sources */,
+				23E717C42A52D35F00FA1E7D /* RadioButton.swift in Sources */,
+				23E717C02A52C74C00FA1E7D /* CustomButton.swift in Sources */,
 				231742E829ED60190049E537 /* UIActivityIndicatorViewController.swift in Sources */,
 				2314D4D229F78A2B00996791 /* CallOut.swift in Sources */,
 				23E411DD29F94CB700C68F83 /* GolfHomeViewController.swift in Sources */,
@@ -1475,6 +1526,7 @@
 				23E1161A29E95F89000D82EF /* ExpandedTableViewCell.swift in Sources */,
 				2344EA482A417B4E00BC49F7 /* UserManager.swift in Sources */,
 				23C3147A29EFEF5A0017D5F2 /* UIStackViewViewController.swift in Sources */,
+				23E717B92A52A83C00FA1E7D /* CustomControlViewController.swift in Sources */,
 				23E38B5B2A08B8E000DD2850 /* FirstPassViewController.swift in Sources */,
 				235980CE29A49D0B009E8C5D /* SceneDelegate.swift in Sources */,
 				23CB508829E80F7A0057E0D7 /* ColorTableViewCell.swift in Sources */,
