@@ -910,8 +910,8 @@
             filePath = "DemoProject/NavigationController/UICombineViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "UICombineViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1330,86 +1330,6 @@
                   offsetFromSymbolStart = "449">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4BE55EB9-C384-4406-A2E0-BBC62089912E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DemoProject/WebServices/ViewModel/ImageUploadViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "uplaodImage(image:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4BE55EB9-C384-4406-A2E0-BBC62089912E - 920f6349478351b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DemoProject.ImageUploadViewModel.uplaodImage(image: __C.UIImageView) -&gt; ()"
-                  moduleName = "DemoProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/devarsh/Documents/Project/Simform_iOS/DemoProject/DemoProject/WebServices/ViewModel/ImageUploadViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "1774">
-               </Location>
-               <Location
-                  uuid = "4BE55EB9-C384-4406-A2E0-BBC62089912E - 920f6349478351b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DemoProject.ImageUploadViewModel.uplaodImage(image: __C.UIImageView) -&gt; ()"
-                  moduleName = "DemoProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/devarsh/Documents/Project/Simform_iOS/DemoProject/DemoProject/WebServices/ViewModel/ImageUploadViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "2949">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DEAC2804-4F0F-4D7B-B6DE-11707530D4DE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DemoProject/WebServices/ViewModel/ImageUploadViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "uplaodImage(image:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "078C9150-8333-4727-BAD0-CC83274E6F16"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DemoProject/WebServices/ViewModel/ImageUploadViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "uploadImaggeUsingBinary(image:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

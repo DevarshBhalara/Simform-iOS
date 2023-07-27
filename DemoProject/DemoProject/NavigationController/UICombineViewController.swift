@@ -16,10 +16,12 @@ struct CombineScreenData {
     static private let stoardBoardForUiComponentsTwo = "UiComponents2"
     static private let stoardBoardForReverseKT = "ReverseKT"
     static private let stoaryBoardForCustomControls = "CustomControls"
+    static private let stoaryBoardForCoreData = "CoreData"
     
     static func getAllData() -> [CombineScreenData] {
         
         return [
+            CombineScreenData(storyBoardName: CombineScreenData.stoaryBoardForCoreData, vcName: "CoreDataViewController", title: "CoreData"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UILabelViewController", title: "UILabelViewController"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UIButtonViewController", title: "UIButtonViewController"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UiTextFieldViewController", title: "UITexField Demo"),
@@ -56,6 +58,7 @@ struct CombineScreenData {
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForReverseKT, vcName: "OTPViewController", title: "ReverseKT OTP Screen"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForReverseKT, vcName: "TabbarDemoReverseKT", title: "ReverseKT Auto Resize TextView and Tabbar"),
             CombineScreenData(storyBoardName: CombineScreenData.stoaryBoardForCustomControls, vcName: "CustomControlViewController", title: "CustomControls"),
+            
         ]
     }
 }
