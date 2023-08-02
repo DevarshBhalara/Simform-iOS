@@ -17,10 +17,12 @@ struct CombineScreenData {
     static private let stoardBoardForReverseKT = "ReverseKT"
     static private let stoaryBoardForCustomControls = "CustomControls"
     static private let stoaryBoardForCoreData = "CoreData"
+    static private let stoaryBoardForFirebase = "FirebaseDemo"
     
     static func getAllData() -> [CombineScreenData] {
         
         return [
+            CombineScreenData(storyBoardName: CombineScreenData.stoaryBoardForFirebase, vcName: "FBLoginVC", title: "Firebase"),
             CombineScreenData(storyBoardName: CombineScreenData.stoaryBoardForCoreData, vcName: "CoreDataViewController", title: "CoreData"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UILabelViewController", title: "UILabelViewController"),
             CombineScreenData(storyBoardName: CombineScreenData.stoardBoardForUiComponentsOne, vcName: "UIButtonViewController", title: "UIButtonViewController"),

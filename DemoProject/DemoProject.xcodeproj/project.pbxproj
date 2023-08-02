@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		11022AF42A7A237000AC5259 /* First.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 11022AF32A7A237000AC5259 /* First.pdf */; };
+		11022AF62A7A26F600AC5259 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11022AF52A7A26F600AC5259 /* GoogleService-Info.plist */; };
+		11022AFC2A7A2EB500AC5259 /* FirebaseDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11022AFB2A7A2EB500AC5259 /* FirebaseDemo.storyboard */; };
+		11022AFE2A7A3B9000AC5259 /* FBCreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022AFD2A7A3B9000AC5259 /* FBCreateUserVC.swift */; };
+		11022B002A7A3C3A00AC5259 /* FBLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022AFF2A7A3C3A00AC5259 /* FBLoginVC.swift */; };
+		11022B022A7A3E7000AC5259 /* FBCreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022B012A7A3E7000AC5259 /* FBCreateUserViewModel.swift */; };
+		11022B042A7A43C000AC5259 /* FBLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022B032A7A43C000AC5259 /* FBLoginViewModel.swift */; };
+		11022B072A7A5A2600AC5259 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022B062A7A5A2600AC5259 /* Utility.swift */; };
+		11022B092A7A5CFD00AC5259 /* FBAllNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022B082A7A5CFD00AC5259 /* FBAllNotesViewController.swift */; };
+		11022B0B2A7A617E00AC5259 /* FBAddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022B0A2A7A617E00AC5259 /* FBAddNoteViewController.swift */; };
+		11022B0D2A7A639B00AC5259 /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022B0C2A7A639B00AC5259 /* AddNoteViewModel.swift */; };
+		11022B102A7A641000AC5259 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022B0F2A7A641000AC5259 /* Note.swift */; };
 		116A22B52A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B42A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift */; };
 		116A22B82A3D97FB0073A2D6 /* UploadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B72A3D97FB0073A2D6 /* UploadImageViewModel.swift */; };
 		116A22BA2A3DAF310073A2D6 /* DownloadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B92A3DAF310073A2D6 /* DownloadImageViewModel.swift */; };
@@ -229,6 +240,17 @@
 
 /* Begin PBXFileReference section */
 		11022AF32A7A237000AC5259 /* First.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = First.pdf; sourceTree = "<group>"; };
+		11022AF52A7A26F600AC5259 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		11022AFB2A7A2EB500AC5259 /* FirebaseDemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirebaseDemo.storyboard; sourceTree = "<group>"; };
+		11022AFD2A7A3B9000AC5259 /* FBCreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBCreateUserVC.swift; sourceTree = "<group>"; };
+		11022AFF2A7A3C3A00AC5259 /* FBLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginVC.swift; sourceTree = "<group>"; };
+		11022B012A7A3E7000AC5259 /* FBCreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBCreateUserViewModel.swift; sourceTree = "<group>"; };
+		11022B032A7A43C000AC5259 /* FBLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginViewModel.swift; sourceTree = "<group>"; };
+		11022B062A7A5A2600AC5259 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		11022B082A7A5CFD00AC5259 /* FBAllNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAllNotesViewController.swift; sourceTree = "<group>"; };
+		11022B0A2A7A617E00AC5259 /* FBAddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAddNoteViewController.swift; sourceTree = "<group>"; };
+		11022B0C2A7A639B00AC5259 /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
+		11022B0F2A7A641000AC5259 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		116A22B42A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UplaodImageViewControllerAF.swift; sourceTree = "<group>"; };
 		116A22B72A3D97FB0073A2D6 /* UploadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageViewModel.swift; sourceTree = "<group>"; };
 		116A22B92A3DAF310073A2D6 /* DownloadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewModel.swift; sourceTree = "<group>"; };
@@ -465,6 +487,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11022AF72A7A2E1E00AC5259 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				11022B0E2A7A63DE00AC5259 /* Model */,
+				11022B052A7A5A1900AC5259 /* Utility */,
+				11022AFA2A7A2EA400AC5259 /* ViewModel */,
+				11022AF92A7A2E2B00AC5259 /* ViewController */,
+				11022AF82A7A2E2500AC5259 /* View */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		11022AF82A7A2E2500AC5259 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11022AFB2A7A2EB500AC5259 /* FirebaseDemo.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11022AF92A7A2E2B00AC5259 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				11022AFD2A7A3B9000AC5259 /* FBCreateUserVC.swift */,
+				11022AFF2A7A3C3A00AC5259 /* FBLoginVC.swift */,
+				11022B082A7A5CFD00AC5259 /* FBAllNotesViewController.swift */,
+				11022B0A2A7A617E00AC5259 /* FBAddNoteViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		11022AFA2A7A2EA400AC5259 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11022B012A7A3E7000AC5259 /* FBCreateUserViewModel.swift */,
+				11022B032A7A43C000AC5259 /* FBLoginViewModel.swift */,
+				11022B0C2A7A639B00AC5259 /* AddNoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11022B052A7A5A1900AC5259 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				11022B062A7A5A2600AC5259 /* Utility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		11022B0E2A7A63DE00AC5259 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11022B0F2A7A641000AC5259 /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2314D4D329F78B2C00996791 /* CustomCallOut */ = {
 			isa = PBXGroup;
 			children = (
@@ -885,6 +964,8 @@
 		235980CA29A49D0B009E8C5D /* DemoProject */ = {
 			isa = PBXGroup;
 			children = (
+				11022AF72A7A2E1E00AC5259 /* Firebase */,
+				11022AF52A7A26F600AC5259 /* GoogleService-Info.plist */,
 				236622662A72628D00D6AC92 /* CoreData */,
 				23E717B42A52A4DB00FA1E7D /* CustomControls */,
 				2385E7CC2A36EE5000E41156 /* WebServices */,
@@ -1334,6 +1415,7 @@
 				2314D4D029F789A800996791 /* CallOut.xib in Resources */,
 				238FCD4D29FA60F10005C623 /* HeaderTableViewCell.xib in Resources */,
 				235980E029A49FAB009E8C5D /* Storyboard2.storyboard in Resources */,
+				11022AF62A7A26F600AC5259 /* GoogleService-Info.plist in Resources */,
 				235980D829A49D0C009E8C5D /* LaunchScreen.storyboard in Resources */,
 				239F128429E6A386005313AA /* TableViewCellOneFor2.xib in Resources */,
 				23FCACFA29E3CEAF00623264 /* UiComponents.storyboard in Resources */,
@@ -1351,6 +1433,7 @@
 				2339135329DBEE4900505575 /* Main.storyboard in Resources */,
 				2385E7CE2A36F05C00E41156 /* WebServiceStoaryBoard.storyboard in Resources */,
 				239F128B29E6B0FA005313AA /* MovieTableViewCell.xib in Resources */,
+				11022AFC2A7A2EB500AC5259 /* FirebaseDemo.storyboard in Resources */,
 				23CB508B29E8243A0057E0D7 /* UiComponents2.storyboard in Resources */,
 				23487C4A2A3C377B00DA3DF5 /* AlamoFireStructured.storyboard in Resources */,
 				239F127A29E688B6005313AA /* IndexTableViewCell.xib in Resources */,
@@ -1484,6 +1567,7 @@
 				239A39622A090B9900A0A5DC /* DiscardThirdViewController.swift in Sources */,
 				234C242429EE5B5100EB917E /* PHPickerImageViewController.swift in Sources */,
 				23FCAD0629E415AB00623264 /* UITextViewViewController.swift in Sources */,
+				11022B0B2A7A617E00AC5259 /* FBAddNoteViewController.swift in Sources */,
 				23C8969C29FFB8210049E4F9 /* TableTestViewController.swift in Sources */,
 				239F128D29E6B282005313AA /* UiTableMovieViewController.swift in Sources */,
 				23CB508029E7DB2E0057E0D7 /* AnimalModelStructure.swift in Sources */,
@@ -1504,6 +1588,7 @@
 				23E717C02A52C74C00FA1E7D /* CustomButton.swift in Sources */,
 				231742E829ED60190049E537 /* UIActivityIndicatorViewController.swift in Sources */,
 				2314D4D229F78A2B00996791 /* CallOut.swift in Sources */,
+				11022B102A7A641000AC5259 /* Note.swift in Sources */,
 				23E411DD29F94CB700C68F83 /* GolfHomeViewController.swift in Sources */,
 				238087E129E6D86B00CBDCD3 /* AnimalModel.swift in Sources */,
 				23CC7DA629F65A66002336E3 /* MyAnnotation.swift in Sources */,
@@ -1518,11 +1603,13 @@
 				2353510A2A0373D700350318 /* CombineScreenTableViewCell.swift in Sources */,
 				23BBB4EA2A022D5600BDF4A4 /* FourthNavigationViewController.swift in Sources */,
 				23E51FA12A04FF5C0050D9CA /* PatientViewController.swift in Sources */,
+				11022AFE2A7A3B9000AC5259 /* FBCreateUserVC.swift in Sources */,
 				239F127D29E69CD5005313AA /* EvenTableViewCell.swift in Sources */,
 				2380873E29E56B5B004D9AB3 /* UISegmentViewController.swift in Sources */,
 				23BBB4F52A02880700BDF4A4 /* SecondWithTitleViewController.swift in Sources */,
 				235351102A03DC0800350318 /* LoginNavigationViewController.swift in Sources */,
 				23487C572A3C499600DA3DF5 /* LoginViewModel.swift in Sources */,
+				11022B092A7A5CFD00AC5259 /* FBAllNotesViewController.swift in Sources */,
 				23368CE62A3880C6008DF0B5 /* ImageReponseModel.swift in Sources */,
 				23D295C429ED2084000069E8 /* JobCompanyCollectionViewCell.swift in Sources */,
 				23AF267029F7A81000D10905 /* FirstViewController.swift in Sources */,
@@ -1542,6 +1629,7 @@
 				23487C5B2A3C5A5800DA3DF5 /* LoginRequestModel.swift in Sources */,
 				23368CF92A3AE499008DF0B5 /* AlamoFIreAddUserViewController.swift in Sources */,
 				23368D102A3B266D008DF0B5 /* Product.swift in Sources */,
+				11022B002A7A3C3A00AC5259 /* FBLoginVC.swift in Sources */,
 				2344EA532A41852300BC49F7 /* SignUPVC.swift in Sources */,
 				238FCD3729FA44AC0005C623 /* CardCollectionViewCell.swift in Sources */,
 				23FCAD0029E4021600623264 /* UiTextFieldViewController.swift in Sources */,
@@ -1554,6 +1642,7 @@
 				23B31AF429E5277F00F3748D /* UISliderViewController.swift in Sources */,
 				23487C4C2A3C3FDD00DA3DF5 /* APIManager+Request.swift in Sources */,
 				2344EA562A41869D00BC49F7 /* LoginViewModelCoordinator.swift in Sources */,
+				11022B0D2A7A639B00AC5259 /* AddNoteViewModel.swift in Sources */,
 				2385E7E22A373ED600E41156 /* AddUserViewController.swift in Sources */,
 				230207012A00EFB2009D2592 /* TabViewViewController.swift in Sources */,
 				23BBB4EE2A02606E00BDF4A4 /* MySegue.swift in Sources */,
@@ -1570,16 +1659,19 @@
 				23E1161729E95EF7000D82EF /* TableViewExpandedController.swift in Sources */,
 				23E1160D29E91A4B000D82EF /* FruitColorModel.swift in Sources */,
 				23E5A23B29F139E6009D60DE /* UIPickerViewViewController.swift in Sources */,
+				11022B072A7A5A2600AC5259 /* Utility.swift in Sources */,
 				238FCD4129FA4E120005C623 /* GroupModel.swift in Sources */,
 				2385E7DE2A3725E600E41156 /* UserCell.swift in Sources */,
 				23C3148129EFF4F00017D5F2 /* MoviewViewController.swift in Sources */,
 				236622652A725A9000D6AC92 /* UserData.xcdatamodeld in Sources */,
 				23E1160B29E90E6A000D82EF /* SeriesCollectionViewCell.swift in Sources */,
 				230207072A00F09E009D2592 /* MoneyViewController.swift in Sources */,
+				11022B022A7A3E7000AC5259 /* FBCreateUserViewModel.swift in Sources */,
 				23368CE42A388094008DF0B5 /* URLextension.swift in Sources */,
 				239A39602A090B8E00A0A5DC /* DiscardSecondViewController.swift in Sources */,
 				23AF267429F7B6ED00D10905 /* UIButtonConfigViewController.swift in Sources */,
 				239F128729E6AFD3005313AA /* MovieSeriesModel.swift in Sources */,
+				11022B042A7A43C000AC5259 /* FBLoginViewModel.swift in Sources */,
 				116A22BC2A3DB0960073A2D6 /* DownloadImageViewController.swift in Sources */,
 				23FCAD0A29E4227800623264 /* UISwitchViewController.swift in Sources */,
 				116A22B82A3D97FB0073A2D6 /* UploadImageViewModel.swift in Sources */,
