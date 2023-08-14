@@ -23,7 +23,9 @@ class FBAddNoteViewController: UIViewController {
     }
     
     private func setupUI() {
-        navigationItem.setRightBarButton(UIBarButtonItem(image: UIImage(systemName: "check"), style: .done, target: self, action: #selector(saveNote)), animated: true)
+        tfTitle.layer.borderWidth = 0
+        tfTitle.borderStyle = .none
+        navigationItem.setRightBarButton(UIBarButtonItem(image: UIImage(systemName: "checkmark"), style: .done, target: self, action: #selector(saveNote)), animated: true)
     }
     
     @objc func saveNote() {

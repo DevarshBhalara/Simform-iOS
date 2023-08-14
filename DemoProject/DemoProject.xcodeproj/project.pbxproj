@@ -19,6 +19,8 @@
 		11022B0B2A7A617E00AC5259 /* FBAddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022B0A2A7A617E00AC5259 /* FBAddNoteViewController.swift */; };
 		11022B0D2A7A639B00AC5259 /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022B0C2A7A639B00AC5259 /* AddNoteViewModel.swift */; };
 		11022B102A7A641000AC5259 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11022B0F2A7A641000AC5259 /* Note.swift */; };
+		116072C02A7B751900CC7DF7 /* ViewAllNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116072BF2A7B751900CC7DF7 /* ViewAllNoteViewModel.swift */; };
+		116072C32A7B80AE00CC7DF7 /* AllNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116072C22A7B80AE00CC7DF7 /* AllNoteCell.swift */; };
 		116A22B52A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B42A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift */; };
 		116A22B82A3D97FB0073A2D6 /* UploadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B72A3D97FB0073A2D6 /* UploadImageViewModel.swift */; };
 		116A22BA2A3DAF310073A2D6 /* DownloadImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116A22B92A3DAF310073A2D6 /* DownloadImageViewModel.swift */; };
@@ -251,6 +253,8 @@
 		11022B0A2A7A617E00AC5259 /* FBAddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAddNoteViewController.swift; sourceTree = "<group>"; };
 		11022B0C2A7A639B00AC5259 /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
 		11022B0F2A7A641000AC5259 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		116072BF2A7B751900CC7DF7 /* ViewAllNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllNoteViewModel.swift; sourceTree = "<group>"; };
+		116072C22A7B80AE00CC7DF7 /* AllNoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNoteCell.swift; sourceTree = "<group>"; };
 		116A22B42A3D73FF0073A2D6 /* UplaodImageViewControllerAF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UplaodImageViewControllerAF.swift; sourceTree = "<group>"; };
 		116A22B72A3D97FB0073A2D6 /* UploadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageViewModel.swift; sourceTree = "<group>"; };
 		116A22B92A3DAF310073A2D6 /* DownloadImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageViewModel.swift; sourceTree = "<group>"; };
@@ -490,6 +494,7 @@
 		11022AF72A7A2E1E00AC5259 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				116072C12A7B809600CC7DF7 /* Cell */,
 				11022B0E2A7A63DE00AC5259 /* Model */,
 				11022B052A7A5A1900AC5259 /* Utility */,
 				11022AFA2A7A2EA400AC5259 /* ViewModel */,
@@ -524,6 +529,7 @@
 				11022B012A7A3E7000AC5259 /* FBCreateUserViewModel.swift */,
 				11022B032A7A43C000AC5259 /* FBLoginViewModel.swift */,
 				11022B0C2A7A639B00AC5259 /* AddNoteViewModel.swift */,
+				116072BF2A7B751900CC7DF7 /* ViewAllNoteViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -542,6 +548,14 @@
 				11022B0F2A7A641000AC5259 /* Note.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		116072C12A7B809600CC7DF7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				116072C22A7B80AE00CC7DF7 /* AllNoteCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		2314D4D329F78B2C00996791 /* CustomCallOut */ = {
@@ -1528,6 +1542,7 @@
 				2343370C29E833E800976581 /* SecondViewController.swift in Sources */,
 				2353510C2A037D8700350318 /* UIScrollViewViewController.swift in Sources */,
 				235351122A03E01900350318 /* UIProfileTabViewController.swift in Sources */,
+				116072C32A7B80AE00CC7DF7 /* AllNoteCell.swift in Sources */,
 				239F129229E6C23A005313AA /* SeriesTableViewCell.swift in Sources */,
 				23368CE92A3885F2008DF0B5 /* ImageUploadViewModel.swift in Sources */,
 				23368CFC2A3AFA42008DF0B5 /* LoginViewController.swift in Sources */,
@@ -1613,6 +1628,7 @@
 				23368CE62A3880C6008DF0B5 /* ImageReponseModel.swift in Sources */,
 				23D295C429ED2084000069E8 /* JobCompanyCollectionViewCell.swift in Sources */,
 				23AF267029F7A81000D10905 /* FirstViewController.swift in Sources */,
+				116072C02A7B751900CC7DF7 /* ViewAllNoteViewModel.swift in Sources */,
 				23368CEB2A397DA4008DF0B5 /* ApiManager.swift in Sources */,
 				231742EA29ED679F0049E537 /* WKWebViewViewController.swift in Sources */,
 				2374DFB32A3C8237006D488C /* UpdateUserDataViewController.swift in Sources */,

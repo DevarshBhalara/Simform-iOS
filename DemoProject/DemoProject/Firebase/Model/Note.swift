@@ -19,4 +19,13 @@ struct Note {
             "time": self.timeStamp
         ]
     }
+    
+    static func convertToModelArray(dictionaryArray: [Dictionary<String, Any>]) -> [Note] {
+        return dictionaryArray.map { dict in
+            let title = dict["title"] as? String ?? ""
+            let content = dict["content"] as? String ?? ""
+            let timeStamp = dict["timeStamp"] as? Timestamp ?? Timestamp()
+            return Note(title: title, content: content, timeStamp: timeStamp)
+        }
+    }
 }
